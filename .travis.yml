@@ -32,9 +32,9 @@ script:
 - mv 0-giulietta.pdf giulietta.pdf
 
 # Tag 'latest' before deploying
+# Unfortunately, the tag stay at the first date it's set. To avoid this, we would have to push it upstream: https://github.com/oliexdev/openScale/pull/121
 before_deploy:
 - export TRAVIS_TAG=latest
-- git tag -d $TRAVIS_TAG || true
 - git tag -f $TRAVIS_TAG
 deploy:
   provider: releases
