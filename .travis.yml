@@ -23,6 +23,9 @@ script:
 - pip install pygrep pygit2 pdfrw
 - git clone https://github.com/LaurentClaessens/pytex
 - sed -i 's/\/usr\/bin\/python3/\/usr\/bin\/env python3/' pytex/pytex
+# We redirect output to dev null the build of both frido & giulietta generates too much logs for Travis which interrupts the build.
+# We could keep logs of one of the two builds, but this could end up reaching the limit in a near future.
+# It would be nice to reduce the volume outputted by the command.
 - PATH=$PATH:$PWD/pytex pytex lst_frido.py > /dev/null
 - mv 0-lefrido.pdf frido.pdf
 - PATH=$PATH:$PWD/pytex pytex lst_giulietta.py > /dev/null
