@@ -21,6 +21,7 @@ script:
 
 deploy:
   provider: releases
+  name: latest
   # To fill the "secure" field:
   # In github, click on profile picture, Settings, Developer settings, Personal access tokens, Generate new token, toggle repo_deployment
   # sudo apt-get install ruby-all-dev
