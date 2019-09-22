@@ -30,4 +30,4 @@ deploy:
  - giuletta.pdf
  skip_cleanup: true
  on:
-  branches: master travis
+  all_branches: true
