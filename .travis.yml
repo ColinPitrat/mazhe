@@ -23,10 +23,10 @@ script:
 - pip install pygrep pygit2 pdfrw
 - git clone https://github.com/LaurentClaessens/pytex
 - sed -i 's/\/usr\/bin\/python3/\/usr\/bin\/env python3/' pytex/pytex
-- PATH=$PATH:$PWD/pytex pytex lst_frido.py | grep "^[(\!]"
+- PATH=$PATH:$PWD/pytex pytex lst_frido.py | grep -v "Warning" | grep -v "^$"
 #- PATH=$PATH:$PWD/pytex pytex lst_frido.py
 - mv 0-lefrido.pdf frido.pdf
-- PATH=$PATH:$PWD/pytex pytex lst_giulietta.py | grep "^[(\!]"
+- PATH=$PATH:$PWD/pytex pytex lst_giulietta.py  | grep -v "Warning" | grep -v "^$"
 #- PATH=$PATH:$PWD/pytex pytex lst_giulietta.py
 - mv 0-giulietta.pdf giulietta.pdf
 
