@@ -34,6 +34,7 @@ script:
 # Tag 'latest' before deploying
 before_deploy:
 - export TRAVIS_TAG=latest
+- git tag -d $TRAVIS_TAG || true
 - git tag -f $TRAVIS_TAG
 deploy:
   provider: releases
