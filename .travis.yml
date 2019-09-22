@@ -18,10 +18,16 @@ script:
 - sed -i 's/\/usr\/bin\/python3/\/usr\/bin\/env python3/' pytex/pytex
 - PATH=$PATH:$PWD/pytex pytex lst_frido.py | grep "^[(\!]"
 - PATH=$PATH:$PWD/pytex pytex lst_giulietta.py | grep "^[(\!]"
+
 deploy:
   provider: releases
+  # To fill the "secure" field:
+  # In github, click on profile picture, Settings, Developer settings, Personal access tokens, Generate new token, toggle repo_deployment
+  # sudo apt-get install ruby-all-dev
+  # sudo gem install travis -v 1.8.10 --no-rdoc --no-ri
+  # travis encrypt <api key>
   api_key:
-    secure: FyxYsrWC4vEDeP5OjHbHjAhylhuw1CyvGkLIJa17OyvYF2YdNof4Hnr1Xcpj6rQRt6SYeWezntQGE7BcDAQ/RD08KAiyFFqzOTU66HYlydHBNdl8pAGxYS5345v8g43I38YZIh32Ajal2KPgdOR+0fNxAyXuqYIs6CAH3X1DnfXJERhrQlFZ6EaBRbF//t14S/9ma/dg9/L3ECW8p9oKz8A/IHLrZJFIwARwm3AgyV5TCM3tcKhzXmB1ynMXsnal3BsoxHJ4mqxSb3oSdNfy4meqr5sVeEAFsP3a/B4jh/sBCfYjQNNGqU1l2rj76433WIJQvx1/yvDkwr8l3jfHqk4qY3gxedD49SIy2zUVYbmXGq6IGFnLnynkXA80Ww5wGPKipalBcXO9A6gZ6RtKwiilML8ep5Hrlug+lHBMPpvdEA2xwOZdMrlq1BCXCeAUOoQBxPPEzpu7BFv4PFqG6IZWC6CjdQp4LOQV1ufZrWlkmOKGt8Gyxg5UdqY7vCakDrmgnL1wMB/c01pCEHCOWoA44BsCDdlHN8ZUk5l8WPDkuEZ0mSpUCCLQ4R2Szx9iAKvcY6FXYw1kBMduJoaRofR2j7LexpDaoDkUeh4Fkw56ooEMVMrdlEJjDX2AZCxX8w0mFHjOn5rNeSucOJorCMQUANyRH+eUaLZFsMZrU2Y=
+    secure: e3vB7v6qi06VaWZgrKW1h0qhvbrKUC0wNNCgG+GZE6/TawRrwhAaMqUmHNgrRcJ17H2eyHlfuAEoudJ6AaIZJbnthAlKGdICIJWuamE8wIlVffSIpTI/F/c6rwnhxwYhLgLMkdZ5jp5xeTnUV3A/xrMdBgkgCwfPxmiotkCMGnjV75iJ4qLdrN+3/n2n58WQAn5Fei/ZMEH4S9ESUqYb1QO4IDLZDQfjjUyUsPXb2ZvslfbHQTRKuJXNK4kqBJNWqs4YwNqCZasRJf4T9G8DIHTuoEoUE9veAF1USPJSJ/y+k9x9OXWn1tpk1SbLm+DLskdNyJItPVASHhuNU5CQo6zteVDJ2OajaD2GifdKS9n4VCY1Nrgk3OEKy6cHDBCtq8+YfUJUDfViw+u26kpJDq56Xk31fd0LdBvAIo2Fo7K0c16D5eoFtSNhvTIGSOtpx/B+5JLJDH2QQC07FHogbC+9hARGwFTW4q+/Sh8s0Fa0b5GCCKJCIc5PVewNoLhL4f7jaJF5fXQY7MVeDURNDHnaT0Dfh/W/m8wtGiYlBeERlI4iL+sStFAGzCZGLZilRnm81zPuOG7boHhVRMcDeBq2NYOeFukQOytVSEV0ScJlPo+fXKDHoqvqzLICI6plTm/9xkOnddMBb8BU9MQC83hJuc9yknBVdZ2bUdyMl9Y=
   file:
   - frido.pdf
   - giulietta.pdf
