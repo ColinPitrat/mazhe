@@ -8,6 +8,7 @@ addons:
      - texlive-fonts-extra
      - texlive-latex-extra
      - texlive-science
+     - texlive-math-extra
      - texlive-lang-french
 
 script:
