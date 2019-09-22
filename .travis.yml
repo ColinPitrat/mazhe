@@ -4,6 +4,7 @@ python:
 addons:
   apt:
     packages:
+     - lmodern
      - texlive-fonts-recommended
      - texlive-generic-recommended
      - texlive-fonts-extra
