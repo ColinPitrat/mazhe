@@ -4,6 +4,7 @@ python:
 addons:
   apt:
     packages:
+     - texlive-full
      - texlive-science
      - texlive-lang-french
 
