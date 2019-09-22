@@ -20,7 +20,8 @@ script:
 - PATH=$PATH:$PWD/pytex pytex lst_frido.py
 - mv 0-lefrido.pdf frido.pdf
 #- PATH=$PATH:$PWD/pytex pytex lst_giulietta.py | grep "^[(\!]"
-#- mv 0-giulietta.pdf giulietta.pdf
+- PATH=$PATH:$PWD/pytex pytex lst_giulietta.py
+- mv 0-giulietta.pdf giulietta.pdf
 
 # Tag 'latest' before deploying
 before_deploy:
@@ -43,6 +44,7 @@ deploy:
   skip_cleanup: true
   overwrite: true
   on:
+    tags: false
     branch:
     - master
     - travis
