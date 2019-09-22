@@ -6,10 +6,9 @@ addons:
     packages:
      - texlive-science
      - texlive-lang-french
-     - python3-pygit2
-     - python3-pdfrw
 
 script:
+ - pip install pygrep pygit2 pdfrw
  - git clone https://github.com/LaurentClaessens/pytex
  - sed -i 's/\/usr\/bin\/python3/\/usr\/bin\/env python3/' pytex/pytex
  - PATH=$PATH:$PWD/pytex pytex lst_frido.py
