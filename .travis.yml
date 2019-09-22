@@ -22,6 +22,10 @@ script:
 #- PATH=$PATH:$PWD/pytex pytex lst_giulietta.py | grep "^[(\!]"
 #- mv 0-giulietta.pdf giulietta.pdf
 
+# Tag 'latest' before deploying
+before_deploy:
+- export TRAVIS_TAG=latest
+- git tag -f $TRAVIS_TAG
 deploy:
   provider: releases
   name: latest
