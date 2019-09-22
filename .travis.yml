@@ -25,6 +25,7 @@ script:
 deploy:
   provider: releases
   name: latest
+  body: "Les dernières versions du Frido et de Giulietta."
   # To fill the "secure" field:
   # In github, click on profile picture, Settings, Developer settings, Personal access tokens, Generate new token, toggle repo_deployment
   # sudo apt-get install ruby-all-dev
@@ -36,6 +37,7 @@ deploy:
   - frido.pdf
   - giulietta.pdf
   skip_cleanup: true
+  overwrite: true
   on:
     branch:
     - master
