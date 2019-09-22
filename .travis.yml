@@ -1,0 +1,13 @@
+language: tex
+addons:
+  apt:
+    packages:
+     - texlive-science
+     - texlive-lang-french
+
+script:
+ - git clone https://github.com/LaurentClaessens/pytex
+ - PATH=$PATH:$PWD/pytex pytex lst_frido.py
+ - PATH=$PATH:$PWD/pytex pytex lst_frido.py --verif
+ - PATH=$PATH:$PWD/pytex pytex lst_giulietta.py
+ - PATH=$PATH:$PWD/pytex pytex lst_giulietta.py --verif
