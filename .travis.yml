@@ -5,6 +5,7 @@ addons:
   apt:
     packages:
      - texlive-fonts-recommended
+     - texlive-generic-recommended
      - texlive-fonts-extra
      - texlive-latex-extra
      - texlive-science
