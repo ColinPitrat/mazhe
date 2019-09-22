@@ -29,5 +29,3 @@ deploy:
  - frido.pdf
  - giuletta.pdf
  skip_cleanup: true
- on:
-   tags: true
