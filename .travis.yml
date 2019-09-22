@@ -6,9 +6,12 @@ addons:
     packages:
      - texlive-science
      - texlive-lang-french
+     - python3-pygit2
+     - python3-pdfrw
 
 script:
  - git clone https://github.com/LaurentClaessens/pytex
+ - sed -i 's/\/usr\/bin\/python3/\/usr\/bin\/env python3/' pytex/pytex
  - PATH=$PATH:$PWD/pytex pytex lst_frido.py
  - PATH=$PATH:$PWD/pytex pytex lst_frido.py --verif
  - PATH=$PATH:$PWD/pytex pytex lst_giulietta.py
