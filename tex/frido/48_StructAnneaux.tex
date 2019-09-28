@@ -63,7 +63,7 @@ Commençons par donner une autre vision de la divisibilité dans les anneaux int
 Donc la divisibilité devient en réalité une relation d'ordre dont nous pouvons chercher un maximum et un minimum. Si \( S\) est une partie de \( A\), nous notons \( a\divides S\) pour exprimer que \( a\divides x\) pour tout \( x\in S\); de la même façon, \( S\divides b\) signifie que \( x\divides b\) pour tout \( x\in S\).
 
 
-Nous rappelons également la définition~\ref{DEFooQBGJooKJqHXr} de morphisme d'anneaux. Remarquons que si \( f\) est un morphisme, nous avons \( f(0)=0\) et \( f(x)^{-1}=f(x^{-1})\).
+Nous rappelons également la définition~\ref{DEFooSPHPooCwjzuz} de morphisme d'anneaux. Remarquons que si \( f\) est un morphisme, nous avons \( f(0)=0\) et \( f(x)^{-1}=f(x^{-1})\).
 
 \begin{lemma}[\cite{ooLIOMooBuCPUS}]
     Les éléments inversibles d'un anneau sont diviseurs de tous les éléments.
@@ -933,45 +933,6 @@ La définition d'un idéal dans un anneau est la définition~\ref{DefooQULAooREU
     L'ensemble \( 2\eZ\) est un idéal de \( \eZ\). On peut aussi le noter \( (2) \).
 \end{example}
 
-\begin{propositionDef}      \label{PROPooGXMRooTcUGbi}
-    Soit \( A\), un anneau, \( I\) un idéal bilatère\footnote{Définition~\ref{DefooQULAooREUIU}.} de \( A\). Nous considérons la relation d'équivalence \( x\sim y\) si et seulement si \( x-y\in I\). Sur le quotient
-    \begin{equation}
-        A/\sim=A/I,
-    \end{equation}
-    nous mettons les opérations
-    \begin{enumerate}
-        \item
-            \( \bar x+\bar y=\overline{ x+y }\);
-        \item
-            \( \bar x\bar y=\overline{ xy }\).
-    \end{enumerate}
-    Nous avons alors les résultats suivants :
-    \begin{enumerate}
-        \item
-            Les opérations sont bien définies,
-        \item
-            l'ensemble \( A/I\) est un anneau
-        \item
-            la surjection canonique \( A\to A/I\) est un morphisme.
-    \end{enumerate}
-    Cet anneau est appelé \defe{anneau quotient}{anneau!quotient par un idéal}.
-\end{propositionDef}
-
-\begin{proof}
-    Nous montrons que le produit est bien défini\quext{Si vous le voulez, n'hésitez pas à m'envoyer un patch pour le reste de la démonstration.}. Nous savons que, par définition,
-    \begin{equation}
-        \bar x=\{ x+i\tq i\in I \}.
-    \end{equation}
-    Calculons le produit de représentants génériques de \( \bar x\) et de \( \bar y\) :
-    \begin{equation}
-        (x+i_1)(y+i_2)=xy+xi_2+yi_1+i_1i_2.
-    \end{equation}
-    Vu que \( I\) est un idéal nous avons \( xi_2+yi_1+i_1i_2\in I\) et donc bien
-    \begin{equation}
-        (x+i_1)(y+i_2)\in \overline{ xy }.
-    \end{equation}
-\end{proof}
-
 \begin{proposition}[Premier théorème d'isomorphisme pour les anneaux]
     Soient \( A\) et \( B\) des anneaux et un homomorphisme \( f\colon A\to B\). Nous considérons l'injection canonique \( j\colon f(A)\to B\) et la surjection canonique \( \phi\colon A\to A/\ker f\). Alors il existe un unique isomorphisme
     \begin{equation}
@@ -1237,8 +1198,125 @@ Nous le nommons le \defe{morphisme de Frobenius}{morphisme!Frobenius}\index{Frob
 \end{proof}
 
 \begin{definition}\label{DEFooKHWZooIfxdNc}
-    Un \defe{espace vectoriel}{espace!vectoriel} est un module sur un corps commutatif\footnote{La condition de commutativité n'est pas indispensable, mais comme nous ne parlerons que de corps commutatifs \ldots}.
+    Un \defe{espace vectoriel}{espace!vectoriel} est un module sur un corps commutatif\footnote{La condition de commutativité n'est pas indispensable, mais comme nous ne parlerons que de corps commutatifs\ldots}.
 \end{definition}
+
+\begin{definition}[\cite{BIBooSTWWooItiMUp}]        \label{DEFooRUKVooLnXxdS}
+    Soient un \( A\)-module \( M\) et un ensemble \( I\). Une famille \( (m_i)_{i\in I}\) est \defe{libre}{partie libre!module} si ils sont \defe{linéairement indépendants}{linéairement indépendant!module}, c'est à dire si pour tout choix d'une partie finie \( J\) dans \( I\) et d'éléments \( (a_j)_{j\in J}\) dans \( A\), si nous avons
+    \begin{equation}
+        \sum_{j\in J}a_jm_j=0,
+    \end{equation}
+    alors \( a_j=0\) pour tout \( j\).
+\end{definition}
+
+\begin{definition}[\cite{BIBooNKWVooYfrwSd}]        \label{DEFooWBOBooJNyyBF}
+    Soit \( S\), une partie du \( A\)-module \( M\). Le \defe{sous-module engendré}{sous-module engendré} par \( S\) est l'ensemble des éléments de \( M\) qui sont des combinaisons linéaires finies d'éléments de \( S\), c'est à dire de sommes de la forme
+    \begin{equation}
+        \sum_{t\in T}a_tt
+    \end{equation}
+    où \( T\) est fini dans \( S\) et \( a_t\in A\).
+\end{definition}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Module produit}
+%---------------------------------------------------------------------------------------------------------------------------
+
+\begin{definition}[\cite{BIBooSTWWooItiMUp}]        \label{DEFooLCJEooBvVmkV}
+    Soient un anneau \( A\) et un ensemble \( I\). Le \( A\)-\defe{module produit}{module produit} \( A^I\) est l'ensemble des applications \( I\to A\).
+
+    En termes de notations, nous écrivons ceci :
+    \begin{equation}
+        A^I=\{ (a_i)_{i\in I},a_i\in A \}.
+    \end{equation}
+    L'ensemble \( A^I\) devient un module par les définition, pour \( x,y\in A^I\) et \( a\in A\) :
+    \begin{subequations}
+        \begin{align}
+            ax&=(ax_i)_{i\in I}\\
+            x+y&=(x_i+y_i)_{i\in I}     \label{EQooODBMooQKLUgd}.
+        \end{align}
+    \end{subequations}
+    En d'autres termes, \( A^I=\Fun(I,A)\).
+\end{definition}
+
+\begin{lemma}
+    Pour chaque \( i\in I\) nous considérons l'élément \( e_i\in A^I\) donné par
+    \begin{equation}
+        e_i=(\delta_{ij})_{j\in I}.
+    \end{equation}
+    La famille \( \{ e_i \}_{i\in I}\) est libre\footnote{Définition \ref{DEFooRUKVooLnXxdS}.} dans \( A^I\).
+\end{lemma}
+
+\begin{proof}
+    Soient \( J\) fini dans \( I\) ainsi que des éléments \( a_j\in A\) (\( j\in J\)). Nous supposons que\footnote{Pour rappel, les sommes finies sont définies par \ref{DEFooLNEXooYMQjRo}.} \( \sum_{j\in J}a_je_j=0\). Calculons un peu :
+    \begin{equation}
+        \sum_{j\in J}a_je_j=\sum_{j\in J}(a_j\delta_{ji})_{i\in I}=\left( \sum_{j\in J}a_j\delta_{ji} \right)_{i\in I}.
+    \end{equation}
+    Pour que le tout soit nul dans \( A^I\), il faut que
+    \begin{equation}
+        \sum_{j\in J}a_j\delta_{ji}
+    \end{equation}
+    soit nul pour tout \( i\in I\). Si nous fixons \( i\in I\), la somme sur \( j\) possède un seul terme non annulé par \( \delta_{ji}\), et c'est le terme \( j=i\). Nous avons donc \( a_i=0\).
+\end{proof}
+
+\begin{normaltext}
+    Nous notons \( A^{(I)}\) le sous-module de \( A^I\) engendré\footnote{Définition \ref{DEFooWBOBooJNyyBF}.} par les \( e_i\).
+\end{normaltext}
+
+\begin{theorem}[Propriété universelle de \( A^{(I)}\)\cite{BIBooSTWWooItiMUp}]      \label{THOooPDZCooJnHbOd}
+    Soient un anneau \( A\) ainsi qu'un \( A\)-module \( P\). Pour \( \phi\in\Hom_A(A^{(I)}, P)\), nous considérons
+    \begin{equation}
+        \begin{aligned}
+            \phi|_I\colon I&\to P \\
+            i&\mapsto \phi(e_i). 
+        \end{aligned}
+    \end{equation}
+    \begin{enumerate}
+        \item
+            
+    L'application
+    \begin{equation}
+        \begin{aligned}
+            f\colon \Hom_A(A^{(I)},P)&\to \Fun(I,P) \\
+            \phi&\mapsto \phi|_I 
+        \end{aligned}
+    \end{equation}
+    est une bijection.
+\item
+    L'application inverse est \( g\colon \Fun(I,P)\to \Hom_A(A^{(I)},P) \) donnée par
+    \begin{equation}
+        g(\psi)\big( \sum_{j\in J}a_je_j \big)=\sum_{j\in J}a_j\psi(j)
+    \end{equation}
+    pour tout \( J\) fini dans \( I\) et choix de \( a_j\in A\).
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    Nous allons montrer que \( g\big( f(\phi) \big)=\phi\) et que \( f\big( g(\psi) \big)=\psi\) pour tout \( \phi\in\Hom_A(A^{(I)},P)\) et pour tout \( \psi\in \Fun(I,P)\).
+
+    Dans un premier sens nous avons :
+    \begin{subequations}
+        \begin{align}
+            g\big( f(\phi) \big)\big( \sum_ja_je_j \big)&=\sum_ja_jf(\phi)(j)\\
+            &=\sum_ja_j\phi(e_j)\label{SUBALIGNooBWPLooHeIaQg}\\
+            &=\phi(\sum_ja_je_j)        \label{SUBALIGNooUOQPooCwLgZo}.
+        \end{align}
+    \end{subequations}
+    Justifications :
+    \begin{itemize}
+        \item 
+            Pour \eqref{SUBALIGNooBWPLooHeIaQg}, nous avons utilisé le fait que \( f(\phi)(i)=\phi|_I(i)=\phi(e_i)\).
+        \item
+            Pour \eqref{SUBALIGNooUOQPooCwLgZo}, nous utilisons le fait que \( \phi\) est un morphisme de modules.
+    \end{itemize}
+    Et pour l'autre sens,
+    \begin{equation}
+        f\big( g(\psi) \big)(i)=g(\psi)(e_i)=\psi(i).
+    \end{equation}
+\end{proof}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Sous-module}
+%---------------------------------------------------------------------------------------------------------------------------
 
 Soient \( M\) un \( A\)-module et \( x=(x_i)_{i\in I}\) une famille d'éléments de \( M\) paramétrée par l'ensemble \( I\). Nous considérons l'application
 \begin{equation}
@@ -1329,6 +1407,235 @@ Un module simple est a fortiori indécomposable. L'inverse n'est pas vrai comme 
 \begin{definition}\label{DefkAXaWY}
     L'\defe{algèbre engendrée}{algèbre!engendrée} par \( X\) est l'intersection de toutes les sous-algèbres de \( A\) contenant \( X\) (qui est une algèbre par le lemme~\ref{LEMooVKLKooSAHmpZ}).
 \end{definition}
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+\section{Polynômes}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Polynômes d'une variable}
+%---------------------------------------------------------------------------------------------------------------------------
+
+Et voila la définition que tout le monde attendait; la définition des anneaux de polynômes. Pour ne pas taper trop fort du premier coup, nous commençons par les polynômes d'une seule variable.
+
+Nous allons définir et étudier ici l'anneau des polynômes sur un anneau \( A\), c'est à dire ce qui sera noté \( A[X]\). Pour \( \eK(X)\) lorsque \( \eK\) est un corps, voir~\ref{DEFooQPZIooQYiNVh}.
+
+L'ensemble des polynômes sur \( A\) sera simplement \( A^{(\eN)}\). Vu que \( \eN\) est un ensemble bien particulier possédant plein de structure, nous allons pouvoir mettre sur \( A^{(\eN)}\) une structures non seulement de \( A\)-module (ça c'est déjà fait), mais en plus d'anneau ainsi qu'une évaluation.
+\begin{definition}      \label{DEFooFYZRooMikwEL}
+    L'ensemble des \defe{polynômes}{polynômes} en une indéterminée sur l'anneau \( A\) est \( A^{(\eN)}\) défini en \ref{DEFooLCJEooBvVmkV}.
+\end{definition}
+
+Notez que nous n'avons pas encore donné la notation \( A[X]\); nous verrons plus tard comment elle arrive. 
+
+Vu que \( A^{(\eN)}\) est engendré par les \( e_i\), tout polynôme sur \( A\) s'écrit \( P=\sum_{i=1}^na_ie_i\).
+
+\begin{definition}      \label{DEFooNXKUooLrGeuh}
+    Nous ajoutons deux structures à \( A^{(\eN)}\).
+    \begin{description}
+        \item[L'évaluation] Si \( \alpha\in A\) et si \( P\in A^{(\eN)}\), nous définissons \( P(\alpha)\) par
+            \begin{equation}        \label{EQooDJISooTEkMOw}
+                P(\alpha)=(\sum_{i=0}^{n}a_ie_i)(\alpha)=\sum_{i=0}^na_i\alpha^i,
+            \end{equation}
+            étant entendu que \( \alpha^0=1\) dans \( A\).
+
+            Cette définition s'étend immédiatement au cas où \( B\) est un anneau qui étend \( A\). Dans ce cas nous pouvons définir \( P(b)\) pour tout \( P\in \eA^{(\eN)}\) et \( b\in B\) avec la même formule \eqref{EQooDJISooTEkMOw}.
+        \item[Le produit] C'est ici que la structure particulière de \( \eN\) est utilisée. Nous définissons le produit \( A^{\eN}\times A^{(\eN)}\to A^{(\eN)}\) de la façon suivante. Si \( (P_k)_{k\in \eN}\) est la suite (presque partout nulle) d'éléments de \( A\) qui définit \( P\) et si \( (Q_k)_{k\in \eN}\) est celle de \( Q\), nous notons
+        \begin{equation}    \label{EQooTNCSooKklisb}
+            (PQ)_n=\sum_{k=0}^nP_kQ_{n-k},
+        \end{equation}
+        et donc \( PQ=\sum_i(PQ)_ie_i\). Plus explicitement,
+        \begin{equation}    \label{EQooCIBUooAgpxjL}
+            (\sum_{i=0}^na_ie_i)(\sum_{j=0}^mb_je_j)=\sum_{k=0}^{\infty}\Big( \sum_{\substack{  (i,j)\in \eN^2 \\i+j=k}}a_ib_j \Big)e_k.
+        \end{equation}
+        Notons qu'à droite, la somme sur \( k\) est une somme finie.
+    \end{description}
+\end{definition}
+
+\begin{proposition}     \label{PROPooGDQCooHziCPH}
+    Soit un anneau \( A\). À propos de structure sur \( A^{(\eN)}\).
+    \begin{enumerate}
+        \item
+            Avec le produit, l'ensemble \( A^{(\eN)}\) devient un anneau.
+        \item
+    L'application
+    \begin{equation}
+        \begin{aligned}
+            g\colon A^{(\eN)}&\to A \\
+            P&\mapsto P(\alpha)
+        \end{aligned}
+    \end{equation}
+    est un morphisme d'anneaux\footnote{Définition \ref{DEFooSPHPooCwjzuz}.}. En particulier, \( (PQ)(\alpha)=P(\alpha)Q(\alpha)\).
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    En plusieurs points
+    \begin{subproof}
+        \item[Anneau]
+            L'identité pour le produit dans \( A^{(\eN)}\) est le polynôme donné par \( a_0=1\) et \( a_i=0\) pour \( i\neq 0\). Cela se vérifie en utilisant directement la définition \eqref{EQooCIBUooAgpxjL}. La distributivité aussi\quext{Je n'ai pas fait les calculs, écrivez-moi pour me dire si ça va facilement.}.
+        \item[Le morphisme]
+    Nous notons \( P_k\) les éléments de la suite définissant \( P\) et \( Q_k\) ceux de \( Q\). Alors nous avons
+    \begin{equation}
+        (P+Q)(\alpha)=\sum_k(P_k+Q_k)\alpha^k=\sum_kP_k\alpha^k+\sum_kQ_k\alpha^k=P(\alpha)+Q(\alpha).
+    \end{equation}
+    Vous aurez noté que la première égalité était la définition \eqref{EQooODBMooQKLUgd}. De même,
+    \begin{subequations}
+        \begin{align}
+            P(\alpha)Q(\alpha)&=\big( \sum_nP_n\alpha^n \big)\big( \sum_kQ_k\alpha^k \big)=\sum_kQ_k\big( \sum_nP_n\alpha^n \big)\alpha^k=\sum_k\sum_nQ_kP_n\alpha^{n+k}\\
+            &=\sum_m\big( \sum_{l=0}^mP_lQ_{m-l} \big)\alpha^m=\sum_m(PQ)_m\alpha^m=(PQ)(\alpha).
+        \end{align}
+    \end{subequations}
+    \end{subproof}
+\end{proof}
+
+\begin{definition}  \label{DefDegrePoly}
+    Soit \( P \in \polyP\), \( P \neq 0 \). On appelle \defe{degré}{degré!d'un polynôme} de $P$ le plus grand nombre naturel $n$ pour lequel le coefficient correspondant est non-nul. Ce naturel est noté \( \deg(P) \).
+\end{definition}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{La notation ${A[X]}$}
+%---------------------------------------------------------------------------------------------------------------------------
+\label{SUBSECooLEKVooFBPSJz}
+
+Si \( A\) est un anneau, nous avons déjà défini les polynômes en une indéterminée sur \( A\) comme étant le module \( A^{(\eN)}\) qui est devenu un anneau par la proposition \ref{PROPooGDQCooHziCPH}.
+
+Le polynôme donné par la suite \( (a_n)_{n\in \eN}\) est souvent notée
+\begin{equation}
+    \sum_ka_kX^k.
+\end{equation}
+Par exemple avec \( a=(4,2,8)\) nous avons \( a=8X^2+2X+4\). Nous utiliserons souvent cette notation, qui est très pratique parce qu'elle s'adapte bien aux règles de multiplication et d'addition, en particulier la distributivité.
+
+Il y a (au moins) deux façons de comprendre ce que signifie réellement «\( X\)» dans cette notation.
+
+%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\subsubsection{Première façon (qui botte en touche)}
+%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+La première est de dire qu'il n'a pas de significations, et que \( X^2\) est un simple abus de notations pour écrire \( (0,0,1,0,\cdots)\). Avec cette façon de voir, nous notons l'anneau des polynômes sur \( A\) par «\( A[X]\)» où le \( X\) n'a pas d'autres raisons d'être que d'avertir le lecteur que nous réservons la lettre «\( X\)» pour utiliser la notation pratique des polynômes.
+
+%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\subsubsection{Seconde façon (la bonne)}
+%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\label{SUBSUBSECooPNBYooWXEHrg}
+
+La seconde façon de voir le «\( X\)» est de nous rappeler que \( A^{(\eN)}\) a une base en tant de que module : les \( e_k\) dont nous avons parlé plus haut. Nous posons \( X=e_1\), et nous prenons la convention \( X^0=1\). Alors nous avons \( e_k=X^k\) et nous notons \( A[X]\)\nomenclature[A]{\( A[X]\)}{tous les polynômes de degré fini à coefficients dans \( A\)} l'anneau \(A^{(\eN)}\) exprimé avec \( X\).
+
+Dans les deux cas, il n'est pas vraiment légitime d'écrire des égalités comme « \( P(X)=X^2+2X-3\) », et encore moins de dire «Le polynôme \( P\), \emph{évalué} en \( X\) vaut \( X^2+2X-3\)»  : il est plus correct d'écrire « \( P=X^2+2X-3\) ».
+
+Le lemme suivant montre que ces notations tombent vraiment à point. La véritable difficulté de l'énoncé est de comprendre qu'il n'est pas trivial.
+
+Nous avons vu dans la définition \ref{DEFooNXKUooLrGeuh} que si \( B\) est un anneau qui étant \( A\), et si \(P\in A[X] \), alors nous avons une définition de \( P(b)\) pour tout \( b\in B\). Nous appliquons cela à \( B=A[X]\), qui est un anneau qui étend \( A\). Autrement dit, si \( P\) et \( Q\) sont des polynômes, ça a un sens d'écrire \( P(Q)\) et le résultat sera un élément de \( A[X]\). 
+
+Dans le cas particulier \( Q=X\), nous avons une chouette formule.
+\begin{lemma}       \label{LEMooGKWQooVOyeDX}
+    Nous avons
+    \begin{equation}
+        P(X)=P
+    \end{equation}
+    pour tout \( P\in A[X]\).
+\end{lemma}
+
+\begin{proof}
+    Si \( P=(a_k)_{k\in \eN}\) alors par définition \( P(\alpha)=\sum_ka_k\alpha^k\) dès que \( \alpha\) est dans un anneau \( B\) qui étend \( A\). Nous considérons le cas particulier \( B=\eA[X]\) et \( \alpha=X\), c'est-à-dire \( Q=(0,1,0,\ldots)\), l'élément \( P(X)\) de \( A[X]\) vaut
+    \begin{equation}        \label{EQooABULooFCEasf}
+        \sum_ka_kX^k,
+    \end{equation}
+    qui est exactement \( P\) lui-même.
+\end{proof}
+
+Mais il faut bien comprendre que si \( P\) est le polynôme \( (-3,2,1,0,\ldots)\), noté \( X^2+2X-3\), écrire \( P(X)=X^2+2X-3\) est une pirouette de notations que rien ne justifie par rapport à simplement écrire \( P=X^2+2X-3\).
+
+%---------------------------------------------------------------------------------------------------------------------------
+\subsection{Polynômes de plusieurs variables}
+%---------------------------------------------------------------------------------------------------------------------------
+
+\begin{definition}      \label{DEFooZNHOooCruuwI}
+    L'ensemble des \defe{polynôme de \( n\) variables}{polynôme de plusieurs variables} sur l'anneau \( A\) est \( A^{(\eN^n)}\), c'est à dire l'ensemble des suites indexées par \( \eN^n\) et dont seulement une quantité finie de coefficients sont non nuls.
+
+    Le produit sur \( A[X_1,\ldots, X_n]\) est défini par
+    \begin{equation}
+        (PQ)(k_1,\ldots, k_n)=\sum_{\substack{ (l_1,\ldots, l_n),(m_1,\ldots, m_n)\in \eN^n\times \eN^n   \\l_i+m_i=k_i}}P_{l_1,\ldots, l_n}Q_{m_1,\ldots, m_n}.
+        \end{equation}
+\end{definition}
+
+\begin{normaltext}
+    Dans \( A[X_1,\ldots, X_n]\), la multiplication n'est pas la multiplication de fonctions \( \eN^n\to \eK\), parce que le but est d'obtenir la multiplication usuelle au niveau des évaluations.
+\end{normaltext}
+
+\begin{definition}
+    Si \( P\) est un polynôme de \( n\) variables sur \( A\), et si \( (x_1,\ldots, x_n)\in A^n\), \defe{l'évaluation}{évaluation!polynôme plusieurs variables} de \( P\) sur \( (x_1,\ldots, x_n)\) est
+    \begin{equation}
+        P(x_1,\ldots, x_n)=\sum_{(k_1,\ldots, k_n)\in \eN^n}P_{k_1,\ldots, k_n}x_1^{k_1}\ldots x_n^{k_n}.
+    \end{equation}
+    Notez que la somme, bien que sur \( \eN^n\), est une somme finie.
+\end{definition}
+
+\begin{normaltext}
+    Comme dans le cas des polynômes d'une seule variable, les \( X_i\) dans la notation \( A[X_1,\ldots, X_n]\) sont à prendre à la légère. L'anneau des polynômes de \( n\) variables sur \( A\) aurait mieux fait d'être noté par exemple par \( \mP_n(A)\).
+
+    Le fait est que nous avons les polynômes élémentaires définis par
+    \begin{equation}
+        X_1(k_1,\ldots, k_n)=\begin{cases}
+            1    &   \text{si } (k_1,\ldots, k_n)=(1,0\ldots, 0)\\
+            0    &    \text{sinon. }
+        \end{cases}
+    \end{equation}
+    et que l'anneau des polynômes peut être vu comme \( A\) (les polynômes constants) étendus par les \( X_i\).
+
+    Quoi qu'il en soit, les \( X_1\) dans la notation \( A[X_1,\ldots, X_n]\) sont des indices muets. L'anneau \( A[X_1,\ldots, X_n]\) est exactement le même que \( A[T_1,\ldots, T_n]\).
+\end{normaltext}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Action du groupe symétrique}
+%---------------------------------------------------------------------------------------------------------------------------
+
+Par soucis de notations, nous notons \( \Poly_n(A)\) l'anneau des polynômes de \( n\) variables sur \( A\). La propriété universelle de \( \Poly_n(A)=A^{(\eN^n)}\) du théorème \ref{THOooPDZCooJnHbOd} nous donne une application
+\begin{equation}
+    g\colon \Fun\big(\eN^n,\Poly_n(A)\big)\to \Hom_A\big( \Poly_n(A),\Poly_n(A) \big)
+\end{equation}
+Avec cela nous pouvons énoncer et démontrer le lemme qui donne l'action de \( S_n\)\footnote{Définition du groupe symétrique \( S_n\) en \ref{DEFooJNPIooMuzIXd}.} sur \( \Poly_n(A)\).
+
+\begin{lemma}[\cite{BIBooFDZDooJQLjlB}]       \label{LEMooIRVQooHvoNBq}
+    Pour \( \sigma\in S_n\) nous définissons 
+    \begin{equation}
+        \begin{aligned}
+            \phi_{\sigma}\colon \eN^n&\to \Poly_n(A) \\
+            m&\mapsto e_{\sigma(m)}. 
+        \end{aligned}
+    \end{equation}
+    Alors l'application
+    \begin{equation}
+        \begin{aligned}
+            \rho\colon S_n&\to \Hom_A\big( \Poly_n(A),\Poly_n(A) \big) \\
+            \sigma&\mapsto g(\phi{\sigma}) 
+        \end{aligned}
+    \end{equation}
+    est une action\footnote{Définition \ref{DefActionGroupe}.}.
+\end{lemma}
+
+\begin{proof}
+    Nous commençons par donner une expression à notre \( \rho\). Un élément de \( \Poly_n(A)\) est de la forme \( \sum_{m\in \eN^n}a_me_m\), et nous avons\footnote{La somme est définie par \ref{DEFooLNEXooYMQjRo}, et ça va être important. Ah oui, en réalité partout, les sommes sont finies parce que les \( a_m\) (\( m\in \eN^n\)) sont presque tous nuls. Il faudrait écrire sur la somme sur \(\{ m\in \eN^2\tq a_m\neq 0 \}\), mais vous vous imaginez la complication dans la notation.}
+    \begin{equation}
+        \rho(\sigma)\big( \sum_{m\in \eN^n}a_me_m \big)=\sum_ma_m\phi_{\sigma}(m)=\sum_ma_me_{\sigma(m)}.
+    \end{equation}
+    
+    Nous avons tout de suite \( \rho(\id)=\id\).
+
+    En ce qui concerne la composition, nous avons d'une part
+    \begin{equation}
+        \rho(\sigma_1\sigma_2)\big( \sum_ma_me_m \big)=g(\phi_{\sigma_1\sigma_2})\big( \sum_ma_me_m \big)=\sum_ma_me_{\sigma_1\sigma_2(m)},
+    \end{equation}
+    et d'autre part,
+    \begin{subequations}
+        \begin{align}
+            \rho(\sigma_1)\rho(\sigma_2)\big( \sum_ma_me_m \big)&=\rho(\sigma_1)\big( \sum_ma_me_{\sigma_2(m)} \big)\\
+            &=\rho(\sigma_1)\big( \sum_ma_{\sigma_2^{-1}(m)}e_m \big)   \label{SUBEQooTSCYooCUWiRz}\\
+            &=\sum_ma_{\sigma_2^{-1}(m)}e_{\sigma_1(m)}\\
+            &=\sum_ma_me_{\sigma_1\sigma_2(m)}      \label{SUBEQooQPGPooVvqJdT}
+        \end{align}
+    \end{subequations}
+    La proposition \ref{PROPooJBQVooNqWErk} est utilisée pour \eqref{SUBEQooTSCYooCUWiRz} et pour \eqref{SUBEQooQPGPooVvqJdT}.
+\end{proof}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \section{Anneau intègre}

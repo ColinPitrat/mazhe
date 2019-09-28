@@ -160,7 +160,33 @@ Comme tout cours de mathématique, ce cours fait des choix qui sont parfois disc
         Voir les remarques~\ref{REMooFBLLooDnkmjR}.
     \item
         Le mot «corps» n'implique pas la commutativité, et nous n'utilisons pas la terminologie «anneau à division». Voir la remarque~\ref{REMooYRNUooYgBBKF} et la discussion~\ref{NORMooGPWRooIKJqqw}.
+\end{enumerate}
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+\section{Autre choix pas spécialement standards}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Nous listons ici quelque choix qui n'induisent pas de différences ou d'incompatibilité avec les autres cours, mais qui doivent être compris et justifiés.
+
+\begin{enumerate}
+    \item
+        Nous n'utilisont pas les notations \( o(x)\) ou autres \( O(N^2)\). D'abord parce que je n'ai jamais très bien compris comment elles fonctionnent, et ensuite (surtout) parce que ces notations induisent en erreur. Ce sont des notations qui cachent sous des notations a peu près intuitive l'utilisation de théorèmes pas simples.
+
+        Écrire
+        \begin{equation}
+            f(x)=P(x)+o(x^2),
+        \end{equation}
+        c'est un peu comme quand on écrit (horreur !)
+        \begin{equation}
+            F(x)=\int f(x)dx+C.
+        \end{equation}
+        Où est le \( x\) à droite ? Quel est le status de \( C \) ? 
+
+        Même chose pour la notation \( f(x)=P(x)+o(x^2)\). Le \( x\) de \( o(x^2)\) est-il le \( x\) qu'on a à gauche ? Si \( g(x)=Q(x)+o(x^2)\), est-ce le même \( o\) que celui de \( f\) ?
+    \item
+        Nous allons être plus calme avec la notation \( A[X]\) pour les polynômes sur l'anneau \( A\), et encore moins \( A[X_1,\ldots, X_n]\) pour les polynômes de \( n\) variables. Au lieu de cela nous utilisons \( \Poly(A)\) et \( \Poly_n(A)\).
+
+        Est-ce que vous diriez que \( A[X]=A[Y]\) ? Quelle est exactement la nature de \( X\) dans \( P=X^2+1\) ou dans \( P(X)=X^2+1\) ? Si \( P\in A[X]\) vaut \( P(X)=X^2\)  et si \( Q\in A[Y]\) vaut \( Q(Y)=Y^2\), est-ce que vous oseriez écrire \( P=Q\) ?
 \end{enumerate}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -340,8 +366,15 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
 %///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 \begin{enumerate}
-    \item
-        Pour donner un peu de consistance à l'exemple \ref{ExluqIkE}, il faudrait décrire les éléments irréductibles de \( \eZ[i\sqrt{ 2 }]\).
+    \item La définition \ref{DEFooLNEXooYMQjRo} de \( \sum_{i\in I}f(i)\)  (\( I\) est fini et \( f\colon I\to (G,+)\) est une application) demande une preuve. Comment prouver que
+    \begin{equation}
+        \sum_{i=1}^nf\big( \sigma_1(i) \big)=\sum_{i=1}^nf\big( \sigma_2(i) \big)
+    \end{equation}
+    lorsque \( \sigma_1\) et \( \sigma_2\) sont des bijections ? 
+
+    De façon peut-être plus simple, il faut prouver la proposition \ref{PROPooJBQVooNqWErk} qui exprime l'invariance d'une somme commutative finie sous le groupe des bijections des termes.
+
+    Je crains que cela demande de décomposer \( \sigma_1\sigma_2^{-1}\) en cycles et de pas mal chipoter pour tout ramener à des permutations de deux termes.
 \end{enumerate}
 
 %///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -494,6 +527,57 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
 \subsubsection{Non classées}
 %///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+\begin{enumerate}
+    \item
+        À propos de suites de Cauchy dans un espace vectoriel topologique et dans un espace métrique, est-ce que le théorème~\ref{THOooGQZSooAmQolf} est correct ?
+
+        Soit \( V\) un espace vectoriel topologique métrisable\footnote{i.e. admet une base dénombrable de topologique, voir la proposition~\ref{PROPooPRLBooGtsRjr}}, alors il admet une métrique \( d\) compatible avec la topologie telle que une suite dans \( V\) est \( d\)-Cauchy si et seulement si elle est \( \tau\)-Cauchy.
+
+        Dans cet ordre d'idée, il faut des exemples de :
+        \begin{itemize}
+            \item un espace vectoriel topologique métrisable et une métrique \( d\) compatible avec la topologie, mais dont les suites \( d\)-Cauchy ne sont pas celles \( \tau\)-Cauchy. Et en particulier dont la complétude est différente que celle de la «bonne» métrique donnée par la théorème~\ref{THOooAGBXooZnvQLK}.
+            \item Et aussi un exemple pour la remarque~\ref{REMooUFQYooUVCCjs}.
+        \end{itemize}
+    \item
+        L'exemple~\ref{ExfYXeQg} parle d'inverser une intégrale et une dérivée au sens des distributions pour prouver que la dérivée de \( \int_0^xg(t)dt\) par rapport à \( x\) est \( g\). Rendre cela rigoureux.
+    \item
+        À propos du théorème de récurrence de Poincaré~\ref{ThoYnLNEL}, l'application \( \phi\) doit être mesurable ? Répondre à la question posée sur la page de discussion de \wikipedia{fr}{Théorème_de_récurrence_de_Poincaré}{l'article sur wikipédia}.
+
+        Toujours à propos du théorème de récurrence de Poincaré, il me semble qu'il y a un énoncé qui insiste sur la compacité de l'espace des phases et une démonstration utilisant la propriété de sous-recouvrement fini. Je serais content de retrouver cela. (ce serait sans doute mettable dans la leçon sur l'utilisation de la compacité)
+        \item
+            Dans \cite{OEVAuEz}, on parle de la proposition~\ref{PropZMKYMKI} à sa page \( 10\). Comment est-ce qu'on justifie le passage
+            \begin{equation}
+                \int_{\eR^d}T\big( y\mapsto \varphi(x)\psi(x-y) \big)dx=T\Big( y\mapsto\int_{\eR^d}\varphi(x)\psi(x-y)dx \Big).
+            \end{equation}
+            Sylvie Benzoni précise que «ceci demanderai quelques justifications». Où trouver lesdites justifications ? Il s'agit de permuter une distribution et une intégrale.
+
+    \item
+        Peut-on permuter une application linéaire et continue avec une somme pas spécialement dénombrable ? En supposant que \( \sum_{i\in I}f(v_i)\) existe, la proposition~\ref{PROPooWLEDooJogXpQ} semble dire que oui. Est-ce correct ?
+
+        Peut-on avoir un exemple de partie sommable \( \{ v_i \}_{i\in I}\) et d'application linéaire continue \( f\) telle que la partie \( \{ f(v_i) \}\) ne soit pas sommable ?
+
+        Peut-être ceci dans un espace de Hilbert.  \( v_i=\frac{1}{ i^2 }e_i\) puis \( f(e_i)=i^3e_i\).
+
+    \item
+        Soit une partie orthonormale \emph{pas spécialement dénombrable} \( \{ u_i \}_{i\in I}\) d'un espace de Hilbert (pas spécialement séparable). Si
+        \begin{equation}
+            x=\sum_{i\in I}x_iu_i,
+        \end{equation}
+        puis-je prendre le produit scalaire avec \( u_{k}\) et le permuter avec la somme pour déduire que \( x_k=\langle x, u_k\rangle \) ?
+
+        C'est ce que je fais dans la proposition~\ref{PROPooWTOZooYZdlml}.
+    \item
+        Théorème de point fixe et équation différentielle. Que penser de l'exemple~\ref{EXooJXIGooQtotMc} qui itère la contraction de Cauchy-Lipschitz pour résoudre \( y'(t)=y(t)\), \( y(0)=1\) ? Est-ce que c'est générique comme comportement ? Est-ce que la convergence est efficace dans des cas moins triviaux ?
+\end{enumerate}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Mes questions d'analyse numérique}
+%---------------------------------------------------------------------------------------------------------------------------
+
+\begin{enumerate}
+    \item
+        Différences finies. Il faut une analyse de consistance, stabilité et convergence du schéma à \( 9\) points pour le laplacien donné par \eqref{EQooKUMVooCVrzjt}. Je crois qu'il est d'ordre \( 6\), mais je n'en suis vraiment pas sûr.
+\end{enumerate}
 
 %---------------------------------------------------------------------------------------------------------------------------
 \subsection{Mes questions de probabilité et statistiques.}
@@ -581,69 +665,9 @@ Je ne sais pas comment faire, et à mon avis il faudra innover.
 
 \begin{enumerate}
     \item
-        L'erreur de cancellation provoquée par la différence \( a-\tilde a\) lorsque \( a\) et \( \tilde a\) n'a pas de conséquences sur l'ordre de grandeur de la réponse. Seulement des conséquences sur la valeur des chiffres significatifs. Vrai ou faux ?
+        L'erreur de cancellation provoquée par la différence \( a-\tilde a\) lorsque \( a\) et \( \tilde a\) sont proches n'a pas de conséquences sur l'ordre de grandeur de la réponse. Seulement des conséquences sur la valeur des chiffres significatifs. Vrai ou faux ?
 
         Voir la remarque~\ref{REMooRQIJooNLdAZE}.
-\end{enumerate}
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Comment contribuer et aider (math) ?}
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-\subsubsection{Questions d'analyse}
-%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-\begin{enumerate}
-    \item
-        À propos de suites de Cauchy dans un espace vectoriel topologique et dans un espace métrique, est-ce que le théorème~\ref{THOooGQZSooAmQolf} est correct ?
-
-        Soit \( V\) un espace vectoriel topologique métrisable\footnote{i.e. admet une base dénombrable de topologique, voir la proposition~\ref{PROPooPRLBooGtsRjr}}, alors il admet une métrique \( d\) compatible avec la topologie telle que une suite dans \( V\) est \( d\)-Cauchy si et seulement si elle est \( \tau\)-Cauchy.
-
-        Dans cet ordre d'idée, il faut des exemples de :
-        \begin{itemize}
-            \item un espace vectoriel topologique métrisable et une métrique \( d\) compatible avec la topologie, mais dont les suites \( d\)-Cauchy ne sont pas celles \( \tau\)-Cauchy. Et en particulier dont la complétude est différente que celle de la «bonne» métrique donnée par la théorème~\ref{THOooAGBXooZnvQLK}.
-            \item Et aussi un exemple pour la remarque~\ref{REMooUFQYooUVCCjs}.
-        \end{itemize}
-    \item
-        L'exemple~\ref{ExfYXeQg} parle d'inverser une intégrale et une dérivée au sens des distributions pour prouver que la dérivée de \( \int_0^xg(t)dt\) par rapport à \( x\) est \( g\). Rendre cela rigoureux.
-    \item
-        À propos du théorème de récurrence de Poincaré~\ref{ThoYnLNEL}, l'application \( \phi\) doit être mesurable ? Répondre à la question posée sur la page de discussion de \wikipedia{fr}{Théorème_de_récurrence_de_Poincaré}{l'article sur wikipédia}.
-
-        Toujours à propos du théorème de récurrence de Poincaré, il me semble qu'il y a un énoncé qui insiste sur la compacité de l'espace des phases et une démonstration utilisant la propriété de sous-recouvrement fini. Je serais content de retrouver cela. (ce serait sans doute mettable dans la leçon sur l'utilisation de la compacité)
-        \item
-            Dans \cite{OEVAuEz}, on parle de la proposition~\ref{PropZMKYMKI} à sa page \( 10\). Comment est-ce qu'on justifie le passage
-            \begin{equation}
-                \int_{\eR^d}T\big( y\mapsto \varphi(x)\psi(x-y) \big)dx=T\Big( y\mapsto\int_{\eR^d}\varphi(x)\psi(x-y)dx \Big).
-            \end{equation}
-            Sylvie Benzoni précise que «ceci demanderai quelques justifications». Où trouver lesdites justifications ? Il s'agit de permuter une distribution et une intégrale.
-
-    \item
-        Peut-on permuter une application linéaire et continue avec une somme pas spécialement dénombrable ? En supposant que \( \sum_{i\in I}f(v_i)\) existe, la proposition~\ref{PROPooWLEDooJogXpQ} semble dire que oui. Est-ce correct ?
-
-        Peut-on avoir un exemple de partie sommable \( \{ v_i \}_{i\in I}\) et d'application linéaire continue \( f\) telle que la partie \( \{ f(v_i) \}\) ne soit pas sommable ?
-
-        Peut-être ceci dans un espace de Hilbert.  \( v_i=\frac{1}{ i^2 }e_i\) puis \( f(e_i)=i^3e_i\).
-
-    \item
-        Soit une partie orthonormale \emph{pas spécialement dénombrable} \( \{ u_i \}_{i\in I}\) d'un espace de Hilbert (pas spécialement séparable). Si
-        \begin{equation}
-            x=\sum_{i\in I}x_iu_i,
-        \end{equation}
-        puis-je prendre le produit scalaire avec \( u_{k}\) et le permuter avec la somme pour déduire que \( x_k=\langle x, u_k\rangle \) ?
-
-        C'est ce que je fais dans la proposition~\ref{PROPooWTOZooYZdlml}.
-    \item
-        Théorème de point fixe et équation différentielle. Que penser de l'exemple~\ref{EXooJXIGooQtotMc} qui itère la contraction de Cauchy-Lipschitz pour résoudre \( y'(t)=y(t)\), \( y(0)=1\) ? Est-ce que c'est générique comme comportement ? Est-ce que la convergence est efficace dans des cas moins triviaux ?
-\end{enumerate}
-
-%---------------------------------------------------------------------------------------------------------------------------
-\subsection{Question de numérique}
-%---------------------------------------------------------------------------------------------------------------------------
-
-\begin{enumerate}
-    \item
-        Différences finies. Il faut une analyse de consistance, stabilité et convergence du schéma à \( 9\) points pour le laplacien donné par \eqref{EQooKUMVooCVrzjt}. Je crois qu'il est d'ordre \( 6\), mais je n'en suis vraiment pas sûr.
 \end{enumerate}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
