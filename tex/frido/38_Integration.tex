@@ -151,7 +151,7 @@ Ce théorème suggère la méthode suivante pour trouver la primitive de la frac
         \end{equation}
 \end{enumerate}
 
-Notons que le polynôme \( R(Y)\) est de degré \( \deg(Q)\) (pour le voir, faire un peu de comptage de lignes et colonnes dans la matrice de Sylvester), donc il n'est a priori pas pire à factoriser que \( Q\) lui-même\footnote{C'est de la factorisation de \( Q\) qu'on a besoin pour utiliser la méthode de décomposition en fractions simples.}. Mais il se peut que nous ayons de la chance et que \( R\) soit plus facile que \( Q\).
+Notons que le polynôme \( R(Y)\) est de degré \( \deg(Q)\) (pour le voir, faire un peu de comptage de lignes et colonnes dans la matrice de Sylvester), donc il n'est à priori pas pire à factoriser que \( Q\) lui-même\footnote{C'est de la factorisation de \( Q\) qu'on a besoin pour utiliser la méthode de décomposition en fractions simples.}. Mais il se peut que nous ayons de la chance et que \( R\) soit plus facile que \( Q\).
 
 À part qu'on a peut-être plus de chance avec \( R\) qu'avec \( Q\), l'avantage de la méthode est qu'elle permet d'éviter de passer par des extensions de \( \eQ\) non nécessaires\quext{J'imagine que pour un ordinateur, c'est plus facile d'éviter les extensions.}.
 
@@ -447,7 +447,7 @@ En physique, la circulation de la force le long d'un chemin est la travail de la
 \end{example}
 
 \begin{proposition}
-    La circulation d'un champ de vecteurs le long d'un chemin ne dépend pas de la paramétrisation. En d'autres termes, si $\sigma_1$ et $\sigma_2$ sont deux chemins équivalents, alors
+    La circulation d'un champ de vecteurs le long d'un chemin ne dépend pas de le paramétrage. En d'autres termes, si $\sigma_1$ et $\sigma_2$ sont deux chemins équivalents, alors
     \begin{equation}
         \int_{\sigma_1}F=\int_{\sigma_2}F.
     \end{equation}
@@ -797,7 +797,7 @@ sage: f.integrate(y,0,sqrt(z-x**2)).integrate(x,0,sqrt(z)).integrate(z,0,2)
     \end{verbatim}
     Notez qu'il a fallu aider Sage en lui indiquant que $z>0$ et $z-x^2>0$.
 
-    Une autre paramétrisation serait
+    Un autre paramétrage serait
     \begin{equation}
         \begin{aligned}[]
             x&\colon 0\to \sqrt{2}\\
@@ -1029,7 +1029,7 @@ Si nous voulons calculer le volume de la sphère de rayon $R$, nous écrivons do
 \end{equation}
 Ici, la valeur absolue n'est pas importante parce que lorsque $\phi\in\mathopen] 0,\pi ,  \mathclose[$, le sinus de $\phi$ est positif.
 
-Des petits malins pourraient remarquer que le changement de variable \eqref{OMEqChmVarSpherique} est encore une paramétrisation de $\eR^3$ si on intervertit le domaine des angles :
+Des petits malins pourraient remarquer que le changement de variable \eqref{OMEqChmVarSpherique} est encore un paramétrage de $\eR^3$ si on intervertit le domaine des angles :
 \begin{equation}
 	\begin{aligned}[]
 		\theta&\colon 0 \to \pi\\

@@ -79,7 +79,7 @@ Si $\gamma=(J,\gamma_N)$ est un arc paramétré de classe $\mathcal{C}^1$, norma
 \end{corollary}
 
 \begin{proof}
-Nous devons démontrer que dans le cas d'une paramétrisation normale nous avons $\| \gamma_N'(s) \|=1$ pour tout $s$. Par définition,
+Nous devons démontrer que dans le cas d'un paramétrage normal nous avons $\| \gamma_N'(s) \|=1$ pour tout $s$. Par définition,
 \begin{equation}
     l\big( \mathopen[ s , s' \mathclose],g \big)=\int_s^{s'}\| \gamma_N'(u) \|du=s'-s.
 \end{equation}
@@ -128,7 +128,7 @@ Dans cette section, nous ne considérons que des courbes dans $\eR^3$.
 \end{proposition}
 
 \begin{proof}
-    La paramétrisation étant normale, nous avons
+    Le paramétrage étant normal, nous avons
     \begin{equation}
         \| \gamma_N'(s) \|^2=\sum_{i=1}^nx'_i(s)^2=1;
     \end{equation}
@@ -190,7 +190,7 @@ Par la proposition~\ref{Proptausclataupzero}, nous avons $\nu(s)\cdot\tau(s)=0$.
     \begin{equation}
         \langle \gamma_N', \gamma_N''\rangle^2 + \| \gamma_N'\times \gamma_N'' \|^2=\| \gamma_N' \|^2\| \gamma_N'' \|^2=\| \gamma_N'' \|^2
     \end{equation}
-    parce que, la paramétrisation étant normale, $\| \gamma_N' \|=1$. Mais $\langle \gamma_N', \gamma_N''\rangle =0$, donc il reste $\| \gamma_N'\times \gamma_N'' \|^2=\| \gamma_N'' \|^2$, d'où
+    parce que, le paramétrage étant normal, $\| \gamma_N' \|=1$. Mais $\langle \gamma_N', \gamma_N''\rangle =0$, donc il reste $\| \gamma_N'\times \gamma_N'' \|^2=\| \gamma_N'' \|^2$, d'où
     \begin{equation}        \label{Eqcsnormgpgpps}
         c(s)=\| \gamma_N''(s) \|=\| \gamma_N'(s)\times \gamma_N''(s) \|
     \end{equation}
@@ -320,10 +320,10 @@ où nous avons utilisé le fait que $\langle \nu(s), \nu(s)\rangle =\| \nu(s) \|
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \begin{remark}      \label{Remfougnormoupad}
-    Notons que la définition de $\tau$ est donnée pour tout arc $\mathcal{C}^1$ régulier $(I,\gamma)$ par $\tau(t)=\gamma'(t)/\| \gamma'(t) \|$. La propriété $\tau=\gamma_N'$ n'est valable que lorsque la paramétrisation est normale. Les autres définitions ont toutes été données dans le cas d'une paramétrisation normale.
+    Notons que la définition de $\tau$ est donnée pour tout arc $\mathcal{C}^1$ régulier $(I,\gamma)$ par $\tau(t)=\gamma'(t)/\| \gamma'(t) \|$. La propriété $\tau=\gamma_N'$ n'est valable que lorsque le paramétrage est normal. Les autres définitions ont toutes été données dans le cas d'un paramétrage normal.
 \end{remark}
 
-La remarque~\ref{Remfougnormoupad} nous incite à exprimer toute la base de Frenet en terme de $\gamma$ lorsque la paramétrisation n'est pas normale. Étant donné que nous pouvons toujours faire le changement de variable $\gamma(t)=\gamma_N\big( \phi(t) \big)$ (proposition~\ref{PropExisteChmNorm}), il est possible d'exprimer les vecteurs $\tau$, $\nu$ et $\beta$ ainsi que les réels $c$ et $t$ en fonction de $\gamma$ et de ses dérivées.
+La remarque~\ref{Remfougnormoupad} nous incite à exprimer toute la base de Frenet en termes de $\gamma$ lorsque le paramétrage n'est pas normal. Étant donné que nous pouvons toujours faire le changement de variable $\gamma(t)=\gamma_N\big( \phi(t) \big)$ (proposition~\ref{PropExisteChmNorm}), il est possible d'exprimer les vecteurs $\tau$, $\nu$ et $\beta$ ainsi que les réels $c$ et $t$ en fonction de $\gamma$ et de ses dérivées.
 
 Nous allons maintenant travailler à écrire les formules.
 
@@ -407,7 +407,7 @@ Les formules \eqref{eqProdvectogpgpp} pour le produit vectoriel et \eqref{EqCour
 \begin{equation}
     \beta(s)=\frac{ \gamma'(t)\times \gamma''(t) }{ \| \gamma'(t) \|^3 }\cdot\frac{1}{ c(s) }=\frac{ \gamma'(t)\times \gamma''(t) }{ \|  \gamma'(t)\times \gamma''(t)  \| }.
 \end{equation}
-Cela donne le vecteur unitaire binormal au point $\gamma(t)$ en terme de $\gamma'(t)$ et $\gamma''(t)$.
+Cela donne le vecteur unitaire binormal au point $\gamma(t)$ en termes de $\gamma'(t)$ et $\gamma''(t)$.
 
 La torsion demande d'utiliser la dérivée troisième de $\gamma_N$. Nous avons
 \begin{equation}
@@ -621,7 +621,7 @@ En particulier pour tout \( v\in \eR^2\) nous avons
 \end{lemma}
 
 \begin{proof}
-    Nous utilisons la définition \eqref{EQooWOUQooXrVzGx} de la courbure signée. La règle de dérivation en chaîne donne :
+    Nous utilisons la définition \eqref{EQooWOUQooXrVzGx} de la courbure signée. La règle de dérivation en chaine donne :
     \begin{subequations}
         \begin{align}
             \sigma'(u)&=\gamma'\big( h(u) \big)h'(u)\\
@@ -646,7 +646,7 @@ En particulier pour tout \( v\in \eR^2\) nous avons
 \end{lemma}
 
 \begin{proof}
-    Vu que la paramétrisation est normale, \( \gamma'_N\cdot \gamma'_N=1\), et en dérivant, \( \gamma_N''\cdot\gamma_N'=0\). Donc \( \gamma''_N\) est un multiple de \( J\gamma'\). En tenant compte du fait que la paramétrisation est normale, la courbure est
+    Vu que le paramétrage est normal, \( \gamma'_N\cdot \gamma'_N=1\), et en dérivant, \( \gamma_N''\cdot\gamma_N'=0\). Donc \( \gamma''_N\) est un multiple de \( J\gamma'\). En tenant compte du fait que le paramétrage est normal, la courbure est
     \begin{equation}
         \kappa(s)=\gamma_N''(s)\cdot J\gamma'(s).
     \end{equation}
@@ -668,9 +668,9 @@ En particulier pour tout \( v\in \eR^2\) nous avons
 \end{theorem}
 
 \begin{proof}
-    Si \( \gamma\) est une droite, la dérivée seconde est nulle et la courbure est nulle. Supposons pour la réciproque que \( \kappa(t)=0\) pour tout \( t\). Nous utilisant une paramétrisation normale de \( \gamma\), ce qui ne change pas que la courbure reste nulle. Nous avons par le lemme~\ref{LEMooKPORooEGJCRm} que \( \gamma''(s)=0\) et donc l'existence de \( a,b\in \eR^2\) tels que \( \gamma(t)=at+b\).
+    Si \( \gamma\) est une droite, la dérivée seconde est nulle et la courbure est nulle. Supposons pour la réciproque que \( \kappa(t)=0\) pour tout \( t\). Nous utilisant un paramétrage normal de \( \gamma\), ce qui ne change pas que la courbure reste nulle. Nous avons par le lemme~\ref{LEMooKPORooEGJCRm} que \( \gamma''(s)=0\) et donc l'existence de \( a,b\in \eR^2\) tels que \( \gamma(t)=at+b\).
 
-    Passons au cas du cercle. Si \( \gamma\) est un cercle, la paramétrisation normale est
+    Passons au cas du cercle. Si \( \gamma\) est un cercle, le paramétrage normal est
     \begin{subequations}
         \begin{align}
             \gamma(t)&=R\begin{pmatrix}
@@ -715,7 +715,7 @@ En particulier pour tout \( v\in \eR^2\) nous avons
 \end{definition}
 
 \begin{lemma}
-    La courbure signée ne change pas sous reparamétrisation positive, et change de signe sous reparamétrisation négative.
+    La courbure signée ne change pas sous reparamétrage positif, et change de signe sous reparamétrage négatif.
 \end{lemma}
 
 \begin{proof}
@@ -973,7 +973,7 @@ Notons que dans cette définition, \( \Phi_{\gamma}\) n'est rien d'autre que le 
     \begin{subproof}
         \item[Choix d'un point et d'une tangente]
 
-            Si \( \ell\) est une droite dans le plan, soit \( p\) le point de \( \Gamma\) le plus proche de \( \ell\). Il n'est peut-être pas unique, mais la parallèle à \( \ell\) passant par \( p\) est une tangente à \( \Gamma\) telle que tout \( \Gamma\) se trouve d'un seul côté de \( \ell_p\). Pour voir cela, il suffit de choisir un système d'axes pour lequel \( \ell\) est l'axe \( y=0\). La distance entre \( \ell\) et les points de \( \Gamma\) est donnée par \( \gamma_y\), et donc les extrema sont atteints là où \( \gamma_y'=0\), c'est-à-dire pour les points sur lesquels la tangente est parallèle à \( \ell\).
+            Si \( \ell\) est une droite dans le plan, soit \( p\) le point de \( \Gamma\) le plus proche de \( \ell\). Il n'est peut-être pas unique, mais la parallèle à \( \ell\) passant par \( p\) est une tangente à \( \Gamma\) telle que tout \( \Gamma\) se trouve d'un seul côté de \( \ell_p\). Pour voir cela, il suffit de choisir un système d'axes pour lequel \( \ell\) est l'axe \( y=0\). La distance entre \( \ell\) et les points de \( \Gamma\) est donnée par \( \gamma_y\), et donc les extrémums sont atteints là où \( \gamma_y'=0\), c'est-à-dire pour les points sur lesquels la tangente est parallèle à \( \ell\).
 
             Étant donné qu'il y a (au moins) un maximum et un minimum distincts, pour pouvons choisir le point \( p\) de telle sorte que pour tout point \( q\in \Gamma\), l'angle du vecteur \( q-p\) soit entre \( \alpha_0\) et \( \alpha_0+\pi\) et non entre \( \alpha_0-pi\) et \( \alpha_0\). Ce choix revient à choisir \( p\) de telle sorte que \( \Gamma\) soit d'un côté ou de l'autre de \( \ell_p\).
 
@@ -981,7 +981,7 @@ Notons que dans cette définition, \( \Phi_{\gamma}\) n'est rien d'autre que le 
 
         \item[Définition de \( \Sigma\)]
 
-            Soit \( L\) la longueur\footnote{Définition~\ref{DEFooDNZWooXmxhsU}.} de \( \gamma\) et \( \beta\), une paramétrisation de \( \gamma\) telle que \( \beta(0)=p\). Nous considérons le triangle
+            Soit \( L\) la longueur\footnote{Définition~\ref{DEFooDNZWooXmxhsU}.} de \( \gamma\) et \( \beta\), un paramétrage de \( \gamma\) telle que \( \beta(0)=p\). Nous considérons le triangle
             \begin{equation}
                 \mT=\{ (t_1,t_2)\in \eR^2\tq 0\leq t_1\leq t_2\leq L \}
             \end{equation}
@@ -1068,7 +1068,7 @@ Notons que dans cette définition, \( \Phi_{\gamma}\) n'est rien d'autre que le 
 
             Les chemins \( \sigma_1\) et \( \sigma_2\) sont homotopes par construction.
         \item[Indices et degrés]
-            La proposition~\ref{PROPooZIAKooHqtnZj}\ref{ITEMooLEHFooXEyTHY} nous donne \( \deg(\sigma_1)=\deg(\sigma_2)\). Nous avons alors la chaîne d'égalités
+            La proposition~\ref{PROPooZIAKooHqtnZj}\ref{ITEMooLEHFooXEyTHY} nous donne \( \deg(\sigma_1)=\deg(\sigma_2)\). Nous avons alors la chaine d'égalités
             \begin{equation}        \label{EQooSXOAooZVOVxc}
                 \deg(\sigma_2)=\deg(\sigma_1)=\deg(\Phi_{\beta})=\IR(\beta)=\IR(\gamma)=\Turn(\gamma)
             \end{equation}
@@ -1081,7 +1081,7 @@ Notons que dans cette définition, \( \Phi_{\gamma}\) n'est rien d'autre que le 
                 \item
                     \( \deg(\Phi_{\beta}=\IR(\beta)\) par définition~\ref{DEFooOCUQooUAlbLo} de l'indice.
                 \item
-                    \(  \IR(\beta)=\IR(\gamma) \) par invariance de l'indice sous reparamétrisation.
+                    \(  \IR(\beta)=\IR(\gamma) \) par invariance de l'indice sous reparamétrage.
                 \item
                     \( \IR(\gamma)=\Turn(\gamma)\) par la proposition~\ref{PROPooXHSDooDDnlJQ}.
             \end{enumerate}
@@ -1433,9 +1433,9 @@ La proposition suivante est dans le même esprit que l'ellipse de John-Loewer\fo
 
     Soient \( \Gamma_1\) et \( \Gamma_2\) les parties de \( \Gamma\) délimitées par \( l_p\). Nous notons \( q_i\) le point de \( \Gamma_i\) le plus éloigné de la droite \( l_p\), il existe parce que \( G\) est compact et que la fonction distance à \( l_p\) est continue sur \( \Gamma\). Les points \( p\), \( q_1\) et \( q_2\) sont distincts (sinon \( l_p\) ne couperait pas \( \Gamma\) en deux parties).
 
-    Montrons que \( l_{q_i}\parallel l_p\). Pour cela nous choisissons un système d'axe dans lequel \( l_p\equiv y=0\). Dans ce système, la distance entre \( \gamma(t)\) et \( l_p\) est \( \gamma_y(t)\) et les extrema de cette fonction ont lieu aux points \( t\) tels que \( \gamma_y'(t)=0\), c'est-à-dire aux points sur lesquels la tangente est parallèle à \( l_p\).
+    Montrons que \( l_{q_i}\parallel l_p\). Pour cela nous choisissons un système d'axe dans lequel \( l_p\equiv y=0\). Dans ce système, la distance entre \( \gamma(t)\) et \( l_p\) est \( \gamma_y(t)\) et les extrémums de cette fonction ont lieu aux points \( t\) tels que \( \gamma_y'(t)=0\), c'est-à-dire aux points sur lesquels la tangente est parallèle à \( l_p\).
 
-    À quel moment avons nous utilisé le fait que la courbe soit fermée ? Au moment de dire que le point le plus éloigné devait vérifier \( \gamma'_y(t)=0\). En effet un extrema peut ne pas vérifier cette condition s'il n'est pas à l'intérieur du domaine. Dans notre cas, nous avons \( \gamma\colon \mathopen[ 0 , 1 \mathclose]\to \eR^2\) qui est fermée :  \( \gamma(0)=\gamma(1)\). Donc en réalité nous pouvons considérer \( \gamma\colon \eR\to \eR^2\) et tous les points du domaine sont intérieurs au domaine. L'extremum doit donc vérifier la condition d'annulation de la dérivée.
+    À quel moment avons nous utilisé le fait que la courbe soit fermée ? Au moment de dire que le point le plus éloigné devait vérifier \( \gamma'_y(t)=0\). En effet un extrémum peut ne pas vérifier cette condition s'il n'est pas à l'intérieur du domaine. Dans notre cas, nous avons \( \gamma\colon \mathopen[ 0 , 1 \mathclose]\to \eR^2\) qui est fermée :  \( \gamma(0)=\gamma(1)\). Donc en réalité nous pouvons considérer \( \gamma\colon \eR\to \eR^2\) et tous les points du domaine sont intérieurs au domaine. L'extrémum doit donc vérifier la condition d'annulation de la dérivée.
 \end{proof}
 
 \begin{example}
@@ -1463,7 +1463,7 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
 \end{proposition}
 
 \begin{proof}
-    Nous considérons un système d'axe dans lequel \( p=(0,0)\), \( \ell_p=\ell_q\equiv y=0\) et tel que \( \gamma_y(t)\geq 0\) pour tout \( t\). Nous choisissons enfin une paramétrisation de \( \gamma\) telle que \( p=\gamma(0)\).
+    Nous considérons un système d'axe dans lequel \( p=(0,0)\), \( \ell_p=\ell_q\equiv y=0\) et tel que \( \gamma_y(t)\geq 0\) pour tout \( t\). Nous choisissons enfin un paramétrage de \( \gamma\) telle que \( p=\gamma(0)\).
 
     Si \( \gamma_y\big( \mathopen[ 0 , s_q \mathclose] \big)=\{ 0 \}\) alors par le théorème des valeurs intermédiaires~\ref{ThoValInter}, tous les points du type \( (t,0)\) avec \( 0\leq t\leq q_x\) sont atteints par \(  \gamma(t)   \) avec \( 0\leq t\leq s_q\). De plus aucun autre point ne peut être atteint parce que \( \gamma\) étant simple, elle ne peut pas faire de retour en arrière.
 
@@ -1484,7 +1484,7 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
 \end{proposition}
 
 \begin{proof}
-    Pour \( p\in \Gamma\) nous considérons le nombre \( r(p)=d(p,\ell)\). En tant que fonction continue sur un compact, elle possède un minimum et un maximum. Dans un système d'axe pour lequel \( \ell\equiv y=0\), la fonction \( r\) s'écrit \( r(p)=p_y\) et les extrema arrivent en \( \gamma(s)\) avec \( \gamma_y'(s)=0\), ce qui signifie que les tangentes aux extrema sont parallèles à \( \ell\). Vu que le maximum et le minimum ne peuvent pas être égaux (sinon la courbe serait horizontale et pas simple), les tangentes en ces points sont distinctes.
+    Pour \( p\in \Gamma\) nous considérons le nombre \( r(p)=d(p,\ell)\). En tant que fonction continue sur un compact, elle possède un minimum et un maximum. Dans un système d'axe pour lequel \( \ell\equiv y=0\), la fonction \( r\) s'écrit \( r(p)=p_y\) et les extrémums arrivent en \( \gamma(s)\) avec \( \gamma_y'(s)=0\), ce qui signifie que les tangentes aux extrémums sont parallèles à \( \ell\). Vu que le maximum et le minimum ne peuvent pas être égaux (sinon la courbe serait horizontale et pas simple), les tangentes en ces points sont distinctes.
 \end{proof}
 
 \begin{corollary}
@@ -1501,7 +1501,7 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
 \label{SUBSECooNJOLooYuGRjA}
 
 \begin{lemma}       \label{LEMooHMFSooFlhanD}
-    Soit \(   \gamma\colon \mathopen[ 0 , L \mathclose]\to \eR^2    \) une courbe simple, fermée en paramétrisation normale. Alors l'application
+    Soit \(   \gamma\colon \mathopen[ 0 , L \mathclose]\to \eR^2    \) une courbe simple, fermée en paramétrage normal. Alors l'application
     \begin{equation}
         \begin{aligned}
             \sigma&\colon \mathopen[ 0 , L \mathclose]\to S^1\\
@@ -1531,7 +1531,7 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
         \end{equation}
         pour un certain \( n\). Mais \( \theta\) est monotone et la différence entre sa première et sa dernière valeur doit valoir \( 2\pi\) ou \( -2\pi\) par le théorème~\ref{THOooEQWOooBCRMMZ}. Donc \( n\) ne peut valoir que \( -1\), \( 0\) et \( 1\).
 
-        Si \( n=0\) alors \( \theta\) est constante sur \( \mathopen[ s_1 , s_2 \mathclose]\). Si \( n=1\) alors \( \theta(s_1)=\sigma(s_2)+2\pi\) alors que sur toute la courbe, \( \theta\) ne peut faire que \( 2\pi\). Donc \( \theta\) est constant sur \( \mathopen[ 0 , s_1 \mathclose]\) et sur \( \mathopen[ s_2 , L \mathclose]\) (où \( L\) est le bord de la paramétrisation). Si \( n=-1\), même conclusion.
+        Si \( n=0\) alors \( \theta\) est constante sur \( \mathopen[ s_1 , s_2 \mathclose]\). Si \( n=1\) alors \( \theta(s_1)=\sigma(s_2)+2\pi\) alors que sur toute la courbe, \( \theta\) ne peut faire que \( 2\pi\). Donc \( \theta\) est constant sur \( \mathopen[ 0 , s_1 \mathclose]\) et sur \( \mathopen[ s_2 , L \mathclose]\) (où \( L\) est le bord de le paramétrage). Si \( n=-1\), même conclusion.
 
         Dans tous les cas, \( \Gamma\) contient une ligne droite, soit de \( q_1\) à \( q_2\), soit de \( q_2\) à \( q_1\). Et dans ces cas nous avons \( \ell_{q_1}=\ell_{q_2}\), ce qui est contraire à la construction de \( q_i\).
 
@@ -1584,7 +1584,7 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
 \end{proof}
 
 \begin{definition}
-    Un \defe{sommet}{sommet} d'une courbe est un point d'extremum local de la courbure.
+    Un \defe{sommet}{sommet} d'une courbe est un point d'extrémum local de la courbure.
 \end{definition}
 
 \begin{theorem}[Théorème des quatre sommets\cite{KXjFWKA,ooIEJXooIYpBbd}]       \label{THOooFRBBooWKZcfY}
@@ -1594,9 +1594,9 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
 \end{theorem}
 
 \begin{proof}
-    Nous supposons que la paramétrisation de \( \gamma\) soit normale.
+    Nous supposons que le paramétrage de \( \gamma\) soit normale.
 
-    Si la courbure \( \kappa\) est constante sur une partie ouverte de la (paramétrisation de la) courbe, alors tous les points de cette partie sont des sommets et le théorème est fait. Nous supposons que \( \kappa\) n'est pas constante et en particulier que \( \Gamma\) ne contient ni bouts de droites ni bouts de cercles (théorème~\ref{THOooDLDVooFQnLWn}).
+    Si la courbure \( \kappa\) est constante sur une partie ouverte de la (du paramétrage de la) courbe, alors tous les points de cette partie sont des sommets et le théorème est fait. Nous supposons que \( \kappa\) n'est pas constante et en particulier que \( \Gamma\) ne contient ni bouts de droites ni bouts de cercles (théorème~\ref{THOooDLDVooFQnLWn}).
 
     La fonction \( \kappa\) étant de classe \( C^1\) sur le compact \( \Gamma\), elle admet au moins un maximum et un minimum distincts. Vu que ces points sont intérieurs, ils correspondent au changement de signe de \( \kappa'\). Soient \( p\) et \( q\) ces points. Pour la simplicité nous supposons que \( \gamma\) est paramétré de telle sorte que \( \gamma(0)=p\), et \( q=\gamma(s_q)\) avec \( 0<s_q<T\).
 
@@ -1641,7 +1641,7 @@ La proposition suivante nous dit que si deux points de \( \Gamma\) ont la même 
     Nous avons donc au moins un troisième point de changement de signe de \( \kappa'\). Vu que la courbe est périodique, il en faut un nombre pair et donc un quatrième.
 \end{proof}
 
-L'exemple de l'ellipse montre qu'il n'y a pas lieu de chercher d'autres extrema de \( \kappa\) à part les \( 4\) déjà trouvés.
+L'exemple de l'ellipse montre qu'il n'y a pas lieu de chercher d'autres extrémums de \( \kappa\) à part les \( 4\) déjà trouvés.
 
 \begin{example}
     Nous trouvons les sommets de l'ellipse.
@@ -1666,7 +1666,7 @@ L'exemple de l'ellipse montre qu'il n'y a pas lieu de chercher d'autres extrema 
         &=\frac{ ab }{  [a^2\sin^2(t)+b^2\cos^2(t)]^{3/2}  }.
         \end{align}
     \end{subequations}
-    Vu que \( ab>0\), les extrema de cela sont ceux du dénominateur et il suffit donc d'étudier les extrema de
+    Vu que \( ab>0\), les extrémums de cela sont ceux du dénominateur et il suffit donc d'étudier les extrémums de
     \begin{equation}
         f(t)=a^2\sin^2(t)+b^2\cos^2(t).
     \end{equation}
@@ -1674,7 +1674,7 @@ L'exemple de l'ellipse montre qu'il n'y a pas lieu de chercher d'autres extrema 
     \begin{equation}
         f'(t)=2(a^2-b^2)\cos(t)\sin(t),
     \end{equation}
-    fonction qui s'annule effectivement $4$ fois sur une période. Deux maxima et deux minima.
+    fonction qui s'annule effectivement $4$ fois sur une période. Deux maximums et deux minima.
 \end{example}
 
 %---------------------------------------------------------------------------------------------------------------------------

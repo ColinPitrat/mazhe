@@ -700,7 +700,7 @@ Nous pouvons maintenant énoncer et démontrer une forme nettement plus généra
             \end{equation}
             Supposons \( f_1(x)=f_2(y)\). Vu que \( f\) sépare, si ce ne sont pas les parties réelles, ce sont les parties imaginaires. C'est-à-dire que  \( f_2(x)\neq f_2(y)\). Mais d'autre part, \( if=f_2+if_1\in A\),  donc en réalité \( f_2\in A_1\) également.
     \end{subproof}
-    Le partie \( A_1\) dans \( C(X,\eR)\) vérifie les hypothèses de Stone-Weierstrass réel \ref{THOooMDILooGPXbTW}, donc \( A_1\) est dense dans \( C(X,\eR)\). Le même raisonnement montre que \( A_2\) est également dense dans \( C(X,\eR)\)\quext{Il me semble même que \( A_1=A_2\) et qu'il y a un raccourcis possible dans cette preuve en exploitant ce fait. Écrivez-moi pour dire ce que vous en pensez.}
+    Le partie \( A_1\) dans \( C(X,\eR)\) vérifie les hypothèses de Stone-Weierstrass réel \ref{THOooMDILooGPXbTW}, donc \( A_1\) est dense dans \( C(X,\eR)\). Le même raisonnement montre que \( A_2\) est également dense dans \( C(X,\eR)\)\quext{Il me semble même que \( A_1=A_2\) et qu'il y a un raccourci possible dans cette preuve en exploitant ce fait. Écrivez-moi pour dire ce que vous en pensez.}
 
     Soit maintenant le vif de la preuve : \( f\in C(X,\eC)\) avec \( f=u+iv\), les fonctions \( u\) et \( v \) étant dans \( C(X,\eR)\). Nous avons des suites \( u_{k}\stackrel{unif}{\longrightarrow}u\) et \( v_k\stackrel{unif}{\longrightarrow}v\) pour des suites \( (u_k) \) et \( (v_k)\) dans \( C(X,\eR)\).
 
@@ -1287,7 +1287,7 @@ Le lemme suivant montre que la définition sur \( \eQ^-\) est cohérente avec ce
 \end{propositionDef}
 
 \begin{proposition}[\cite{MonCerveau}]      \label{PROPooVADRooLCLOzP}
-    Quelque propriétés de la fonction puissance. 
+    Quelques propriétés de la fonction puissance. 
     \begin{enumerate}
         \item       \label{ITEMooQHYRooJIewyp}
             Pour \( a>0\), la fonction \( g_a\colon x\mapsto a^x\) est continue sur \( \eR\).
@@ -1663,7 +1663,7 @@ Notons que les voisinages sur lesquels \( f_{\alpha}\) est injective sont assez 
             \begin{equation}
                 \big( \lim_ja^{x_j} \big)^{y_i}=f_{y_i}\big( \lim_ja^{x_j} \big)=\lim_j\big( f_{y_i}(a^{x_j}) \big)=\lim_ja^{x_jy_i}.
             \end{equation}
-            Nous avons utilisé le résultats déjà démontré dans le cas des rationnels. La suite \( j\mapsto x_jy_i\) est une suite dans \( \eQ\) qui converge vers le réel \( xy_i\), donc la limite sur \( j\) redonne la fonction puissance :
+            Nous avons utilisé le résultat déjà démontré dans le cas des rationnels. La suite \( j\mapsto x_jy_i\) est une suite dans \( \eQ\) qui converge vers le réel \( xy_i\), donc la limite sur \( j\) redonne la fonction puissance :
             \begin{equation}        \label{EQooWORSooFoRBod}
                 \big( \lim_ja^{x_j} \big)^{y_i}=\lim_ja^{x_jy_i}=a^{xy_i}.
             \end{equation}
@@ -2105,7 +2105,7 @@ La proposition suivante donne la dérivée de \( x\mapsto x^q\) pour tout \( q\i
 \subsection{Hölder}
 %---------------------------------------------------------------------------------------------------------------------------
 
-Notre étude de la fonction puissance permet de démontrer quelque inégalités de Hölder. Voir le thème \ref{THEMEooUJVXooZdlmHj}.
+Notre étude de la fonction puissance permet de démontrer quelques inégalités de Hölder. Voir le thème \ref{THEMEooUJVXooZdlmHj}.
 
 \begin{theorem}[\cite{BIBooWAUMooIUnSOs}]       \label{THOooPPDPooJxTYIy}
     Si \( 1\leq p <  \infty\), alors pour tout \( x\in \eR^n\) nous avons
@@ -2186,7 +2186,7 @@ Nous allons maintenant attaquer ce problème.
     ce qui signifie \( y_1(x)=y_2(x)\).
 \end{proof}
 
-Dans la proposition suivante, \( S^1\) désigne l'ensemble des nombres complexes de norme \( 1\), dont une paramétrisation est donnée dans la proposition \ref{PROPooZEFEooEKMOPT} :
+Dans la proposition suivante, \( S^1\) désigne l'ensemble des nombres complexes de norme \( 1\), dont un paramétrage est donnée dans la proposition \ref{PROPooZEFEooEKMOPT} :
 \begin{equation}
     S^1=\{  e^{ix}\tq x\in \eR \}=\{  e^{ix}\tq x\in \mathopen[ 0 , 2\pi \mathclose[ \}.
 \end{equation}
@@ -2254,6 +2254,14 @@ Dans la proposition suivante, \( S^1\) désigne l'ensemble des nombres complexes
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \label{AppSecTaylorR}
 
+\begin{definition}      \label{DEFooCLGZooRuEkTe}
+    Soit un ouvert \( \Omega\subset \eC\). Une fonction \( f\colon \Omega\to \eC\) est \defe{$\eC$-analytique}{analytique!au sens complexe} sur \( \Omega\) si pour tout \( z_0\in\Omega\), il existe une suite complexe \( (c_n)\) et \( r>0\) tels que
+    \begin{equation}
+        f(z)=\sum_{n=0}^{\infty} c_n(z-z_0)^n
+    \end{equation}
+    pour tout \( z\in B(z_0,r)\).
+\end{definition}
+
 \begin{definition}
     Soit une fonction \( f\colon \eR\to \eR\). Si il existe, nous définissons le \( n\)\ieme\ \defe{polynôme de Taylor}{polynôme de Taylor} de $f$ au point \( a\in \eR\) par
     \begin{equation}
@@ -2288,6 +2296,16 @@ pour tout \( x\) dans un voisinage de \( a\). Autrement dit, même si toutes les
     nous n'avons aucune garantie de \( T=f\), même pas sur le rayon de convergence de la série entière définissant \( P\). Et nous n'avons pas de garanties d'avoir un rayon de convergence plus grand que \( 0\).
 
     Notons toutefois que les polynômes étant denses pour la norme supremum parmi les fonctions continues\footnote{Théorème \ref{ThoGddfas}.}, pour tout compact, il existe une suite de polynômes qui converge uniformément uniformément \( f\). Mais ces polynômes ne sont pas spécialement ceux de Taylor.
+\end{normaltext}
+
+\begin{normaltext}
+    Ce que nous venons de dire en \ref{NORMooADIZooUmevqk} n'est pas vrai pour les fonctions analytiques\footnote{Définition \ref{DEFooCLGZooRuEkTe} qu'il faut écrire pour \( \eR\) au lieu de $\eC$}. Une fonction analytique \( f\colon \Omega\to \eR\) s'écrit, autour de \( 0\), sous la forme
+    \begin{equation}
+        f(x)=\sum_{n=0}^{\infty}a_nx^n.
+    \end{equation}
+    Demander \( f^{(k)}(0)=0\) pour tout \( k\) implique \( a_n=0\) pour tout \( n\), et donc \( f=0\) sur un voisinage de \( 0\).
+
+    La condition d'analycité est donc très rigide.
 \end{normaltext}
 
 Le théorème de Taylor que nous démontrons à présent n'est pas un résultat que va dans le sens de \( \lim_{n\to \infty} P_n(x)=f(x)\). C'est un résultat qui dit juste que \( \lim_{x\to a} P_n(x)=f(a)\), et que la limite va d'autant plus vite que \( n\) est grand.
@@ -3085,7 +3103,7 @@ Le \defe{plan tangent}{plan!tangent} au graphe de $f$ au point $\big(a,b,f(a,b)\
 \begin{equation}
 	T_{(a,b)}(x,y) = f(a,b) + \frac{\partial f}{\partial x}(a,b) (x-a) + \frac{\partial f}{\partial y}(a,b) (y-b)
 \end{equation}
-essayez d'écrire l'équation de la droite tangente au graphe de $f(x)$ au point $x=a$ en terme de la dérivée de $f$, et comparez votre résultat à cette formule.
+essayez d'écrire l'équation de la droite tangente au graphe de $f(x)$ au point $x=a$ en termes de la dérivée de $f$, et comparez votre résultat à cette formule.
 
 Un des principaux théorèmes pour tester la différentiabilité d'une fonction est le suivant.
 

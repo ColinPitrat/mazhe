@@ -19,7 +19,7 @@ Il couvre à peu près tout [le programme](http://agreg.org/Rapports/rapport2015
 Afin de donner une idée, une [liste (presque à jour) des développements](#annexe--liste-de-choses-que-lon-peut-trouver-dans-le-frido) que vous pourriez y trouver [est en annexe](#annexe--liste-de-choses-que-lon-peut-trouver-dans-le-frido).
 
 
-### Quelque éléments en plus que l'agrégation
+### Quelques éléments en plus que l'agrégation
 
 * Construction complète de la mesure de Lebesgue, y compris les notions de complétion de mesure (le chapitre tribu/théorie de la mesure est assez lourd).
 * La topologie exacte des espaces de distribution, y compris la topologie liée à une famille de semi-normes.
@@ -50,7 +50,7 @@ Ce cours se distingue d'autres cours de mathématique pour l'agrégation de plus
 
 Le Frido se distingue également par certains aspects négatifs.
 
-* Manque de relecture. Vous croyez que les livres commerciaux sont bien relus et sans erreurs ? Eh bien ce n'est pas le cas pour le Frido. Il n'est pas très relu (si vous trouvez des erreurs, contactez moi !), et contient sûrement beaucoup d'erreurs. Un certain nombre sont d'ailleurs très clairement indiquées.
+* Manque de relecture. Vous croyez que les livres commerciaux sont bien relus et sans erreurs ? Eh bien ce n'est pas le cas pour le Frido. Il n'est pas très relu (si vous trouvez des erreurs, contactez-moi !), et contient sûrement beaucoup d'erreurs. Un certain nombre sont d'ailleurs très clairement indiquées.
 
 ### « *Est-ce je peux utiliser le Frido le jour de l'oral d'agreg ?* »
 
@@ -127,7 +127,7 @@ Afin de donner une idée, voici une liste des développements que vous pourriez 
 
 * Endomorphismes cycliques et commutant dans le cas diagonalisable.
 * Isométries du cube.
-* Racine carré d'une matrice hermitienne positive.
+* Racine carrée d'une matrice hermitienne positive.
 * Action du groupe modulaire sur le demi-plan de Poincaré.
 * Algorithme des facteurs invariants.
 * Méthode du gradient à pas optimal.
@@ -150,7 +150,7 @@ Afin de donner une idée, voici une liste des développements que vous pourriez 
 * RSA, plus l'exponentielle rapide, plus la recherche de couples de Bézout.
 * Théorème de Sylow.
 * Coloriage de roulette et composition de colliers.
-* Théorème de Burnside sur les sous groupes d'exposant fini de GL(n, C).
+* Théorème de Burnside sur les sous-groupes d'exposant fini de GL(n, C).
 * Théorème d'isomorphisme entre (Z/pZ)^\* et Z/(p-1)Z.
 * Forme alternées de degré maximum.
 * Décomposition de Bruhat.

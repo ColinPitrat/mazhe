@@ -71,7 +71,7 @@ Le modèle gaussien est un modèle paramétrique : dès que \( m\) et \( \sigma^
 Nous noterons souvent \( (X_1,\ldots,X_n)\) à la place de \( (X_{\theta,1},\ldots,X_{\theta,n})\) un échantillon, mais il faut se souvenir que les \( X_i\) suivent toujours la même loi donnée par \( \theta\). La loi du vecteur \( (X_1,\ldots,X_n)\) est \( \mu_{\theta}\otimes\ldots\otimes\mu_{\theta}\) et est définie sur l'espace \( (\Omega^n,\tribF\otimes\ldots\otimes\tribF,P^{\otimes n})\).
 
 \begin{remark}
-    Le travail du statisticien est de proposer un modèle statistique \( \statS\) a priori. Si nous étudions la taille d'une population, nous allons choisir un modèle gaussien. Plus le modèle est précis, plus l'espace \( \Theta\) est petit mais plus il y a de risques que le vérité soit hors de l'ensemble considéré.
+    Le travail du statisticien est de proposer un modèle statistique \( \statS\) à priori. Si nous étudions la taille d'une population, nous allons choisir un modèle gaussien. Plus le modèle est précis, plus l'espace \( \Theta\) est petit mais plus il y a de risques que le vérité soit hors de l'ensemble considéré.
 \end{remark}
 
 \begin{example}
@@ -227,7 +227,7 @@ La proposition suivante signifie que la moyenne empirique est une «bonne» faç
 \begin{remark}
     L'intérêt de cette proposition en statistique descriptive expérimentale est le suivant. La taille moyenne des français est un nombre \( m\) qui existe, mais qui est largement hors de portée de l'expérience (mesurer \( 65\cdot 10^6\) personnes risque de prendre un sacré temps). Si on mesure seulement \( n\) personnes dont les tailles sont \( (x_i)_{i=1,\ldots, n}\) (ici \( x_i\) est un \emph{nombre expérimental}, pas une variable aléatoire), alors on peut calculer la moyenne \( \bar x_n\) de ces \( n\) personnes-là. La proposition indique que si \( n\) est assez grand, alors \( \bar x_n\) donne une bonne idée de \( m\).
 
-    Ne pas confondre \( X_n\) qui est une variable aléatoire, c'est-à-dire une application mesurable, qui nous sert à démontrer des théorèmes en mathématique, avec \( x_n\) qui est un nombre mesuré sur le terrain, qui a une existence \emph{physique} bien définie, mais aucun status mathématique.
+    Ne pas confondre \( X_n\) qui est une variable aléatoire, c'est-à-dire une application mesurable, qui nous sert à démontrer des théorèmes en mathématique, avec \( x_n\) qui est un nombre mesuré sur le terrain, qui a une existence \emph{physique} bien définie, mais aucun statut mathématique.
 
     Si on croit que toute cette histoire de variables aléatoires, de tribu et de mesures décrit effectivement la réalité, alors on peut croire que le comportement de la suite \( \bar X_n\) décrit bien le comportement de la suite \( \bar x_n\) (cette dernière n'étant même pas une suite parce qu'on n'a jamais qu'un nombre fini de mesures expérimentales).
 \end{remark}
@@ -395,7 +395,7 @@ Nous posons les hypothèses suivantes.
 \end{enumerate}
 
 \begin{example}
-    Quelque familles identifiables :
+    Quelques familles identifiables :
     \begin{itemize}
         \item 
     La famille des lois exponentielles \( \big( \dE(\lambda) \big)_{\lambda>0}\) est identifiable. 
@@ -601,7 +601,7 @@ Supposons que nous connaissions un estimateur convergeant \( \hat\theta_n\to\the
 %---------------------------------------------------------------------------------------------------------------------------
 
 \begin{example}     \label{ExVrasMaxLp}
-    Nous désirons contrôler la qualité d'une chaîne de production; pour cela nous prélevons un échantillon de \( 10\) pièces, et nous en trouvons \( 3\) défectueuses. Que dire de la proportion de pièces défectueuses ?
+    Nous désirons contrôler la qualité d'une chaine de production; pour cela nous prélevons un échantillon de \( 10\) pièces, et nous en trouvons \( 3\) défectueuses. Que dire de la proportion de pièces défectueuses ?
 
     Évidemment, le plus probable est que la proportion de pièces défectueuses soit de \( 1/3\). Analysons en détail comment nous arrivons à ce résultat. Nous considérons que le fait de tirer \( 10\) pièces revient à une expérience binomiale de paramètres \( 10\) et de probabilité \( p\) inconnue. Dans ce cas, la probabilité d'observer exactement \( 3\) pièces défectueuses est de
     \begin{equation}
@@ -644,7 +644,7 @@ La variable aléatoire \( \hat\theta_n=\hat\theta_n(X_1,\ldots,X_n)\) est l'\def
     \begin{equation}
         L_n(\theta)=\sum_i x_i\ln(\theta)+(1-x_i)\ln(1-\theta)
     \end{equation}
-    En passant à la dérivée, nous trouvons que l'extremum est donné par
+    En passant à la dérivée, nous trouvons que l'extrémum est donné par
     \begin{equation}
         \theta=\frac{1}{ n }\sum_{i=1}^nx_i.
     \end{equation}
@@ -947,7 +947,7 @@ Nous supposons que nous ayons un échantillon \( (X_1,\ldots,X_n)\) dont nous av
 \begin{equation}
     P\big( p\in\mathopen[ \bar X_n-\epsilon , \bar X_n+\epsilon \mathclose] \big)=1-\alpha.
 \end{equation}
-Typiquement, \( \alpha=5\%\). Le nombre \( \alpha\) est le \defe{niveau de confiance}{niveau de confiance} que nous nous fixons a priori.
+Typiquement, \( \alpha=5\%\). Le nombre \( \alpha\) est le \defe{niveau de confiance}{niveau de confiance} que nous nous fixons à priori.
 
 Si nous trouvons un intervalle \( I\) tel que \( P(p\in I)=1-\alpha\), nous disons que l'intervalle est \defe{exact}{exact!intervalle de confiance}, si nous avons \( P(p\in I)\geq 1-\alpha\), nous disons que l'intervalle est \defe{par excès}{excès!intervalle de confiance}.
 
@@ -1251,7 +1251,7 @@ vaut zéro ou un.
     avec \( P(\sigma^2\in I)=95\%\).
     
     \begin{remark}
-        Il n'est pas clair a priori que la longueur de l'intervalle \( I\) décroisse avec \( n\) parce qu'il y a \( n\) dans les \( t\) au numérateur.
+        Il n'est pas clair à priori que la longueur de l'intervalle \( I\) décroisse avec \( n\) parce qu'il y a \( n\) dans les \( t\) au numérateur.
     \end{remark}
 
 \end{example}
@@ -1515,7 +1515,7 @@ donc le fabriquant doit s'assurer que
 \begin{equation}
     \theta\geq\frac{1}{ \ln\left( \frac{1}{ 0.95 } \right) }.
 \end{equation}
-Nous posons donc \( \theta_0=19.5\) et nous prenons comme modèle de décision que si \( \theta<\theta_0\), alors la chaîne de production doit être revue, et si \( \theta>\theta_0\), alors l'usine peut continuer son travail.
+Nous posons donc \( \theta_0=19.5\) et nous prenons comme modèle de décision que si \( \theta<\theta_0\), alors la chaine de production doit être revue, et si \( \theta>\theta_0\), alors l'usine peut continuer son travail.
 
 Ce dont nous disposons n'est pas de \( \theta\), mais d'une estimation de \( \theta\) à partir d'un échantillon. Cela étant il faudra aussi pouvoir estimer la probabilité de faire un mauvais choix.
 

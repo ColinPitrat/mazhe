@@ -86,6 +86,10 @@ test_death_links ()
 
 check_spelling()
 {
+    # For your information, you can make replacements
+    # with
+    # sed -i -- 's/foo/bar/g' *
+
     ag " [LldDcC]es variable " >> $LOG_FILE
     ag " demi [a-z]" >> $LOG_FILE
     ag " d'intersections " >> $LOG_FILE
@@ -96,6 +100,15 @@ check_spelling()
     ag "corollaire" >> $LOG_FILE        # orthographe réformée
     ag "Corollaire" >> $LOG_FILE        # orthographe réformée
     ag "chaîne" >> $LOG_FILE        # orthographe réformée
+    ag "[Qq]uelque [a-zéàçèùôîûê]*s " >> $LOG_FILE
+    ag "[Qq]uelque [a-zéàçèùôîûê]*x " >> $LOG_FILE
+    ag "ez moi" >> $LOG_FILE        # vient par exemple de "écrivez moi" au lieu de "écrivez-moi".
+    ag "[Rr]acine carré " >> $LOG_FILE
+    ag "une cas " >> $LOG_FILE
+    ag " status " >> $LOG_FILE
+    ag " c'est à dire " >> $LOG_FILE # doit être c'est-à-dire
+    ag " en terme " >> $LOG_FILE
+    ag " paramétrisation " >> $LOG_FILE  # doit être "paramétrage"
 }
 
 test_picture ()

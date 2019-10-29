@@ -141,7 +141,7 @@ Le point intéressant de ce lemme est que le majorant soit un maximum, c'est-à-
     Un ensemble est \defe{infini}{ensemble!infini} s'il peut être mis en bijection avec un de ses sous-ensembles propres (c'est-à-dire différent de lui-même).
 \end{definition}
 
-\begin{lemma}[\cite{MonCerveau}\quext{Écrivez moi si vous connaissez une preuve de ceci.}]       \label{LEMooYHGCooAwsVQN}
+\begin{lemma}[\cite{MonCerveau}\quext{Écrivez-moi si vous connaissez une preuve de ceci.}]       \label{LEMooYHGCooAwsVQN}
     Soit un ensemble \( E\). Si \( I\) et \( J\) sont deux parties de \( E\) telles que \( I\cup J\) soit infini. Alors soit \( I\) soit \( J\) (soit le deux) est infini.
 \end{lemma}
 
@@ -224,6 +224,27 @@ Si $E$ est un ensemble, une \defe{relation d'équivalence}{relation d'équivalen
 \end{description}
 \end{definition}
 
+\begin{definition}      \label{DEFooRHPSooHKBZXl}
+    Si \( E\) est un ensemble et si \( \sim\) est une relation d'équivalence sur \( E\), alors nous notons \( E/\sim\) l'\defe{ensemble quotient}{ensemble quotient}, c'est-à-dire l'ensemble des classes d'équivalence dans \( E\). Un élément de \( E/\sim\) est de la forme
+    \begin{equation}
+        [a]=\{ x\in E\tq x\sim a \}.
+    \end{equation}
+\end{definition}
+
+\begin{lemma}
+    Soit un ensemble \( E\) et une relation d'équivalence \( \sim\). Pour \( a,b\in E\), nous avons \( [a]=[b]\) si et seulement si \( a\sim b\).
+\end{lemma}
+
+\begin{proof}
+    En deux parties.
+    \begin{subproof}
+        \item[\( \Rightarrow\)]
+            Nous supposons que \( [a]=[b]\). Vu que \( a\sim a\), nous avons \( a\in [a]=[b]\). Mais \( a\in [b]\) signifie \( a\sim b\), ce qu'il fallait.
+        \item[\( \Leftarrow\)]
+            Nous supposons que \( a\sim b\), et nous démontrons que \( [a]\subset [b]\) (pour l'inclusion inverse, vous devriez vous en sortir par tout seul). Si \( x\in [a]\), alors \( x\sim a\). Mais \( a\sim b\). Donc \( x\sim a\sim b\), ce qui implique \( x\sim b\) par transitivité. Or dire \( x\sim b\) implique \( x\in [b]\).
+    \end{subproof}
+\end{proof}
+
 \begin{example}
     Sur l'ensemble de tous les polygones du plan, la relation «a le même nombre de côtés» est une relation d'équivalence. Plus précisément, si $P$ et $Q$ sont deux polygones, nous disons que $P\sim Q$ si et seulement si $P$ et $Q$ ont le même nombre de côtés. Cela est une relation d'équivalence :
     \begin{itemize}
@@ -272,7 +293,7 @@ Cette section est vide, insuffisamment détaillée ou incomplète. Votre aide es
 \subsection{Quelques résultats de cardinalité}
 %---------------------------------------------------------------------------------------------------------------------------
 
-Je vous conseille fortement de ne pas considérer ces résultats comme évidents avant d'avoir lu quelque articles de Wikipédia sur la construction des naturels en théorie des ensembles.
+Je vous conseille fortement de ne pas considérer ces résultats comme évidents avant d'avoir lu quelques articles de Wikipédia sur la construction des naturels en théorie des ensembles.
 \begin{proposition}     \label{PROPooBYKCooGDkfWy}
     L'ensemble \( \eN\) est infini\footnote{Définition \ref{DefEOZLooUMCzZR}.}.
 \end{proposition}
@@ -420,16 +441,16 @@ Les ensembles dénombrables sont les plus petits ensembles infinis possibles, co
     \end{enumerate}
 \end{definition}
 
-\begin{definition}[Morphisme d'anneaux\cite{ooZRUJooXyxPqQ}]        \label{DEFooSPHPooCwjzuz}
-    Soient des anneaux unitaires \( A\) et \( B\). Une application \( f\colon A\to B\) est un \defe{morphisme d'anneaux}{morphisme d'anneaux} si pour tout \( a,b\in A\) nous avons :
+\begin{definition}[Morphisme d'anneaux\cite{ooZRUJooXyxPqQ}]      \label{DEFooSPHPooCwjzuz}
+    Si \( (A,+,\cdot)\) et \( (B,+,\cdot)\) sont des anneaux, un \defe{morphisme d'anneaux}{morphisme!d'anneaux} est une application \( f\colon A\to B\) telle que
     \begin{enumerate}
+        \item \( f(a+b)=f(a)+f(b)\)
         \item
-            \( f(a+b)=f(a)+f(b)\),
+            \( f(a\cdot b)=f(a)\cdot f(b)\)
         \item
-            \( f(ab)=f(a)f(b)\),
-        \item
-            \( f(1_A)=1_B\).
+            \( f(1)=1\).
     \end{enumerate}
+    Étant bien entendu que les significations de \( 1\), $+$ et \( \cdot\) sont différentes à gauche et à droite.
 \end{definition}
 
 \begin{lemma}       \label{LEMooVUSMooWisQpD}
@@ -471,16 +492,8 @@ Cela est la \defe{structure canonique}{structure d'anneau canonique} d'anneau su
     \end{equation}
 \end{definition}
 
-\begin{definition}[Morphisme d'anneaux]      \label{DEFooQBGJooKJqHXr}
-    Si \( (A,+,\cdot)\) et \( (B,+,\cdot)\) sont des anneaux, un \defe{morphisme}{morphisme!d'anneaux} est une application \( f\colon A\to B\) telle que
-    \begin{enumerate}
-        \item \( f(a+b)=f(a)+f(b)\)
-        \item
-            \( f(a\cdot b)=f(a)\cdot f(b)\)
-        \item
-            \( f(1)=1\).
-    \end{enumerate}
-    Étant bien entendu que les significations de \( 1\), $+$ et \( \cdot\) sont différentes à gauche et à droite.
+\begin{definition}
+    Nous disons que \( A\) est un \defe{anneau commutatif}{anneau commutatif} si pour tout \( a,b\in A\) nous avons \( a+b=b+a\).
 \end{definition}
 
 \begin{definition}
@@ -499,9 +512,77 @@ Cela est la \defe{structure canonique}{structure d'anneau canonique} d'anneau su
     Lorsqu'un ensemble est idéal à gauche et à droite, nous disons que c'est un \defe{idéal bilatère}{idéal!bilatère}. Lorsque nous parlons d'idéal sans précisions, nous parlons d'idéal bilatère.
 \end{definition}
 
-\begin{definition}
-    Nous disons que \( A\) est un \defe{anneau commutatif}{anneau commutatif} si pour tout \( a,b\in A\) nous avons \( a+b=b+a\).
-\end{definition}
+\begin{propositionDef}      \label{PROPooGXMRooTcUGbi}
+    Soit \( A\), un anneau, \( I\) un idéal bilatère\footnote{Définition~\ref{DefooQULAooREUIU}.} de \( A\). Nous considérons la relation d'équivalence \( x\sim y\) si et seulement si \( x-y\in I\). Sur le quotient\footnote{Définition \ref{DEFooRHPSooHKBZXl}.}
+    \begin{equation}
+        A/\sim=A/I,
+    \end{equation}
+    nous mettons les opérations
+    \begin{enumerate}
+        \item
+            \( [x]+[y]=[x+y]\)
+        \item
+            \( [x][y]=[xy]\).
+    \end{enumerate}
+    Nous avons alors les résultats suivants :
+    \begin{enumerate}
+        \item       \label{ITEMooEJPEooRKAqmS}
+            Les opérations sont bien définies,
+        \item       \label{ITEMooYBEGooTlHgNz}
+            l'ensemble \( A/I\), muni de ces opérations, est un anneau
+        \item       \label{ITEMooLNRLooMkoWXZ}
+            la surjection canonique \( \pi\colon A\to A/I\) est un morphisme.
+    \end{enumerate}
+    Cet anneau est appelé \defe{anneau quotient}{anneau!quotient par un idéal}.
+\end{propositionDef}
+
+\begin{proof}
+    En plusieurs parties.
+    \begin{subproof}
+        \item[Pour \ref{ITEMooEJPEooRKAqmS}]
+            Nous savons que, par définition,
+            \begin{equation}
+                \bar x=\{ x+i\tq i\in I \}.
+            \end{equation}
+            Calculons le produit de représentants génériques de \( \bar x\) et de \( \bar y\) :
+            \begin{equation}
+                (x+i_1)(y+i_2)=xy+xi_2+yi_1+i_1i_2.
+            \end{equation}
+            Vu que \( I\) est un idéal nous avons \( xi_2+yi_1+i_1i_2\in I\) et donc bien
+            \begin{equation}
+                (x+i_1)(y+i_2)\in \overline{ xy }.
+            \end{equation}
+        \item[Pour \ref{ITEMooYBEGooTlHgNz}]
+            Il s'agit de vérifier les conditions de la définition \ref{DefHXJUooKoovob}.
+
+            Vu que \( (A,+)\) est un groupe abélien de neutre \( 0\), nous avons
+            \begin{equation}
+                [a]+[b]=[a+b]=[b+a]=[b+a],
+            \end{equation}
+            ainsi que
+            \begin{equation}
+                [a]+[0]=[a+0]=[a]
+            \end{equation}
+            et
+            \begin{equation}
+                [a]+([b]+[c])=[a]+[b+c]=[a+b+c]=[a+b]+[c].
+            \end{equation}
+            Donc \( (A/I,+)\) est un groupe abélien de neutre \( [0]\).
+
+            L'associativité de \( A\) donne l'associativité dans \( A/I\) :
+            \begin{equation}
+                \big( [a][b] \big)[c]=[ab][c]=[abc]=[a][bc]=[a]\big( [b][c] \big).
+            \end{equation}
+            Et enfin pour la distributivité,
+            \begin{equation}
+                [a]\big( [b]+[c] \big)=[a][b+c]=[a(b+c)]=[ab+ac]=[ab]+[ac]=[a][b]+[a][c].
+            \end{equation}
+            Nous avons prouvé que \( A/I\) est un anneau de neutre \( [0]\) et d'unité \( [1]\).
+        \item[Pour \ref{ITEMooLNRLooMkoWXZ}]
+            Nous devons vérifier les trois conditions de la définition \ref{DEFooSPHPooCwjzuz}. Cela est immédiat parce que \( \pi(x)=[x]\).
+    \end{subproof}
+\end{proof}
+
 
 \begin{definition}\label{DefrYwbct}
     Soient \( A\) un anneau commutatif et \( S\subset A\). Nous disons que \( \delta\in A\) est un \defe{PGCD}{PGCD!dans un anneau intègre} de \( S\) si
@@ -668,11 +749,15 @@ Conformément à la définition \ref{DiviseursAnneau} de diviseur, nous posons l
     \end{subproof}
 \end{proof}
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+\section{Somme à valeurs dans un groupe abélien}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 %--------------------------------------------------------------------------------------------------------------------------- 
 \subsection{Somme à valeurs dans un anneau}
 %---------------------------------------------------------------------------------------------------------------------------
 
-\begin{definition}
+\begin{definition}      \label{DEFooNEVNooJlmJOC}
     Si \( f\colon \{ 0,\ldots, N \}\to A\) est une application vers un anneau \( A\), alors nous définissons la notation \( \sum_{i=0}^Nf(i)\) par récurrence de la façon suivante :
     \begin{enumerate}
         \item
@@ -682,22 +767,22 @@ Conformément à la définition \ref{DiviseursAnneau} de diviseur, nous posons l
     \end{enumerate}
 \end{definition}
 
-\begin{propositionDef}[\cite{MonCerveau}]       \label{DEFooLNEXooYMQjRo}
-    Soient un ensemble fini \( S\), un anneau commutatif \( A\), et une fonction \( f\colon S\to A\). 
-    \begin{enumerate}
-        \item
-            Il existe un unique \( N\in \eN\) tel qu'il existe une bijection \( \varphi\colon \{ 0,\ldots, N \}\to S\).
-        \item
-            Si il existe deux bijections \( \varphi_1\colon \{ 0,\cdots N \}\to S\) et \( \varphi_2\colon \{ 0,\ldots, N \}\to S\), alors
-            \begin{equation}
-                \sum_{i=0}^Nf\big( \varphi_1(i) \big)=\sum_{i=0}^Nf\big( \varphi_2(i) \big).
-            \end{equation}
-    \end{enumerate}
-    Ce nombre est noté
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Somme à valeurs dans un groupe abélien}
+%---------------------------------------------------------------------------------------------------------------------------
+
+Si \( S\) est un ensemble fini, nous savons de la proposition \ref{PROPooJLGKooDCcnWi} qu'il existe un unique \( N\in \eN\) pour lequel il existe une bijection \( \varphi\colon \{ 0,\ldots, N \}\to S\). Cette bijection n'est à priori pas unique.
+
+\begin{lemmaDef}[\cite{MonCerveau}]       \label{DEFooLNEXooYMQjRo}
+    Soient un groupe abélien \( (G,+)\) ainsi qu'un ensemble fini \( I\) contenant \( n\) éléments. Soit une application \( f\colon I\to G \). Si \( \sigma_1,\sigma_2\colon \{1,\ldots, n \}\to I\) sont deux bijections, alors\footnote{Pour rappel, le symbole \( \sum_{i=1}^n\) est défini par \ref{DEFooNEVNooJlmJOC}.}
     \begin{equation}
-        \sum_{s\in S}f(s).
+        \sum_{i=1}^nf\big( \sigma_1(i) \big)=\sum_{i=1}^nf\big( \sigma_2(i) \big).
     \end{equation}
-\end{propositionDef}
+    La valeur commune est notée
+    \begin{equation}
+        \sum_{i\in I}f(i)
+    \end{equation}
+\end{lemmaDef}
 
 La définition \ref{DEFooLNEXooYMQjRo} donne lieu à un certain nombre de remarques.
 \begin{enumerate}
@@ -705,9 +790,14 @@ La définition \ref{DEFooLNEXooYMQjRo} donne lieu à un certain nombre de remarq
         Elle donne la somme sur un ensemble fini. Un problème avec les ensembles infinis (outre la convergence) est l'ordre de sommation. Si vous voulez sommer sur \( \eZ\), dans quel ordre le faire ?
     \item
         Pour aller plus loin, et sommer sur des ensembles infinis, il faut regarder la définition \ref{DefHYgkkA}. 
-    \item
-        L'existence d'une bijection entre \( I\) et \( \{ 0,\ldots, N \}\) ainsi que l'unicité du \( N\) pour lequel c'est possible sont donnés par la proposition \ref{PROPooJLGKooDCcnWi}.
 \end{enumerate}
+
+\begin{proposition}     \label{PROPooJBQVooNqWErk}
+    Soient un groupe abélien \( (G,+)\), un ensemble fini \( I\) est un ensemble fini, une application \( f\colon I\to G\) et une bijection \( \sigma\colon I\to I\). Alors
+    \begin{equation}
+        \sum_i\in If(i)=\sum_{i\in I}f\big( \sigma(i) \big).
+    \end{equation}
+\end{proposition}
 
 Si nous avons une application \( L\colon S\to S\), nous notons
 \begin{equation}
@@ -1292,7 +1382,7 @@ Le théorème~\ref{THOooYXJIooWcbnbm} nous dira que tous les \( \sqrt{n}\) sont 
     \end{itemize}
     La fraction \( \frac{ a/2 }{ b/2 }\) est alors une nouvelle fraction d'entiers dont le carré vaut $2$. En procédant de la même façon, en remplaçant \( a\) par \( a/2\) et \( b\) par \( b/2\), on obtient que la fraction d'entiers \( \frac{ a/4 }{ b/4 }\) a la même propriété.
 
-    En particulier, tous les nombres de la forme \( a/2^n\) sont des entiers.  Ils forment une suite strictement décroissante d'entiers strictement positifs. Impossible, me diriez vous ? Et vous auriez bien raison : toute partie non vide de \( \eN\) admet un plus petit élément\footnote{Voir \cite{RWWJooJdjxEK}, et attention : ce n'est pas tout à fait évident.}. Il n'y a donc pas de fractions d'entiers dont le carré vaut \( 2\).
+    En particulier, tous les nombres de la forme \( a/2^n\) sont des entiers.  Ils forment une suite strictement décroissante d'entiers strictement positifs. Impossible, me diriez-vous ? Et vous auriez bien raison : toute partie non vide de \( \eN\) admet un plus petit élément\footnote{Voir \cite{RWWJooJdjxEK}, et attention : ce n'est pas tout à fait évident.}. Il n'y a donc pas de fractions d'entiers dont le carré vaut \( 2\).
 \end{proof}
 
 \begin{lemma}[Série géométrique, voir aussi l'exemple~\ref{ExZMhWtJS}]      \label{LEMooOTVUooImvusn}
@@ -1481,7 +1571,7 @@ et
 \end{equation}
 l'ensemble \( \modE\) devient un anneau\footnote{Définition~\ref{DefHXJUooKoovob}.} commutatif dont le neutre de l'addition est la suite constante \( x_n=0\) et le neutre pour la multiplication est la suite constante \( x_n=1\).
 
-\begin{proposition}
+\begin{proposition}     \label{PROPooNUQVooAAkicK}
     La partie \( \modE_0\) est un idéal\footnote{Définition~\ref{DefooQULAooREUIU}.} de l'anneau \( \modE\).
 \end{proposition}
 
@@ -1509,16 +1599,7 @@ l'ensemble \( \modE\) devient un anneau\footnote{Définition~\ref{DefHXJUooKoovo
     Nous divisons la preuve en plusieurs parties.
     \begin{subproof}
     \item[Les opérations sont bien définies]
-    Si \( u,v\in \modE\) et \( h,k\in \modE_0\) alors \( h+k\in\modE_0\) et nous avons
-    \begin{equation}
-        \overline{ u+h }+\overline{ v+k }=\overline{ u+v+h+k }=\overline{ u+v }.
-    \end{equation}
-    ainsi que
-    \begin{equation}
-        \overline{ u+h }\cdot \overline{ v+k }=\overline{ (u+h)(v+k) }=\overline{ uv+uk+hv+hk }=\overline{ uv }
-    \end{equation}
-    parce que les suites des Cauchy \( u\) et \( v\) sont bornées, ce qui donne que \( uk\), \( hv\) et \( hk\) sont des éléments de \( \modE_0\) par la proposition~\ref{PropFFDJooAapQlP}\ref{ItemRKCIooJguHdjiii}. Cela prouve que les définitions proposées sont bonnes.
-
+        La partie \( \modE_0\) est un idéal par la proposition \ref{PROPooNUQVooAAkicK}. Le quotient est donc bien défini et est un anneau par la proposition \ref{PROPooGXMRooTcUGbi}\ref{ITEMooYBEGooTlHgNz}.
     \item[Caractérisation des classes]
         Soit \( q\in \eQ\) et une suite \( x\) convergente vers \( q\). Cette suite est de Cauchy comme toute suite convergente. Montrons que
         \begin{equation}
@@ -1552,7 +1633,7 @@ l'ensemble \( \modE\) devient un anneau\footnote{Définition~\ref{DefHXJUooKoovo
     \end{subproof}
 \end{proof}
 
-\begin{normaltext}[Quelque notations entre \( \eQ\) et \( \eR\)]      \label{NORMooWBYNooBQaPPk}
+\begin{normaltext}[Quelques notations entre \( \eQ\) et \( \eR\)]      \label{NORMooWBYNooBQaPPk}
     Si \( k\mapsto x_k\) est une suite, nous notons \( (x_k)\) avec des parenthèses la suite elle-même. Le \( k\) dans \( (x_k)\) est un indice muet, et dans les cas où il peut y avoir une ambiguïté, nous pouvons noter \( (x_k)_{k\in \eN}\). Cette dernière notation est plus lourde, mais plus exacte.
     
     Le mieux est d'écrire simplement \( x\) la suite, mais alors il faut être prudent et ne pas noter \( x\) la limite. Nous éviterons donc d'écrire \( x_k\to x\).
@@ -1566,7 +1647,7 @@ l'ensemble \( \modE\) devient un anneau\footnote{Définition~\ref{DefHXJUooKoovo
             q&\mapsto \overline{ [k\mapsto q]},
         \end{aligned}
     \end{equation}
-    c'est à dire que \( \varphi(q)\) est la classe de la suite constante \( x_k=q\).
+    c'est-à-dire que \( \varphi(q)\) est la classe de la suite constante \( x_k=q\).
 \end{normaltext}
 
 \begin{proposition}     \label{PropooEPFCooMtDOfP}
@@ -1870,6 +1951,8 @@ Comme \( q \neq q' \), les développements dyadiques sont différents\quext{À v
 \subsection{Complétude}
 %---------------------------------------------------------------------------------------------------------------------------
 
+Le théorème \ref{ThoKHTQJXZ} donne une complétion de tout espace métrique en un espace complet. Il serait tentant de l'utiliser ici pour définir \( \eR\) à partir de \( \eQ\). Cette méthode ne fonctionne cependant pas parce que la démonstration de \ref{ThoKHTQJXZ} utilise le fait que \( \eR\) est complet.
+
 \begin{lemma}[\cite{RWWJooJdjxEK}]      \label{LemooRTGFooYVstwS}
     Toute suite de Cauchy dans \( \eQ\) converge dans \( \eR\) vers le réel qu'elle représente.
 
@@ -1997,7 +2080,7 @@ Nous avons terminé avec la construction des réels. Les propriétés topologiqu
 \subsection{Intervalles}
 %---------------------------------------------------------------------------------------------------------------------------
 
-Nous avons déjà défini la notion d'intervalle pour un espace totalement ordonné en \ref{DefEYAooMYYTz}. Nous posons quelque notations dans \( \eR\).
+Nous avons déjà défini la notion d'intervalle pour un espace totalement ordonné en \ref{DefEYAooMYYTz}. Nous posons quelques notations dans \( \eR\).
 
 \begin{definition}  \label{DEFooAQBUooKLChOW}
     Soient \( a\neq b\) dans \( \eR\). Nous définissons les parties suivantes de \( \eR\) :
@@ -2141,7 +2224,7 @@ Par convention, si la partie n'est pas bornée vers le haut, nous dirons que son
 \subsubsection{Quelques exemples}
 %///////////////////////////////////////////////////////////////////////////
 
-En matières de notations, le maximum de l'ensemble $A$ est noté $\max A$, le supremum est noté $\sup A$. Le minimum et l'infimum sont notés $\min A$ et $\inf A$.
+En matière de notations, le maximum de l'ensemble $A$ est noté $\max A$, le supremum est noté $\sup A$. Le minimum et l'infimum sont notés $\min A$ et $\inf A$.
 
 \begin{example}
 Exemples de différence entre majorant, supremum et maximum.
@@ -2182,7 +2265,7 @@ Si on dit qu'un pont résiste jusqu'à $10$ tonnes, alors $10$ tonnes est un \em
 
 
 \begin{example}
-    Quelque exemples dans les intervalles.
+    Quelques exemples dans les intervalles.
 	\begin{enumerate}
 		\item
 			$A=\mathopen[ 1 , 2 \mathclose]$. Tous les nombres plus petits ou égaux à $1$ sont minorants, $1$ est infimum et minimum. Le nombre $2$ est un majorant, le maximum et le supremum.
@@ -2220,7 +2303,7 @@ L'exemple suivant est une source classique d'erreurs en ce qui concerne l'infimu
 %---------------------------------------------------------------------------------------------------------------------------
 \label{SUBSECooMBCNooEqjjTY}
 
-Dans cette section, nous définissons \( \sqrt{ x }\) pour \( x\in\eR^+\). Vous notez que c'est fait de façon assez algébrique\footnote{Discutable parce que des limites sont utilisées.}, ou en tout cas, en restant proche des définitions. Des définition plus technologiques utilisant la continuité de \( x\mapsto x^n\) et qui prouvent que c'est bijectif sur un domaine choisi avec prudence existent, et c'est fait dans la définition \ref{DEFooJWQLooWkOBxQ}. Il est même expliqué dans \cite{BIBooMPXEooQLKhku} que la méthode décrite ici permet de définir \( \sqrt[n]{ x }\) pour tout \( n\) entier, et pas seulement pour \( n=2\).
+Dans cette section, nous définissons \( \sqrt{ x }\) pour \( x\in\eR^+\). Vous notez que c'est fait de façon assez algébrique\footnote{Discutable parce que des limites sont utilisées.}, ou en tout cas, en restant proche des définitions. Des définitions plus technologiques utilisant la continuité de \( x\mapsto x^n\) et qui prouvent que c'est bijectif sur un domaine choisi avec prudence existent, et c'est fait dans la définition \ref{DEFooJWQLooWkOBxQ}. Il est même expliqué dans \cite{BIBooMPXEooQLKhku} que la méthode décrite ici permet de définir \( \sqrt[n]{ x }\) pour tout \( n\) entier, et pas seulement pour \( n=2\).
 
 \begin{proposition}     \label{PROPooUHKFooVKmpte}
     Soit \( q\in \eQ^+\). Il existe un unique \( r\in \eR\) tel que \( r^2=q\).
@@ -2285,7 +2368,7 @@ Dans cette section, nous définissons \( \sqrt{ x }\) pour \( x\in\eR^+\). Vous 
 
     Nous donnons ici en vrac quelques propriétés et définitions que se doivent d'être présentes dans la version finale de cette section, si elle existe un jour.
 
-    Comme partout dans ce chapitre sur la construction des ensembles de nombres, certains propriétés qui ont l'air toute simples peuvent, en fonction des définitions prises, s'avérer pas du tout évidentes.
+    Comme partout dans ce chapitre sur la construction des ensembles de nombres, certaines propriétés qui ont l'air toute simples peuvent, en fonction des définitions prises, s'avérer pas du tout évidentes.
 \end{probleme}
 
 

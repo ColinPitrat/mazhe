@@ -475,7 +475,7 @@ La chose impressionnante dans la proposition suivante est que \( \rho(A)\) est d
 
         \item[Pour \( A\in \eM(n,\eR)\)]
 
-            L'endroit qui coince dans le raisonnement fait pour \( \eM(n,\eC)\) est que certes \( A\in \eM(n,\eR)\) possède une plus grande valeur propre en module et qu'un vecteur propre lui est associé. Mais ce vecteur propre est a priori dans \( \eC^n\), et non dans \( \eR^n\). Nous pouvons donc écrire \( Au=\lambda u\), mais pas \( \| Au \|=| \lambda |\| u \|\) parce que nous ne savons pas quelle norme prendre sur \( \eC^n\).
+            L'endroit qui coince dans le raisonnement fait pour \( \eM(n,\eC)\) est que certes \( A\in \eM(n,\eR)\) possède une plus grande valeur propre en module et qu'un vecteur propre lui est associé. Mais ce vecteur propre est à priori dans \( \eC^n\), et non dans \( \eR^n\). Nous pouvons donc écrire \( Au=\lambda u\), mais pas \( \| Au \|=| \lambda |\| u \|\) parce que nous ne savons pas quelle norme prendre sur \( \eC^n\).
 
             Il n'est pas certain que nous ayons une norme sur \( \eC^n\) qui se réduit sur \( \eR^n\) à celle choisie implicitement dans l'énoncé. Nous allons donc ruser un peu.
 
@@ -506,7 +506,7 @@ La chose impressionnante dans la proposition suivante est que \( \rho(A)\) est d
 \end{lemma}
 
 \begin{proof}
-    Soit par le lemme~\ref{LemSchurComplHAftTq} une matrice inversible \( U\) telle que \( T=UAU^{-1}\) soit triangulaire supérieure, avec les valeurs propres sur la diagonale. Notons que même si \( A\in \eM(n,\eR)\), les matrices \( U\) et \( T\) sont a priori complexes.
+    Soit par le lemme~\ref{LemSchurComplHAftTq} une matrice inversible \( U\) telle que \( T=UAU^{-1}\) soit triangulaire supérieure, avec les valeurs propres sur la diagonale. Notons que même si \( A\in \eM(n,\eR)\), les matrices \( U\) et \( T\) sont à priori complexes.
 
     Soit \( s\in \eR\) ainsi que les matrices
     \begin{equation}
@@ -662,7 +662,6 @@ Si \( V\) est un espace vectoriel normé, nous avons déjà défini son dual top
 
     Notons que \( \varphi\) est continue (et donc bien dans \( V'\)) parce qu'elle est bornée (proposition \ref{PROPooQZYVooYJVlBd}).
 \end{proof}
-<++>
 
 %---------------------------------------------------------------------------------------------------------------------------
 \subsection{Normes de matrices et d'applications linéaires}
@@ -1270,7 +1269,7 @@ Dans le cas des espaces de fonctions, nous avons une norme importante : la norme
                 \sum_{k=0}^{\infty}a_k=\sum_{k=0}^Na_k+\sum_{k=N+1}^{\infty}a_k.
             \end{equation}
         \item       \label{ITEMooQNHMooUPjupB}
-            La suite des queues de série converge vers \( 0\), c'est à dire que
+            La suite des queues de série converge vers \( 0\), c'est-à-dire que
             \begin{equation}
                 \lim_{N\to \infty} \sum_{k=N}^{\infty}a_k=0.
             \end{equation}
@@ -1725,7 +1724,7 @@ Un cas particulier de la formule \eqref{EqASYTiCK} est le calcul de \( \sum_{j=1
     \end{subequations}
     En ce qui concerne la seconde formule, par définition\footnote{Définition d'une série, \ref{DefGFHAaOL}.}
     \begin{equation}
-        \sum_{k=1}^{\infty}\frac{1}{ k(k+1) }=\lim_{n\to \infty} \sum_{k=1}^n\frac{1}{ k(k+1) }=\lim_{n\to \infty\frac{ n }{ n+1 }} =1.
+        \sum_{k=1}^{\infty}\frac{1}{ k(k+1) }=\lim_{n\to \infty} \sum_{k=1}^n\frac{1}{ k(k+1) }=\lim_{n\to \infty}\frac{ n }{ n+1 } =1.
     \end{equation}
 \end{proof}
 
@@ -1734,13 +1733,13 @@ Un cas particulier de la formule \eqref{EqASYTiCK} est le calcul de \( \sum_{j=1
 %---------------------------------------------------------------------------------------------------------------------------
 
 \begin{theorem}[Critère des séries alternées\cite{ooXFPIooCLUvzV}]      \label{THOooOHANooHYfkII} 
-    Si \( a\) est une suite réelle décroissante à limite nulle, alors
+    Si \( (a_n)_{n\in \eN}\) est une suite positive décroissante à limite nulle, alors
     \begin{enumerate}
         \item
-            La série \( \sum_n(-1)^na_n\) converge,
+            Si nous notons \( (S_n)\) la suite des sommes partielles, les sous-suites \( (S_{2n})\) et \( (S_{2n+1})\) sont adjacentes\footnote{Définition \ref{DEFooDMZLooDtNPmu}.}.
         \item
-            si nous notons \( (S_n)\) la suite des sommes partielles, les sous-suites \( (S_{2n})\) et \( (S_{2n+1})\) sont adjacentes de limite \( \sum_{n=1}^{\infty}(-1)^na_n\).
-        \item
+            La série \( \sum_n(-1)^na_n\) converge.
+        \item       \label{ITEMooWEPWooXhLMYL}
             Si nous considérons le reste 
             \begin{equation}
                 R_n=\sum_{k=n+1}^{\infty}(-1)^ka_k,
@@ -3116,7 +3115,7 @@ Cette façon d'écrire a l'avantage de ne pas demander de se souvenir qui est un
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \label{SecLStKEmc}
 
-Quelque motivations pour la notion de différentielle sont données dans \ref{SEBSECooLPRQooJRQCFL}.
+Quelques motivations pour la notion de différentielle sont données dans \ref{SEBSECooLPRQooJRQCFL}.
 
 %---------------------------------------------------------------------------------------------------------------------------
 \subsection{Définition de la différentielle}
@@ -3518,7 +3517,7 @@ Si \( E\) et \( F\) sont deux espaces vectoriels nous notons \( \aL(E,F)\)\nomen
             \begin{equation}
                 d^{k+1}(\varphi\circ f)_a(u)=d\big( d^k(\varphi\circ f) \big)_a(u)=d(\varphi_k\circ d^kf)_a(u).
             \end{equation}
-            C'est le moment d'utiliser la formule de différentiation en chaîne :
+            C'est le moment d'utiliser la formule de différentiation en chaine :
             \begin{equation}
                 d^{k+1}(\varphi\circ f)_a(u)=\big( (d\varphi_k)_{d^kf_a}\circ d^{k+1}f_a \big)(u).
             \end{equation}
@@ -3545,7 +3544,7 @@ Si \( E\) et \( F\) sont deux espaces vectoriels nous notons \( \aL(E,F)\)\nomen
 \end{lemma}
 
 \begin{proof}
-    Il suffit d'apercevoir qu'en vertu de la règle de différentiation en chaîne \eqref{EqHFmezmr},
+    Il suffit d'apercevoir qu'en vertu de la règle de différentiation en chaine \eqref{EqHFmezmr},
     \begin{equation}
         (df_a)(df^{-1})_{f(a)}=d(f\circ f^{-1})_{f(a)}=\id.
     \end{equation}

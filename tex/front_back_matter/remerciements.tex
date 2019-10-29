@@ -63,6 +63,10 @@ Les remerciements, dans chaque catégorie, sont mis dans l'ordre chronologique a
         Provatiscus pour avoir signalé un paquet de choses pas claires, et surtout pour avoir trouvé une faute dans la démonstration du fait qu'une fonction continue sur \( \eQ\) se prolonge en une fonction continue sur \( \eR\). Et pour cause : cet énoncé est faux. \url{https://github.com/LaurentClaessens/mazhe/issues/124}
     \item 
         William pour l'environnement \info{example} qui gère correctement le triangle.
+    \item
+        Colin Pitrat pour de nombreuses remarques, typos et relecture de théorèmes.
+    \item
+        Bruno Turgeon pour une très belle moisson de fautes de frappe (euphémisme pour dire «mon ignorance crasse de l'orthographe»).
 \end{enumerate}
 
 %---------------------------------------------------------------------------------------------------------------------------
@@ -103,7 +107,7 @@ Les remerciements, dans chaque catégorie, sont mis dans l'ordre chronologique a
         David Revoy pour les dessins de Pepper\&Carrot \href{https://www.peppercarrot.com/fr/article285/episode-8-pepper-s-birthday-party}{de la couverture}.
 \end{enumerate}
 
-J'ai souvent donné entre parenthèse à côté des mots « théorème », « lemme » ou « proposition » une ou plusieurs références vers les sources de la preuve que je donne. Ce sont parfois des liens vers la bibliographie; parfois aussi des liens hypertexte vers des sites, des blogs, etc. Tous ces gens ont fait du bon boulot. Sans toute cette « communauté », l'internet serait mort\footnote{Cette dernière phrase doit être comprise comme un appel à ne pas utiliser Moodle et autres iCampus pour diffuser vos cours de math, ou en tout cas pas comme moyen exclusif.}.
+J'ai souvent donné entre parenthèses à côté des mots « théorème », « lemme » ou « proposition » une ou plusieurs références vers les sources de la preuve que je donne. Ce sont parfois des liens vers la bibliographie; parfois aussi des liens hypertextes vers des sites, des blogs, etc. Tous ces gens ont fait du bon boulot. Sans toute cette « communauté », l'internet serait mort\footnote{Cette dernière phrase doit être comprise comme un appel à ne pas utiliser Moodle et autres iCampus pour diffuser vos cours de math, ou en tout cas pas comme moyen exclusif.}.
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \section{Originalité}
@@ -111,7 +115,7 @@ J'ai souvent donné entre parenthèse à côté des mots « théorème », « le
 
 Ces notes ne sont pas originales par leur contenu : ce sont toutes des choses qu'on trouve facilement sur internet; je crois que la bibliographie est éloquente à ce sujet. Ce cours se distingue des autres sur les points suivants.
 \begin{description}
-    \item[La longueur] J'ai décidé de ne pas me soucier de la taille du fichier. Il fera cinq mille pages s'il le faut, mais il restera en un bloc. Étant donné qu'il n'existe qu'une seule mathématique, il ne m'a pas semblé intéressant de produire une division artificielle entre l'analyse, la géométrie ou l'algèbre. Tous le résultats d'une branche peuvent (et sont) être utilisés dans toutes les autres branches.
+    \item[La longueur] J'ai décidé de ne pas me soucier de la taille du fichier. Il fera cinq mille pages s'il le faut, mais il restera en un bloc. Étant donné qu'il n'existe qu'une seule mathématique, il ne m'a pas semblé intéressant de produire une division artificielle entre l'analyse, la géométrie ou l'algèbre. Tous les résultats d'une branche peuvent (et sont) être utilisés dans toutes les autres branches.
 
         Dans cette optique, je me suis évertué à ne créer que des références «vers le haut». À moins d'oubli de ma part\footnote{Par exemple pour les théorèmes pour lesquels je n'ai pas lu ni a fortiori écrit de preuves.}, il n'y a aucun endroit du texte qui dépend d'un lemme démontré plus bas. Le fait qu'un théorème \( B\) soit plus bas qu'un théorème \( A\) signifie qu'on peut démontrer \( A\) sans savoir \( B\).
 
@@ -132,7 +136,7 @@ Un cours de math doit toujours être lu attentivement, surtout si vous avez l'in
     \item[La référence \cite{MonCerveau}] 
         D'abord les références à \cite{MonCerveau} indiquent qu'une bonne partie de ce qui suit est de l'invention personnelle de l'auteur. Cela ne veut évidemment pas dire que c'est moi qui ait découvert le résultat. Ça veut dire que je n'ai pas trouvé le résultat ou certaines parties de la preuve.
     \item[Les notes en bas de page]
-        Certaine notes en bas de page sont écrite dans une fonte spéciale\quext{Les notes comme celle-ci signifient qu'il y a quelque chose dont je ne suis pas sûr.}. Elles indiquent des points sur lesquels je doute ou des étapes de calculs que je ne parviens pas à reproduire en suivant mes sources. Lorsque vous voyez une telle note, redoublez de prudence, allez voir la source, et écrivez-moi si vous pouvez résoudre le problème.
+        Certaines notes en bas de page sont écrites dans une fonte spéciale\quext{Les notes comme celle-ci signifient qu'il y a certaines chose dont je ne suis pas sûr.}. Elles indiquent des points sur lesquels je doute ou des étapes de calculs que je ne parviens pas à reproduire en suivant mes sources. Lorsque vous voyez une telle note, redoublez de prudence, allez voir la source, et écrivez-moi si vous pouvez résoudre le problème.
     \item[Les environnements dédiés]       
         Et enfin certains problèmes sont indiqués plus longuement dans un environnement dédié en petits caractères comme ceci :
 
@@ -151,7 +155,7 @@ Comme tout cours de mathématique, ce cours fait des choix qui sont parfois disc
     \item
         Nous utilisons la définition usuelle de limite d'une fonction en un point. Elle diffère de celle donnée par le ministère de l'enseignement en France. Si votre but est de passer un concours d'enseignement en France, vous devriez lire~\ref{SUBSECooVHKCooYRFgrb}; dans tous les autres cas, la définition prise ici est celle qu'il vous faut.
     \item
-        Un compact est un partie d'un espace topologique pour lequel tout recouvrement par des ouverts admet un sous-recouvrement fini. Le fait d'être séparable n'est pas inclus dans la définition de compact. De nombreux textes français incluent la séparabilité dans la compacité.
+        Un compact est une partie d'un espace topologique pour lequel tout recouvrement par des ouverts admet un sous-recouvrement fini. Le fait d'être séparable n'est pas inclus dans la définition de compact. De nombreux textes français incluent la séparabilité dans la compacité.
     \item
         Le logarithme sur \( \eC\) est une application \( \ln\colon \eC^*\to \eC\) définie partout sauf en zéro. Elle n'est donc pas continue sur la fameuse demi-droite. À ne pas confondre avec une \emph{détermination} du logarithme qui est par définition continue et donc non définie sur la demi-droite.
 
@@ -160,7 +164,33 @@ Comme tout cours de mathématique, ce cours fait des choix qui sont parfois disc
         Voir les remarques~\ref{REMooFBLLooDnkmjR}.
     \item
         Le mot «corps» n'implique pas la commutativité, et nous n'utilisons pas la terminologie «anneau à division». Voir la remarque~\ref{REMooYRNUooYgBBKF} et la discussion~\ref{NORMooGPWRooIKJqqw}.
+\end{enumerate}
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+\section{Autres choix pas spécialement standards}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Nous listons ici quelques choix qui n'induisent pas de différences ou d'incompatibilité avec les autres cours, mais qui doivent être compris et justifiés.
+
+\begin{enumerate}
+    \item
+        Nous n'utilisons pas les notations \( o(x)\) ou autres \( O(N^2)\). D'abord parce que je n'ai jamais très bien compris comment elles fonctionnent, et ensuite (surtout) parce que ces notations induisent en erreur. Ce sont des notations qui cachent sous des notations a peu près intuitive l'utilisation de théorèmes pas simples.
+
+        Écrire
+        \begin{equation}
+            f(x)=P(x)+o(x^2),
+        \end{equation}
+        c'est un peu comme quand on écrit (horreur !)
+        \begin{equation}
+            F(x)=\int f(x)dx+C.
+        \end{equation}
+        Où est le \( x\) à droite ? Quel est le statut de \( C \) ? 
+
+        Même chose pour la notation \( f(x)=P(x)+o(x^2)\). Le \( x\) de \( o(x^2)\) est-il le \( x\) qu'on a à gauche ? Si \( g(x)=Q(x)+o(x^2)\), est-ce le même \( o\) que celui de \( f\) ?
+    \item
+        Nous allons être plus calme avec la notation \( A[X]\) pour les polynômes sur l'anneau \( A\), et encore moins \( A[X_1,\ldots, X_n]\) pour les polynômes de \( n\) variables. Au lieu de cela nous utilisons \( \Poly(A)\) et \( \Poly_n(A)\).
+
+        Est-ce que vous diriez que \( A[X]=A[Y]\) ? Quelle est exactement la nature de \( X\) dans \( P=X^2+1\) ou dans \( P(X)=X^2+1\) ? Si \( P\in A[X]\) vaut \( P(X)=X^2\)  et si \( Q\in A[Y]\) vaut \( Q(Y)=Y^2\), est-ce que vous oseriez écrire \( P=Q\) ?
 \end{enumerate}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -212,7 +242,7 @@ Ce livre est émaillé de petits bouts de code en Sage montrant ses différentes
 	\item
         Tout savoir d'une forme quadratique, voir exemple~\ref{exBNGVooIvKfTT}.
 	\item
-        Calculer la matrice hessienne de fonctions de deux variables, déterminer les points critiques, déterminer le genre de la matrice hessienne aux points critiques et écrire extrema de la fonctions (sous réserve d'être capable de résoudre certaines équations), voir les exemples~\ref{exZHGRooTQpVpq} et~\ref{exHWIHooOAvaDQ}.
+        Calculer la matrice hessienne de fonctions de deux variables, déterminer les points critiques, déterminer le genre de la matrice hessienne aux points critiques et écrire les extrémums de la fonctions (sous réserve d'être capable de résoudre certaines équations), voir les exemples~\ref{exZHGRooTQpVpq} et~\ref{exHWIHooOAvaDQ}.
 	\item
         Indiquer une infinité de solutions à une équation en utilisant des paramètres. L'exemple \ref{exEEHPooKDxLTJ} montre ça avec une équation algébrique. Un exemple concernant des fonctions trigonométriques :
         \begin{verbatim}
@@ -274,7 +304,7 @@ Quel que soit votre niveau, vous pouvez faire ceci :
     \item
         M'écrire pour me signaler toutes les fautes que vous voyez, même si vous n'êtes pas sûr.
     \item
-        Si vous n'êtes pas expert, me signaler tous le endroits qui vous semblent obscurs. Vu que ces notes sont destinées à \emph{apprendre}, les avis des non experts sont très importants.
+        Si vous n'êtes pas expert, me signaler tous les endroits qui vous semblent obscurs. Vu que ces notes sont destinées à \emph{apprendre}, les avis des non-experts sont très importants.
     \item
         Mettre une copie de (ou un lien vers) ces notes sur votre site.
 \end{enumerate}
@@ -288,6 +318,12 @@ Vous trouverez un peu partout des énoncés sans preuves. Certaines sont suremen
 Vous pouvez m'envoyer vos preuves sous forme de «c'est bien fait dans tel cours», avec une URL.
 
 Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille pas à l'université, et je n'ai pas accès à une bibliothèque universitaire; je n'ai donc pas réellement accès à ces fameux «livres» dont tout le monde parle.
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Du texte qui manque}
+%---------------------------------------------------------------------------------------------------------------------------
+
+Vous remarquerez que de nombreuses pages du Frido sont des enchainements de théorèmes et démonstrations sans articulations. Autrement dit, il manque ce qu'à l'agrégation on irait à l'oral quand on présente le plan. Si vous avez des idées de choses à ajouter ici où là, faites le moi savoir.
 
 %---------------------------------------------------------------------------------------------------------------------------
 \subsection{Mes questions de géométrie}
@@ -323,7 +359,7 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
         En géométrie projective, dans \( P_1(\eC)=\hat\eC=\eC\cup\{ \infty \}\), si \( \ell\) est une droite dans \( \eC\), est-ce que la droite correspondante dans \( \hat\eC\) contient le point \( \infty\) ? Moi j'ai envie de dire que \( \infty\) est sur toutes les droites. Voir le problème~\ref{PROBooZHHTooIFNwxR} et la remarque~\ref{REMooBMAEooHDvNID}.
 
     \item
-        Géométrie affine, barycentre. Les mauvaise langues diraient que tout cela est du snobisme autour de la paresse d'écrire \( \vect{ xy }\) au lieu de \( y-x\). Est-ce qu'il y a des cas où toute l'étude des espaces affines et des barycentres en particulier apportent \emph{réellement} plus qu'une facilité d'écriture par rapport à travailler dans le cadre vectoriel pur ?
+        Géométrie affine, barycentre. Les mauvaises langues diraient que tout cela est du snobisme autour de la paresse d'écrire \( \vect{ xy }\) au lieu de \( y-x\). Est-ce qu'il y a des cas où toute l'étude des espaces affines et des barycentres en particulier apportent \emph{réellement} plus qu'une facilité d'écriture par rapport à travailler dans le cadre vectoriel pur ?
 \end{enumerate}
 
 
@@ -340,8 +376,15 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
 %///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 \begin{enumerate}
-    \item
-        Pour donner un peu de consistance à l'exemple \ref{ExluqIkE}, il faudrait décrire les éléments irréductibles de \( \eZ[i\sqrt{ 2 }]\).
+    \item La définition \ref{DEFooLNEXooYMQjRo} de \( \sum_{i\in I}f(i)\)  (\( I\) est fini et \( f\colon I\to (G,+)\) est une application) demande une preuve. Comment prouver que
+    \begin{equation}
+        \sum_{i=1}^nf\big( \sigma_1(i) \big)=\sum_{i=1}^nf\big( \sigma_2(i) \big)
+    \end{equation}
+    lorsque \( \sigma_1\) et \( \sigma_2\) sont des bijections ? 
+
+    De façon peut-être plus simple, il faut prouver la proposition \ref{PROPooJBQVooNqWErk} qui exprime l'invariance d'une somme commutative finie sous le groupe des bijections des termes.
+
+    Je crains que cela demande de décomposer \( \sigma_1\sigma_2^{-1}\) en cycles et de pas mal chipoter pour tout ramener à des permutations de deux termes.
 \end{enumerate}
 
 %///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -413,9 +456,11 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
 
 \begin{enumerate}
     \item
-        Est-ce que l'énoncé du théorème de Müntz~\ref{ThoAEYDdHp} est correct ? Voir en particulier la remarque~\ref{REMooGPYYooCQJwFa} à propos de la présence du monôme  \( 1\) dans la liste.
-    \item
-        À propos de formule sommatoire de Poisson, est-ce que l'exemple~\ref{ExDLjesf} est bien fait ? En particulier la formule \eqref{EqjrNxLr} est-elle correcte et bien justifiée ?
+        Définition de l'intégrale. Si \( f(x)=x^2\), alors \( \int_{\eR}f(x)dx\) utilise la définition de l'intégrale des fonctions partout positive en tant que supremum des fonctions étagées qui minorent \( f\). Pas de problèmes, \( \int_{\eR}x^2dx\) existe et vaut \( \infty\).
+
+        Par contre \( g(x)=x^2-1\) possède une minuscule partie négative et doit donc prendre la définition des intégrales pour des fonctions de signe variable. Cette définition \ref{DefTCXooAstMYl} demande que les intégrales des parties positives et négatives soient séparément finies. Donc \( \int_{\eR} (x^2-1)dx\) n'existe pas.
+
+        Ça me semble un peu restrictif. Il y a un problème à définir \( \int_{\eR}f\) lorsque la partie positive est infinie, mais la partie négative reste finie ?
     \item
         Que penser de la remarque~\ref{RemfdJcQF} qui dit qu'on doit avoir un théorème de complétion de partie orthonormale en une base orthonormale pour un espace de Hilbert ? C'est vrai ?
     \item
@@ -494,6 +539,57 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
 \subsubsection{Non classées}
 %///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+\begin{enumerate}
+    \item
+        À propos de suites de Cauchy dans un espace vectoriel topologique et dans un espace métrique, est-ce que le théorème~\ref{THOooGQZSooAmQolf} est correct ?
+
+        Soit \( V\) un espace vectoriel topologique métrisable\footnote{i.e. admet une base dénombrable de topologique, voir la proposition~\ref{PROPooPRLBooGtsRjr}}, alors il admet une métrique \( d\) compatible avec la topologie telle que une suite dans \( V\) est \( d\)-Cauchy si et seulement si elle est \( \tau\)-Cauchy.
+
+        Dans cet ordre d'idée, il faut des exemples de :
+        \begin{itemize}
+            \item un espace vectoriel topologique métrisable et une métrique \( d\) compatible avec la topologie, mais dont les suites \( d\)-Cauchy ne sont pas celles \( \tau\)-Cauchy. Et en particulier dont la complétude est différente que celle de la «bonne» métrique donnée par la théorème~\ref{THOooAGBXooZnvQLK}.
+            \item Et aussi un exemple pour la remarque~\ref{REMooUFQYooUVCCjs}.
+        \end{itemize}
+    \item
+        L'exemple~\ref{ExfYXeQg} parle d'inverser une intégrale et une dérivée au sens des distributions pour prouver que la dérivée de \( \int_0^xg(t)dt\) par rapport à \( x\) est \( g\). Rendre cela rigoureux.
+    \item
+        À propos du théorème de récurrence de Poincaré~\ref{ThoYnLNEL}, l'application \( \phi\) doit être mesurable ? Répondre à la question posée sur la page de discussion de \wikipedia{fr}{Théorème_de_récurrence_de_Poincaré}{l'article sur wikipédia}.
+
+        Toujours à propos du théorème de récurrence de Poincaré, il me semble qu'il y a un énoncé qui insiste sur la compacité de l'espace des phases et une démonstration utilisant la propriété de sous-recouvrement fini. Je serais content de retrouver cela. (ce serait sans doute mettable dans la leçon sur l'utilisation de la compacité)
+        \item
+            Dans \cite{OEVAuEz}, on parle de la proposition~\ref{PropZMKYMKI} à sa page \( 10\). Comment est-ce qu'on justifie le passage
+            \begin{equation}
+                \int_{\eR^d}T\big( y\mapsto \varphi(x)\psi(x-y) \big)dx=T\Big( y\mapsto\int_{\eR^d}\varphi(x)\psi(x-y)dx \Big).
+            \end{equation}
+            Sylvie Benzoni précise que «ceci demanderai quelques justifications». Où trouver lesdites justifications ? Il s'agit de permuter une distribution et une intégrale.
+
+    \item
+        Peut-on permuter une application linéaire et continue avec une somme pas spécialement dénombrable ? En supposant que \( \sum_{i\in I}f(v_i)\) existe, la proposition~\ref{PROPooWLEDooJogXpQ} semble dire que oui. Est-ce correct ?
+
+        Peut-on avoir un exemple de partie sommable \( \{ v_i \}_{i\in I}\) et d'application linéaire continue \( f\) telle que la partie \( \{ f(v_i) \}\) ne soit pas sommable ?
+
+        Peut-être ceci dans un espace de Hilbert.  \( v_i=\frac{1}{ i^2 }e_i\) puis \( f(e_i)=i^3e_i\).
+
+    \item
+        Soit une partie orthonormale \emph{pas spécialement dénombrable} \( \{ u_i \}_{i\in I}\) d'un espace de Hilbert (pas spécialement séparable). Si
+        \begin{equation}
+            x=\sum_{i\in I}x_iu_i,
+        \end{equation}
+        puis-je prendre le produit scalaire avec \( u_{k}\) et le permuter avec la somme pour déduire que \( x_k=\langle x, u_k\rangle \) ?
+
+        C'est ce que je fais dans la proposition~\ref{PROPooWTOZooYZdlml}.
+    \item
+        Théorème de point fixe et équation différentielle. Que penser de l'exemple~\ref{EXooJXIGooQtotMc} qui itère la contraction de Cauchy-Lipschitz pour résoudre \( y'(t)=y(t)\), \( y(0)=1\) ? Est-ce que c'est générique comme comportement ? Est-ce que la convergence est efficace dans des cas moins triviaux ?
+\end{enumerate}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Mes questions d'analyse numérique}
+%---------------------------------------------------------------------------------------------------------------------------
+
+\begin{enumerate}
+    \item
+        Différences finies. Il faut une analyse de consistance, stabilité et convergence du schéma à \( 9\) points pour le laplacien donné par \eqref{EQooKUMVooCVrzjt}. Je crois qu'il est d'ordre \( 6\), mais je n'en suis vraiment pas sûr.
+\end{enumerate}
 
 %---------------------------------------------------------------------------------------------------------------------------
 \subsection{Mes questions de probabilité et statistiques.}
@@ -533,7 +629,7 @@ Ne me dites juste pas «c'est bien fait dans tel \emph{livre}». Je ne travaille
 
 \begin{enumerate}
     \item
-        Comment faire en sorte que les mots commençant par «é» soient avec les «e» dans l'index, et non avant les «a» ? Il me faudrait quelque chose de plus automatique que faire \info{machin@truc}.
+        Comment faire en sorte que les mots commençant par «é» soient avec les «e» dans l'index, et non avant les «a» ? Il me faudrait un mécanisme plus automatique que faire \info{machin@truc}.
     \item 
         Il y a des problèmes dans la table des matières.  « Table des matières », « Index », et « Liste des notations » ne pointent pas vers la bonne page.
 \end{enumerate}
@@ -581,69 +677,9 @@ Je ne sais pas comment faire, et à mon avis il faudra innover.
 
 \begin{enumerate}
     \item
-        L'erreur de cancellation provoquée par la différence \( a-\tilde a\) lorsque \( a\) et \( \tilde a\) n'a pas de conséquences sur l'ordre de grandeur de la réponse. Seulement des conséquences sur la valeur des chiffres significatifs. Vrai ou faux ?
+        L'erreur de cancellation provoquée par la différence \( a-\tilde a\) lorsque \( a\) et \( \tilde a\) sont proches n'a pas de conséquences sur l'ordre de grandeur de la réponse. Seulement des conséquences sur la valeur des chiffres significatifs. Vrai ou faux ?
 
         Voir la remarque~\ref{REMooRQIJooNLdAZE}.
-\end{enumerate}
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Comment contribuer et aider (math) ?}
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-\subsubsection{Questions d'analyse}
-%///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-\begin{enumerate}
-    \item
-        À propos de suites de Cauchy dans un espace vectoriel topologique et dans un espace métrique, est-ce que le théorème~\ref{THOooGQZSooAmQolf} est correct ?
-
-        Soit \( V\) un espace vectoriel topologique métrisable\footnote{i.e. admet une base dénombrable de topologique, voir la proposition~\ref{PROPooPRLBooGtsRjr}}, alors il admet une métrique \( d\) compatible avec la topologie telle que une suite dans \( V\) est \( d\)-Cauchy si et seulement si elle est \( \tau\)-Cauchy.
-
-        Dans cet ordre d'idée, il faut des exemples de :
-        \begin{itemize}
-            \item un espace vectoriel topologique métrisable et une métrique \( d\) compatible avec la topologie, mais dont les suites \( d\)-Cauchy ne sont pas celles \( \tau\)-Cauchy. Et en particulier dont la complétude est différente que celle de la «bonne» métrique donnée par la théorème~\ref{THOooAGBXooZnvQLK}.
-            \item Et aussi un exemple pour la remarque~\ref{REMooUFQYooUVCCjs}.
-        \end{itemize}
-    \item
-        L'exemple~\ref{ExfYXeQg} parle d'inverser une intégrale et une dérivée au sens des distributions pour prouver que la dérivée de \( \int_0^xg(t)dt\) par rapport à \( x\) est \( g\). Rendre cela rigoureux.
-    \item
-        À propos du théorème de récurrence de Poincaré~\ref{ThoYnLNEL}, l'application \( \phi\) doit être mesurable ? Répondre à la question posée sur la page de discussion de \wikipedia{fr}{Théorème_de_récurrence_de_Poincaré}{l'article sur wikipédia}.
-
-        Toujours à propos du théorème de récurrence de Poincaré, il me semble qu'il y a un énoncé qui insiste sur la compacité de l'espace des phases et une démonstration utilisant la propriété de sous-recouvrement fini. Je serais content de retrouver cela. (ce serait sans doute mettable dans la leçon sur l'utilisation de la compacité)
-        \item
-            Dans \cite{OEVAuEz}, on parle de la proposition~\ref{PropZMKYMKI} à sa page \( 10\). Comment est-ce qu'on justifie le passage
-            \begin{equation}
-                \int_{\eR^d}T\big( y\mapsto \varphi(x)\psi(x-y) \big)dx=T\Big( y\mapsto\int_{\eR^d}\varphi(x)\psi(x-y)dx \Big).
-            \end{equation}
-            Sylvie Benzoni précise que «ceci demanderai quelques justifications». Où trouver lesdites justifications ? Il s'agit de permuter une distribution et une intégrale.
-
-    \item
-        Peut-on permuter une application linéaire et continue avec une somme pas spécialement dénombrable ? En supposant que \( \sum_{i\in I}f(v_i)\) existe, la proposition~\ref{PROPooWLEDooJogXpQ} semble dire que oui. Est-ce correct ?
-
-        Peut-on avoir un exemple de partie sommable \( \{ v_i \}_{i\in I}\) et d'application linéaire continue \( f\) telle que la partie \( \{ f(v_i) \}\) ne soit pas sommable ?
-
-        Peut-être ceci dans un espace de Hilbert.  \( v_i=\frac{1}{ i^2 }e_i\) puis \( f(e_i)=i^3e_i\).
-
-    \item
-        Soit une partie orthonormale \emph{pas spécialement dénombrable} \( \{ u_i \}_{i\in I}\) d'un espace de Hilbert (pas spécialement séparable). Si
-        \begin{equation}
-            x=\sum_{i\in I}x_iu_i,
-        \end{equation}
-        puis-je prendre le produit scalaire avec \( u_{k}\) et le permuter avec la somme pour déduire que \( x_k=\langle x, u_k\rangle \) ?
-
-        C'est ce que je fais dans la proposition~\ref{PROPooWTOZooYZdlml}.
-    \item
-        Théorème de point fixe et équation différentielle. Que penser de l'exemple~\ref{EXooJXIGooQtotMc} qui itère la contraction de Cauchy-Lipschitz pour résoudre \( y'(t)=y(t)\), \( y(0)=1\) ? Est-ce que c'est générique comme comportement ? Est-ce que la convergence est efficace dans des cas moins triviaux ?
-\end{enumerate}
-
-%---------------------------------------------------------------------------------------------------------------------------
-\subsection{Question de numérique}
-%---------------------------------------------------------------------------------------------------------------------------
-
-\begin{enumerate}
-    \item
-        Différences finies. Il faut une analyse de consistance, stabilité et convergence du schéma à \( 9\) points pour le laplacien donné par \eqref{EQooKUMVooCVrzjt}. Je crois qu'il est d'ordre \( 6\), mais je n'en suis vraiment pas sûr.
 \end{enumerate}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
@@ -791,7 +827,7 @@ Aucune erreur ne devrait être signalée.
 Attention : ce script fait quelques manipulations à base de \info{git stash} et crée une nouvelle branche (nom aléatoire assez long) pour tester votre dernière modification sans créer de commit.
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-\section{Acceptation des contribution}
+\section{Acceptation des contributions}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 TD;DR : pratiquement aucun patch n'est refusé.
@@ -828,6 +864,6 @@ Ce type de substitutions automatiques créent des patch gigantesques qui prennen
 
 Pire : ils ont des effets de bords pas toujours évident à détecter ou à prévoir.
 
-N'oubliez pas que le Frido n'est pas que du \LaTeX. Il est aussi divers script de pré et post-compilation (y compris qui hackent des fichiers intermédiaires entre deux passes de \LaTeX). Ces scipts, écrits par votre très humble et très obéissant serviteur, ne sont pas parfaits et les parseurs reposent sur certaines hypothèses. Donc des choses qui ne devraient ne rien changer du point de vue de \LaTeX\ peuvent avoir des conséquences.
+N'oubliez pas que le Frido n'est pas que du \LaTeX. Il est aussi divers scripts de pré et post-compilation (y compris qui hackent des fichiers intermédiaires entre deux passes de \LaTeX). Ces scipts, écrits par votre très humble et très obéissant serviteur, ne sont pas parfaits et les parseurs reposent sur certaines hypothèses. Donc des choses qui ne devraient ne rien changer du point de vue de \LaTeX\ peuvent avoir des conséquences.
 
 Bien entendu, si vous êtes en train de taper des math et que ce genre de «malpropreté» du code vous gêne, vous pouvez corriger dans les fichiers que vous modifiez.

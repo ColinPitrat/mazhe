@@ -12,15 +12,39 @@
     si elle existe.
 \end{definition}
 
-Ce qui est bien avec cette définition est que si la formule \eqref{EQooCHMUooFhSmaz} ne définit pas \( \hat f\) (parce que l'intégrale n'existe pas, par exemple), nous nous réservons le droit de définir tout de même \( \hat f\) par d'autres biais. Ce sera d'ailleurs l'objet du théorème~\ref{THOooJLCDooAjTvJf} qui définira \( \hat f\) pour tout \( f\in L^2(\eR^d)\) alors que la formule \eqref{EQooCHMUooFhSmaz} ne fonctionne pas sur toutes ces fonctions.
+\begin{normaltext}
+    Ce qui est bien avec cette définition est que si la formule \eqref{EQooCHMUooFhSmaz} ne définit pas \( \hat f\) (parce que l'intégrale n'existe pas, par exemple), nous nous réservons le droit de définir tout de même \( \hat f\) par d'autres biais. Ce sera d'ailleurs l'objet du théorème~\ref{THOooJLCDooAjTvJf} qui définira \( \hat f\) pour tout \( f\in L^2(\eR^d)\) alors que la formule \eqref{EQooCHMUooFhSmaz} ne fonctionne pas sur toutes ces fonctions.
 
-Une bonne partie de ce qui va suivre aura pour objet de déterminer des espaces de fonctions sur lesquels la transformée est bien définie, et sur lesquels elle a de bonnes propriétés.
+    Une bonne partie de ce qui va suivre aura pour objet de déterminer des espaces de fonctions sur lesquels la transformée est bien définie, et sur lesquels elle a de bonnes propriétés.
 
-Nous allons par ailleurs utiliser indifféremment les notations \( \TF(f)\) ou \( \hat f\) pour la transformée de Fourier de \( f\). La notation \( \TF\) est pratique pour les transformées de loooooongues expressions ainsi que pour parler de l'application «transformée de Fourier» d'un espace de fonction vers un autre.
+    Nous allons par ailleurs utiliser indifféremment les notations \( \TF(f)\) ou \( \hat f\) pour la transformée de Fourier de \( f\). La notation \( \TF\) est pratique pour les transformées de loooooongues expressions ainsi que pour parler de l'application «transformée de Fourier» d'un espace de fonction vers un autre.
+\end{normaltext}
 
 \begin{normaltext}
     Nous verrons dans le théorème~\ref{THOooJLCDooAjTvJf} que la transformée de Fourier n'est pas une isométrie de \( L^2\). Pour avoir une isométrie, il aurait fallu choisir des coefficients moins simples.
 \end{normaltext}
+
+\begin{proposition}
+    La transformée de Fourier est \( \eC\)-linéaire au sens suivant. Soient des fonctions \( f,g\colon \eR^d\to \eC\) telles que \( \TF(f)\) et \( \TF(g)\) existent. Alors
+    \begin{enumerate}
+        \item
+            La transformée de Fourier de \( f+g\) existe et vaut \( \TF(f+g)=\TF(f)+\TF(g)\)
+        \item
+            Pour tout \( \lambda\in \eC\), la transformée de Fourier de \( \lambda f\) existe et vaut \( \TF(\lambda f)=\lambda\TF(f)\).
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    C'est la proposition \ref{PROPooFIYEooCpdmwZ} qui nous permet de séparer l'intégrale dans le calcul suivant :
+    \begin{subequations}
+        \begin{align}
+            \TF(f+g)(\xi)&=\int_{\eR^d}(f+g)(x) e^{-i\xi\cdot x}dx\\
+            &=\int_{\eR^d}f(x) e^{-i\xi\cdot x}dx+\int_{\eR^d}g(x) e^{-i\xi\cdot x}dx\\
+            &=\TF(f)(\xi)+\TF(g)(\xi).
+        \end{align}
+    \end{subequations}
+    En ce qui concerne \( \TF(\lambda f)\), c'est la même chose, en utilisant la linéarité de l'intégrale.
+\end{proof}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \section{Transformée de Fourier sur \( L^1(\eR^d)\)}
@@ -48,7 +72,45 @@ Nous rappelons que les espaces \( L^p\) sont des ensembles de classes de fonctio
 \begin{proof}
     Par définition, si \( f\in L^1(\eR^d)\), alors l'intégrale \( \int_{\eR^d}| f |\) existe et est finie. Alors la fonction qui arrive dans la transformée de Fourier en \( \xi\), la fonction \( s\colon x\to f(x) e^{-i\xi x}\) est également dans \( L^1(\eR^d)\) parce que \( | s |=| f |\).
 \end{proof}
-<++>
+
+\begin{normaltext}
+    Si \( f\in L^1(\eR)\), la transformée de Fourier \( \hat f\) existe, mais il n'est pas garanti qu'elle soit elle-même dans \( L^1\), même si il est vrai que \( \hat f\) est continue (proposition \ref{PropJvNfj}) et bornée (proposition \ref{CORooHSNYooZlZoyV}). Nous allons immédiatement montrer un exemple de fonction \( L^1\) dont la transformée de Fourier n'est pas dans \( L^1\).
+\end{normaltext}
+
+\begin{lemma}       \label{LEMooROPHooOSguhN}
+    La transformée de Fourier de
+    \begin{equation}
+        \begin{aligned}
+            f\colon \eR&\to \eR \\
+            x&\mapsto \begin{cases}
+                1    &   \text{si } x\in \mathopen[ -\frac{ 1 }{2} , \frac{ 1 }{2} \mathclose]\\
+                0    &    \text{sinon }
+            \end{cases}
+        \end{aligned}
+    \end{equation}
+    est 
+    \begin{equation}
+        \hat f(\xi)=-\frac{ \sin(\xi/2) }{ \xi/2 }.
+    \end{equation}
+
+    La fonction \( \hat f\) n'est pas dans \( L^1(\eR)\).
+\end{lemma}
+
+\begin{proof}
+    Pour \( \xi\in \eR\) fixé, la fonction \( x\mapsto f(x) e^{i\xi x}\) est continue à support compact, donc nous n'avons aucun problèmes avec l'intégrale
+    \begin{subequations}
+        \begin{align}
+            \hat f(\xi)&=\int_{\eR}f(x) e^{-i\xi x}dx\\
+            &=\int_{\mathopen[ -1/2 , 1/2 \mathclose]} e^{-i\xi x}\\
+            &=\big[ -\frac{1}{ i\xi } e^{-i\xi x} \big]_{x=-1/2}^{x=1/2}\\
+            &=-\frac{1}{ i\xi }\big(  e^{-i\xi /2}- e^{-i\xi /2} \big)\\
+            &=-\frac{ 2i\sin(\xi/2) }{ i\xi }\\
+            &=\frac{ \sin(\xi/2) }{ \xi/2 }.
+        \end{align}
+    \end{subequations}
+
+    Le fait que cette fonction ne soit pas dans \( L^1(\eR)\) est le lemme \ref{LEMooEEWSooZwLSAP}.
+\end{proof}
 
 \begin{lemma}       \label{LEMooKGDKooVXSMCn}
     Si \( f\in L^1(\eR^d)\) et si \( g(x)=f(\lambda x)\) alors
@@ -188,7 +250,7 @@ c'est-à-dire \( \lim_{n\to \infty} \hat f(\xi_n)=\hat f(\xi)\). La fonction \( 
     mais cela est le résultat de la première partie de la preuve.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}       \label{CORooHSNYooZlZoyV}
     La transformée de Fourier d'une fonction \( L^1(\eR)\) est bornée.
 \end{corollary}
 
@@ -369,268 +431,6 @@ c'est-à-dire \( \lim_{n\to \infty} \hat f(\xi_n)=\hat f(\xi)\). La fonction \( 
 \end{example}
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Transformée de Fourier dans l'espace de Schwartz}
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-La définition de la transformée de Fourier de \( \varphi\in\swS(\eR^d)\) est
-\begin{equation}
-    \hat  \varphi(\xi)=\int_{\eR^n}\varphi(x) e^{-ix\cdot \xi}dx.
-\end{equation}
-
-Si \( \alpha\) est un multiindice de taille \( m\), nous notons
-\begin{equation}
-    (M_{\alpha}f)(x)=x_{\alpha_1}\ldots x_{\alpha_m}f(x).
-\end{equation}
-
-\begin{lemma}[Lemme de transfert]   \label{LemQPVQjCx}
-    Si \( \varphi\in\swS(\eR^d)\) et si \( \alpha\) est un multiindice, alors
-    \begin{equation}
-        \partial^{\alpha}\hat\varphi=(-i)^{| \alpha |}\widehat{M_{\alpha}\varphi}.
-    \end{equation}
-    et
-    \begin{equation}
-        \widehat{\partial^{\alpha}\varphi}(\xi)=(-i)^{| \alpha |}\xi^{\alpha}\hat\varphi(\xi).
-    \end{equation}
-\end{lemma}
-
-\begin{proof}
-    Nous considérons la fonction \( h(x,\xi)=\varphi(x) e^{-ix\cdot \xi}\) dont la dérivée par rapport à \( \xi_i\) est donnée par \( -i(M_{i}\varphi)(x) e^{x\cdot \xi}\). Cette fonction est majorée en norme par
-    \begin{equation}
-        G(x)=M_i\varphi(x),
-    \end{equation}
-    qui est encore une fonction à décroissance rapide et donc parfaitement intégrable sur \( \eR^d\). Le théorème~\ref{ThoMWpRKYp} nous dit donc que la dérivée de \( \hat \varphi\) par rapport à \( \xi_i\) existe et vaut
-    \begin{equation}
-        \frac{ \partial \hat\varphi }{ \partial \xi_i }(\xi)=-i\int_{\eR^n}x_i\varphi(x) e^{-i\xi\cdot x}=-i\widehat{M_i\varphi}(\xi).
-    \end{equation}
-    En appliquant ce résultat en chaîne, nous trouvons la première formule annoncée.
-
-    Nous passons à la seconde formule annoncée. Étant donné que \( \varphi\in\swS\), ses dérivées le sont aussi et par conséquent, il n'y a pas de problèmes pour écrire
-    \begin{equation}    \label{EqTYizlnia}
-        \widehat{\partial_{x_k}\varphi}(\xi)=\int_{\eR^d}\frac{ \partial \varphi }{ \partial x_k }(x) e^{-ix\cdot \xi}dx.
-    \end{equation}
-    Étant donné que
-    \begin{equation}    \label{EqZAeYaCB}
-        \frac{ \partial  }{ \partial x_k }\left( \varphi(x) e^{-ix\cdot\xi} \right)=\frac{ \partial \varphi }{ \partial x_k }(x) e^{-ix\cdot\xi}-i\xi_k\varphi(x) e^{-ix\cdot \xi},
-    \end{equation}
-    notre tâche sera de prouver que
-    \begin{equation}    \label{EqVGvYBNK}
-        \int_{\eR^d}\frac{ \partial  }{ \partial x_k }\left( \varphi(x) e^{-ix\cdot \xi} \right)dx=0.
-    \end{equation}
-    Autrement dit, nous voulons montrer que le terme au bord d'une intégration par partie s'annule. D'abord le fait que \( \varphi\) soit à décroissance rapide nous assure que l'intégrale \eqref{EqVGvYBNK} converge. Pour chaque \( \xi\), la fonction
-    \begin{equation}
-        f(x,\xi)=\frac{ \partial}{\partial x_k }\left( \varphi(x) e^{-ix\cdot \xi} \right)
-    \end{equation}
-    est intégrable par rapport à \( x\). De plus, \( f\) est dans \( \swS(\eR)\) pour chacune de ses variables (les autres étant fixées). Le théorème de Fubini~\ref{ThoFubinioYLtPI} nous permet alors de décomposer l'intégrale en
-    \begin{equation}
-        \int_{\eR^d}f(x,\xi)dx=\int_{\eR}\ldots\int_{\eR} f(x_1,\ldots, x_d)dx_1\ldots dx_d.
-    \end{equation}
-    De plus nous pouvons intégrer dans l'ordre de notre choix et nous choisissons évidemment d'intégrer d'abord par rapport à \( x_k\).  Étudions donc l'intégrale
-    \begin{equation}
-        \int_{\eR}\frac{ \partial  }{ \partial x }\left( \varphi(x) e^{-ix\xi} \right)dx=\lim_{A\to\infty}\int_{-A}^A\frac{ \partial  }{ \partial x }\left( \varphi(x) e^{-ix\xi} \right)dx
-    \end{equation}
-    dans laquelle nous avons un peu allégé les notations. Une primitive de ce qui est intégré est toute trouvée : c'est \( \varphi(x) e^{-ix\xi}\), et nous pouvons utiliser le théorème fondamental du calcul intégral pour écrire que
-    \begin{equation}
-        \int_{-A}^A\left( \varphi(x) e^{-ix\xi} \right)'dx=\left[ \varphi(x) e^{-ix\xi} \right]_{x=-A}^{x=A}.
-    \end{equation}
-    Vu que \( \varphi\) est dans \( \swS\), la limite \( A\to\infty\) donne zéro.
-
-    En substituant maintenant \eqref{EqZAeYaCB} dans \eqref{EqTYizlnia} et en tenant compte du terme que nous venons de montrer s'annuler, nous avons
-    \begin{equation}
-        \widehat{\partial_k\varphi}(\xi)=-i\xi_k\int_{\eR^d}\varphi(x) e^{-ix\cdot \xi}=-i\xi_k\hat\varphi(\xi).
-    \end{equation}
-    En recommençant la procédure \( | \alpha |\) fois nous trouvons la seconde formule annoncée.
-\end{proof}
-
-\begin{proposition}[\cite{MesIntProbb}] \label{PropKPsjyzT}
-    L'espace de Schwartz est stable par transformée de Fourier. De plus l'application
-    \begin{equation}
-        \TF\colon \swS(\eR^d)\to \swS(\eR^d)
-    \end{equation}
-    est une bijection linéaire et continue.
-\end{proposition}
-
-\begin{proof}
-    La linéarité découle de celle de l'intégrale. La difficulté est de prouver que pour \( \varphi\in\swS(\eR^d)\) nous avons bien que \( \hat\varphi\in\swS(\eR^d)\) et que cette association est continue\footnote{Pour rappel, en dimension infinie, il n'est pas garanti qu'une application linéaire soit continue.}.
-    \begin{subproof}
-        \item[Stabilité]
-            Nous devons prouver que pour tout multiindices \( \alpha\) et \( \beta\), nous avons \( p_{\alpha,\beta}(\hat\varphi)<\infty\). Nous avons
-            \begin{equation}
-                \xi^{\beta}\partial^{\alpha}\hat\varphi(\xi)=\xi^{\beta}(-i)^{| \alpha |}\widehat{M_{\alpha}\varphi}(\xi)=(-i)^{| \alpha |+| \beta |}\widehat{\partial^{\beta}M_{\alpha}\varphi}(\xi).
-            \end{equation}
-            Ensuite nous nous souvenons que \( \| \hat f \|_{\infty}\leq \| f \|_1\) parce que
-            \begin{equation}
-                | \hat f(\xi) |\leq\int_{\eR^d}\big| f(x) e^{-ix\cdot \xi} \big|=\int_{\eR^d}| f(x) |dx=\| f \|_1.
-            \end{equation}
-            Donc
-            \begin{equation}
-                p_{\alpha,\beta}(\hat\varphi)=\| \widehat{\partial^{\beta}M_{\alpha}\varphi} \|_{\infty}\leq \| \partial^{\beta}M_{\alpha}\varphi \|_1.
-            \end{equation}
-            Du fait que \( \varphi\) soit dans \( \swS\), la dernière expression est finie. Cela prouve déjà que
-            \begin{equation}
-                \TF\big( \swS(\eR^d) \big)\subset\swS(\eR^d).
-            \end{equation}
-
-        \item[Continuité]
-
-            Nous supposons avoir une suite \( \varphi_n\stackrel{\swS}{\to}\varphi\), et nous devons prouver que \( \hat\varphi_n\stackrel{\swS}{\to}\hat\varphi\). Pour alléger les notations, nous posons \( f_n=\varphi_n-\varphi\). Nous avons
-            \begin{subequations}    \label{subEqsSGsGGih}
-                \begin{align}
-                    \| \hat f \|_{\alpha,\beta}&=\| \xi^{\beta}\partial^{\alpha}\hat f \|_{\infty}\\
-                    &=\| \widehat{  \partial^{\beta}M_{\alpha}f  } \|_{\infty}\,\text{lemme~\ref{LemQPVQjCx}.}\\
-                    &\leq \| \partial^{\beta}M_{\alpha}f \|_1
-                \end{align}
-            \end{subequations}
-            La convergence \(f_n\stackrel{\swS}{\to}0\) nous dit ente autres que \( \partial^{\beta}M_{\alpha}f_n\stackrel{\swS}{\to}0\); en particulier la proposition~\ref{PropGNXBeME} nous dit que \( \partial^{\beta}M_{\alpha}f_n\stackrel{L^1}{\to}0\), ce qui signifie, par les majorations \eqref{subEqsSGsGGih} que
-            \begin{equation}
-                \| \hat f_n \|_{\alpha,\beta}\leq \| \partial^{\beta}M_{\alpha}f_n \|_1\to0,
-            \end{equation}
-            ce qui prouve la continuité de transformée de Fourier dans \( \swS(\eR^d)\).
-        \item[Bijection]
-            Une preuve peut être trouvée dans \cite{BMoNzTY}.
-    \end{subproof}
-    % TODO : Faire le dernier morceau de cette preuve.
-\end{proof}
-
-\begin{proposition}[\cite{MonCerveau}]     \label{PROPooMVQMooGYAzSX}
-    Soit \( \varphi\in\swS(\eR^n\times \eR^m)\) et la transformée de Fourier partielle
-    \begin{equation}
-        \tilde \varphi(x,k)=\int_{\eR^m}  e^{-iky}\varphi(x,y)dy.
-    \end{equation}
-    Alors \( \tilde \varphi\in\swS(\eR^n\times \eR^m  )\).
-\end{proposition}
-
-\begin{proof}
-    Il s'agit de reprendre les étapes de la partie correspondante de la preuve de la proposition~\ref{PropKPsjyzT}. Soient des multiindices \( \alpha\), \( \alpha'\), \( \beta\) et \( \beta'\) où \( \alpha\) et \( \beta\) se réfèrent à la variable \( x\) tandis que \( \alpha'\) et \( \beta'\) se réfèrent à la variable \( k\).
-
-    Vu que la multiplication par \( k^{\beta'}\) commute avec \( \partial^{\alpha}\) nous avons
-    \begin{equation}
-        x^{\beta}k^{\beta'}\partial^{\alpha}\partial^{\alpha'}\tilde \varphi(x,k)=x^{\beta}k^{\beta'}\partial^{\alpha}(-i)^{| \alpha' |}\widetilde{M_{\alpha'}\varphi}(x,k)=(-i)^{| \alpha' |+| \beta' |}x^{\beta}\partial^{\alpha}\widetilde{    \partial^{\beta'}M_{\alpha'}\varphi  }(x,k).
-    \end{equation}
-    D'autre part nous avons \( \partial^{\alpha}\tilde \varphi=\widetilde{\partial^{\alpha}\varphi}\) parce que la fonction \( \partial_x\varphi\) étant Schwartz, la fonction
-    \begin{equation}
-        G(y)=\sup_{x\in \eR^n}|(\partial_x\varphi)(x,y)|
-    \end{equation}
-    est dans \( L^1(\eR^m)\) par le corolaire~\ref{CORooZFPSooHCFUSH}. Par conséquent le théorème~\ref{ThoMWpRKYp} permet de permuter la dérivée et l'intégrale dans
-    \begin{equation}
-        \frac{ \partial  }{ \partial x }\tilde \varphi(x,k)=\frac{ \partial  }{ \partial x }\int_{\eR^m} e^{-iky}\varphi(x,y)dy.
-    \end{equation}
-    Dans le même ordre d'esprit mais dans difficultés de permutation de limites nous avons \( M_{\beta}\tilde \varphi=\widetilde{M_{\beta}\varphi}\).
-
-    D'autre part nous avons encore \( \| \tilde \varphi \|_{\alpha}<\infty\) parce que
-    \begin{equation}
-        | \tilde \varphi(x,k) |\leq \int_{\eR^m}| \varphi(x,y) |dy\leq \sup_x\int_{\eR^m}| \varphi(x,y) |dy\leq \int_{\eR^m}| \sup_x\varphi(x,y) |dy<\infty
-    \end{equation}
-    parce que \( \varphi\) est Schwartz et le corolaire~\ref{CORooZFPSooHCFUSH} donne l'intégrabilité.
-
-    Donc nous avons
-    \begin{equation}
-        p_{(\alpha\alpha'),(\beta\beta')(\tilde \varphi)}=\|  \widetilde{   \partial^{\beta'}M_{\alpha'}M_{\beta}\partial^{\alpha}\varphi      }    \|_{\infty}<\infty.
-    \end{equation}
-    Cela prouve que \( \tilde \varphi\) est Schwartz.
-\end{proof}
-
-%---------------------------------------------------------------------------------------------------------------------------
-\subsection{Quelques transformées de Fourier}
-%---------------------------------------------------------------------------------------------------------------------------
-
-\begin{example}[\cite{KXjFWKA}] \label{EXooLMXKooFcAZGR}
-    Soit la fonction \( g_{\epsilon}(x)= e^{-\epsilon x^2}\). Sa transformée de Fourier sera déduite dans le lemma~\ref{LEMooPAAJooCsoyAJ} en utilisant le lemme de transfert~\ref{LemQPVQjCx}. Nous nous proposons ici de déduire de façon directe l'équation différentielle vérifiée par la transformée de Fourier de \( g_{\epsilon}\).
-
-    Nous posons
-    \begin{equation}
-        I(k)=\int_{\eR} e^{-ikx} e^{-\epsilon x^2}dx.
-    \end{equation}
-    et nous considérons la fonction
-    \begin{equation}
-        f(k,x)= e^{-ikx} e^{-\epsilon x^2}.
-    \end{equation}
-    Elle est de classe \( C^1\) par rapport à \( k\), et intégrable en \( x\) pour chaque \( k\). De plus sa dérivée
-    \begin{equation}
-        (\partial_k f)(k,x)=-ix e^{-ikx} e^{-\epsilon x^2}
-    \end{equation}
-    vérifie \( | \partial_kf |\leq x e^{-\epsilon x^2}\). La dérivée est donc majorée (uniformément en \( k\)) par une fonction intégrable. Le théorème~\ref{ThoMWpRKYp} permet de permuter la dérivée et l'intégrale :
-    \begin{subequations}
-        \begin{align}
-            I'(k)&=\int_{\eR}-ix e^{-ikx} e^{-\epsilon x^2}dx\\
-            &=i\int_{\eR} e^{-ikx}\frac{1}{ 2\epsilon } \frac{ d  }{ dx }\left(  e^{-\epsilon x^2} \right)dx\\
-            &=\frac{ -i }{ 2\epsilon }\int_{\eR}\frac{ d }{ dx }\left(  e^{-ikx} \right) e^{-\epsilon x^2}dx     &\text{par partie}\\
-            &=\frac{ -k }{ 2\epsilon }\int_{\eR} e^{-ikx} e^{-\epsilon x^2}dx\\
-            &=\frac{ -k }{ 2\epsilon }I(k).
-        \end{align}
-    \end{subequations}
-    D'où l'équation différentielle \( I'(k)=-\frac{ k }{ 2\epsilon }I(k)\).
-\end{example}
-
-\begin{lemma}[Transformée de Fourier de la Gausienne \cite{ooKDRBooDFsyfV}]       \label{LEMooPAAJooCsoyAJ}
-    La transformée de Fourier de
-    \begin{equation}
-        \begin{aligned}
-            g_{\epsilon}\colon \eR^d&\to \eR \\
-            x&\mapsto  e^{-\epsilon\| x \|^2}
-        \end{aligned}
-    \end{equation}
-    est donnée par
-    \begin{equation}
-        \hat g_{\epsilon}(\xi)=\left( \frac{ \pi }{ \epsilon } \right)^{d/2} e^{-\| \xi \|^2/4\epsilon}
-    \end{equation}
-\end{lemma}
-
-\begin{proof}
-    Nous commençons par la fonction $ g(x) = e^{-\| x \|^2/2}$ et nous prouvons que sa transformée de Fourier est $\hat g(\xi)=(2\pi)^{d/2}g(\xi)$.
-    \begin{subproof}
-        \item[Réduction à la dimension \( 1\)]
-        La fonction \( g\) est dans l'espace de Schwartz. Par le théorème de Fubini,
-        \begin{equation}
-                \hat g(\xi)=\int_{\eR^d}\prod_{k=1}^d e^{-x_k^2} e^{-i\xi_kx_k}dx
-                =\prod_{k=1}^d\int_{\eR} e^{-t^2/2} e^{-\xi_kx}dt
-                =\prod_{k=1}^d\hat f(\xi_k) \label{EQooXRLIooRCfIOd}
-        \end{equation}
-        où \( f\) est la fonction d'une variable
-        \begin{equation}        \label{EQooFKSPooRBdgnk}
-            f(x)= e^{-x^2/2}.
-        \end{equation}
-        Notons que \( f\in\swD(\eR)\).
-
-    \item[Une équation différentielle]
-
-        Voyons l'équation différentielle satisfaite par la transformée de Fourier \( \hat f\) de la fonction \eqref{EQooFKSPooRBdgnk}. Grâce au lemme~\ref{LemQPVQjCx} nous trouvons l'équation différentielle\footnote{Une façon directe de déduire cette équation différentielle est donnée dans l'exemple~\ref{EXooLMXKooFcAZGR}.}
-        \begin{equation}
-            \xi \hat f(\xi)+(\hat f)'(\xi)=0.
-        \end{equation}
-        C'est le moment d'utiliser le théorème de Cauchy-Lipschitz \eqref{ThokUUlgU}, appliqué à la fonction \( f(t,y)=-ty\) qui est Lipschitz et continue au au problème
-        \begin{subequations}        \label{SUBEQSooWZZKooNEKnME}
-            \begin{numcases}{}
-                y'+ty=0\\
-                y(0)=y_0
-            \end{numcases}
-        \end{subequations}
-        possède une unique solution maximale, en l'occurrence \( y(x)= y_0  e^{-x^2/2}  \). En ce qui concerne la condition initiale nous avons
-        \begin{equation}
-            \hat f(0)=\int_{\eR} e^{-x^2/2}dx=\sqrt{ 2\pi }.
-        \end{equation}
-        par l'exemple~\ref{EXooLUFAooGcxFUW}. Donc
-        \begin{equation}
-            \hat f(\xi)=\sqrt{ 2\pi } e^{-\xi^2/2}.
-        \end{equation}
-        En reformant le produit \eqref{EQooXRLIooRCfIOd} nous concluons.
-   \end{subproof}
-
-    Nous passons maintenant à la fonction \( g_{\epsilon}\). Nous pouvons écrire \( g_{\epsilon}\) sous la forme
-    \begin{equation}
-        g_{\epsilon}(x)=g(\sqrt{ 2\epsilon }x).
-    \end{equation}
-        Utilisant successivement la transformée de Fourier de \( g\) que nous venons de calculer et~\ref{LEMooKGDKooVXSMCn} (facteur d'échelle) nous trouvons
-        \begin{subequations}
-            \begin{align}
-                \hat g(\xi)&=(2\pi)^{d/2}g(\xi)\\
-                \hat g_{\epsilon}(\xi)&=(2\epsilon)^{-d/2}\hat g\big( \xi/\sqrt{ 2\epsilon } \big)\\
-                &=\left( \frac{ \pi }{ \epsilon } \right)^{d/2} e^{-| \xi |^2/4\epsilon} \label{SUBEQooFWIKooGMpFbo}..
-            \end{align}
-        \end{subequations}
-        Nous voyons que \( \hat g_{\epsilon}\in\swS(\eR^d)\)  (c'était gagné d'avance par la proposition~\ref{PropKPsjyzT}).
-\end{proof}
-
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \section{Suite régularisante}
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -701,6 +501,242 @@ Une telle suite est régularisante parce que souvent \( \rho_n\in\swD(\eR^d)\), 
     \end{equation}
 \end{proof}
 
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\section{Transformée de Fourier dans l'espace de Schwartz}
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+La définition de la transformée de Fourier de \( \varphi\in\swS(\eR^d)\) est
+\begin{equation}
+    \hat  \varphi(\xi)=\int_{\eR^n}\varphi(x) e^{-ix\cdot \xi}dx.
+\end{equation}
+
+Si \( \alpha\) est un multiindice de taille \( m\), nous notons
+\begin{equation}
+    (M_{\alpha}f)(x)=x_{\alpha_1}\ldots x_{\alpha_m}f(x).
+\end{equation}
+
+\begin{lemma}[Lemme de transfert]   \label{LemQPVQjCx}
+    Si \( \varphi\in\swS(\eR^d)\) et si \( \alpha\) est un multiindice, alors
+    \begin{equation}
+        \partial^{\alpha}\hat\varphi=(-i)^{| \alpha |}\widehat{M_{\alpha}\varphi}.
+    \end{equation}
+    et
+    \begin{equation}
+        \widehat{\partial^{\alpha}\varphi}(\xi)=(-i)^{| \alpha |}\xi^{\alpha}\hat\varphi(\xi).
+    \end{equation}
+\end{lemma}
+
+\begin{proof}
+    Nous considérons la fonction \( h(x,\xi)=\varphi(x) e^{-ix\cdot \xi}\) dont la dérivée par rapport à \( \xi_i\) est donnée par \( -i(M_{i}\varphi)(x) e^{x\cdot \xi}\). Cette fonction est majorée en norme par
+    \begin{equation}
+        G(x)=M_i\varphi(x),
+    \end{equation}
+    qui est encore une fonction à décroissance rapide et donc parfaitement intégrable sur \( \eR^d\). Le théorème~\ref{ThoMWpRKYp} nous dit donc que la dérivée de \( \hat \varphi\) par rapport à \( \xi_i\) existe et vaut
+    \begin{equation}
+        \frac{ \partial \hat\varphi }{ \partial \xi_i }(\xi)=-i\int_{\eR^n}x_i\varphi(x) e^{-i\xi\cdot x}=-i\widehat{M_i\varphi}(\xi).
+    \end{equation}
+    En appliquant ce résultat en chaine, nous trouvons la première formule annoncée.
+
+    Nous passons à la seconde formule annoncée. Étant donné que \( \varphi\in\swS\), ses dérivées le sont aussi et par conséquent, il n'y a pas de problèmes pour écrire
+    \begin{equation}    \label{EqTYizlnia}
+        \widehat{\partial_{x_k}\varphi}(\xi)=\int_{\eR^d}\frac{ \partial \varphi }{ \partial x_k }(x) e^{-ix\cdot \xi}dx.
+    \end{equation}
+    Étant donné que
+    \begin{equation}    \label{EqZAeYaCB}
+        \frac{ \partial  }{ \partial x_k }\left( \varphi(x) e^{-ix\cdot\xi} \right)=\frac{ \partial \varphi }{ \partial x_k }(x) e^{-ix\cdot\xi}-i\xi_k\varphi(x) e^{-ix\cdot \xi},
+    \end{equation}
+    notre tâche sera de prouver que
+    \begin{equation}    \label{EqVGvYBNK}
+        \int_{\eR^d}\frac{ \partial  }{ \partial x_k }\left( \varphi(x) e^{-ix\cdot \xi} \right)dx=0.
+    \end{equation}
+    Autrement dit, nous voulons montrer que le terme au bord d'une intégration par partie s'annule. D'abord le fait que \( \varphi\) soit à décroissance rapide nous assure que l'intégrale \eqref{EqVGvYBNK} converge. Pour chaque \( \xi\), la fonction
+    \begin{equation}
+        f(x,\xi)=\frac{ \partial}{\partial x_k }\left( \varphi(x) e^{-ix\cdot \xi} \right)
+    \end{equation}
+    est intégrable par rapport à \( x\). De plus, \( f\) est dans \( \swS(\eR)\) pour chacune de ses variables (les autres étant fixées). Le théorème de Fubini~\ref{ThoFubinioYLtPI} nous permet alors de décomposer l'intégrale en
+    \begin{equation}
+        \int_{\eR^d}f(x,\xi)dx=\int_{\eR}\ldots\int_{\eR} f(x_1,\ldots, x_d)dx_1\ldots dx_d.
+    \end{equation}
+    De plus nous pouvons intégrer dans l'ordre de notre choix et nous choisissons évidemment d'intégrer d'abord par rapport à \( x_k\).  Étudions donc l'intégrale
+    \begin{equation}
+        \int_{\eR}\frac{ \partial  }{ \partial x }\left( \varphi(x) e^{-ix\xi} \right)dx=\lim_{A\to\infty}\int_{-A}^A\frac{ \partial  }{ \partial x }\left( \varphi(x) e^{-ix\xi} \right)dx
+    \end{equation}
+    dans laquelle nous avons un peu allégé les notations. Une primitive de ce qui est intégré est toute trouvée : c'est \( \varphi(x) e^{-ix\xi}\), et nous pouvons utiliser le théorème fondamental du calcul intégral pour écrire que
+    \begin{equation}
+        \int_{-A}^A\left( \varphi(x) e^{-ix\xi} \right)'dx=\left[ \varphi(x) e^{-ix\xi} \right]_{x=-A}^{x=A}.
+    \end{equation}
+    Vu que \( \varphi\) est dans \( \swS\), la limite \( A\to\infty\) donne zéro.
+
+    En substituant maintenant \eqref{EqZAeYaCB} dans \eqref{EqTYizlnia} et en tenant compte du terme que nous venons de montrer s'annuler, nous avons
+    \begin{equation}
+        \widehat{\partial_k\varphi}(\xi)=-i\xi_k\int_{\eR^d}\varphi(x) e^{-ix\cdot \xi}=-i\xi_k\hat\varphi(\xi).
+    \end{equation}
+    En recommençant la procédure \( | \alpha |\) fois nous trouvons la seconde formule annoncée.
+\end{proof}
+
+\begin{proposition}[\cite{MesIntProbb}] \label{PropKPsjyzT}
+    À propos de transformée de Fourier dans l'espace de Schwartz.
+    \begin{enumerate}
+        \item
+            L'espace de Schwartz est stable par transformée de Fourier, c'est-à-dire que \( \TF\big( \swS(\eR^2) \big)\subset \swS(\eR^d)\)\footnote{Nous verrons, avec la formule d'inversion dans la proposition \ref{PROPooLWTJooReGlaN} que c'est même une bijection.}.
+        \item
+            L'application $\TF\colon \swS(\eR^d)\to \swS(\eR^d)$ est continue.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    La linéarité découle de celle de l'intégrale. La difficulté est de prouver que pour \( \varphi\in\swS(\eR^d)\) nous avons bien que \( \hat\varphi\in\swS(\eR^d)\) et que cette association est continue\footnote{Pour rappel, en dimension infinie, il n'est pas garanti qu'une application linéaire soit continue.}.
+    \begin{subproof}
+        \item[Première inclusion : \(  \TF\big( \swS(\eR^d) \big)\subset\swS(\eR^d)\)]
+            Nous devons prouver que pour tout multiindices \( \alpha\) et \( \beta\), nous avons \( p_{\alpha,\beta}(\hat\varphi)<\infty\). Nous avons
+            \begin{equation}
+                \xi^{\beta}\partial^{\alpha}\hat\varphi(\xi)=\xi^{\beta}(-i)^{| \alpha |}\widehat{M_{\alpha}\varphi}(\xi)=(-i)^{| \alpha |+| \beta |}\widehat{\partial^{\beta}M_{\alpha}\varphi}(\xi).
+            \end{equation}
+            Ensuite nous nous souvenons que \( \| \hat f \|_{\infty}\leq \| f \|_1\) parce que
+            \begin{equation}
+                | \hat f(\xi) |\leq\int_{\eR^d}\big| f(x) e^{-ix\cdot \xi} \big|=\int_{\eR^d}| f(x) |dx=\| f \|_1.
+            \end{equation}
+            Donc
+            \begin{equation}
+                p_{\alpha,\beta}(\hat\varphi)=\| \widehat{\partial^{\beta}M_{\alpha}\varphi} \|_{\infty}\leq \| \partial^{\beta}M_{\alpha}\varphi \|_1.
+            \end{equation}
+            Du fait que \( \varphi\) soit dans \( \swS\), la dernière expression est finie. Cela prouve déjà que
+            \begin{equation}
+                \TF\big( \swS(\eR^d) \big)\subset\swS(\eR^d).
+            \end{equation}
+
+        \item[Continuité]
+
+            Nous supposons avoir une suite \( \varphi_n\stackrel{\swS}{\to}\varphi\), et nous devons prouver que \( \hat\varphi_n\stackrel{\swS}{\to}\hat\varphi\). Pour alléger les notations, nous posons \( f_n=\varphi_n-\varphi\). Nous avons
+            \begin{subequations}    \label{subEqsSGsGGih}
+                \begin{align}
+                    \| \hat f \|_{\alpha,\beta}&=\| \xi^{\beta}\partial^{\alpha}\hat f \|_{\infty}\\
+                    &=\| \widehat{  \partial^{\beta}M_{\alpha}f  } \|_{\infty}\,\text{lemme~\ref{LemQPVQjCx}.}\\
+                    &\leq \| \partial^{\beta}M_{\alpha}f \|_1
+                \end{align}
+            \end{subequations}
+            La convergence \(f_n\stackrel{\swS}{\to}0\) nous dit ente autres que \( \partial^{\beta}M_{\alpha}f_n\stackrel{\swS}{\to}0\); en particulier la proposition~\ref{PropGNXBeME} nous dit que \( \partial^{\beta}M_{\alpha}f_n\stackrel{L^1}{\to}0\), ce qui signifie, par les majorations \eqref{subEqsSGsGGih} que
+            \begin{equation}
+                \| \hat f_n \|_{\alpha,\beta}\leq \| \partial^{\beta}M_{\alpha}f_n \|_1\to0,
+            \end{equation}
+            ce qui prouve la continuité de transformée de Fourier dans \( \swS(\eR^d)\).
+        \item[Bijection]
+            Une preuve peut être trouvée dans \cite{BMoNzTY}.
+    \end{subproof}
+    % TODO : Faire le dernier morceau de cette preuve.
+\end{proof}
+
+\begin{proposition}[\cite{MonCerveau}]     \label{PROPooMVQMooGYAzSX}
+    Soit \( \varphi\in\swS(\eR^n\times \eR^m)\) et la transformée de Fourier partielle
+    \begin{equation}
+        \tilde \varphi(x,k)=\int_{\eR^m}  e^{-iky}\varphi(x,y)dy.
+    \end{equation}
+    Alors \( \tilde \varphi\in\swS(\eR^n\times \eR^m  )\).
+\end{proposition}
+
+\begin{proof}
+    Il s'agit de reprendre les étapes de la partie correspondante de la preuve de la proposition~\ref{PropKPsjyzT}. Soient des multiindices \( \alpha\), \( \alpha'\), \( \beta\) et \( \beta'\) où \( \alpha\) et \( \beta\) se réfèrent à la variable \( x\) tandis que \( \alpha'\) et \( \beta'\) se réfèrent à la variable \( k\).
+
+    Vu que la multiplication par \( k^{\beta'}\) commute avec \( \partial^{\alpha}\) nous avons
+    \begin{equation}
+        x^{\beta}k^{\beta'}\partial^{\alpha}\partial^{\alpha'}\tilde \varphi(x,k)=x^{\beta}k^{\beta'}\partial^{\alpha}(-i)^{| \alpha' |}\widetilde{M_{\alpha'}\varphi}(x,k)=(-i)^{| \alpha' |+| \beta' |}x^{\beta}\partial^{\alpha}\widetilde{    \partial^{\beta'}M_{\alpha'}\varphi  }(x,k).
+    \end{equation}
+    D'autre part nous avons \( \partial^{\alpha}\tilde \varphi=\widetilde{\partial^{\alpha}\varphi}\) parce que la fonction \( \partial_x\varphi\) étant Schwartz, la fonction
+    \begin{equation}
+        G(y)=\sup_{x\in \eR^n}|(\partial_x\varphi)(x,y)|
+    \end{equation}
+    est dans \( L^1(\eR^m)\) par le corolaire~\ref{CORooZFPSooHCFUSH}. Par conséquent le théorème~\ref{ThoMWpRKYp} permet de permuter la dérivée et l'intégrale dans
+    \begin{equation}
+        \frac{ \partial  }{ \partial x }\tilde \varphi(x,k)=\frac{ \partial  }{ \partial x }\int_{\eR^m} e^{-iky}\varphi(x,y)dy.
+    \end{equation}
+    Dans le même ordre d'esprit des difficultés de permutation de limites nous avons \( M_{\beta}\tilde \varphi=\widetilde{M_{\beta}\varphi}\).
+
+    D'autre part nous avons encore \( \| \tilde \varphi \|_{\alpha}<\infty\) parce que
+    \begin{equation}
+        | \tilde \varphi(x,k) |\leq \int_{\eR^m}| \varphi(x,y) |dy\leq \sup_x\int_{\eR^m}| \varphi(x,y) |dy\leq \int_{\eR^m}| \sup_x\varphi(x,y) |dy<\infty
+    \end{equation}
+    parce que \( \varphi\) est Schwartz et le corolaire~\ref{CORooZFPSooHCFUSH} donne l'intégrabilité.
+
+    Donc nous avons
+    \begin{equation}
+        p_{(\alpha\alpha'),(\beta\beta')(\tilde \varphi)}=\|  \widetilde{   \partial^{\beta'}M_{\alpha'}M_{\beta}\partial^{\alpha}\varphi      }    \|_{\infty}<\infty.
+    \end{equation}
+    Cela prouve que \( \tilde \varphi\) est Schwartz.
+\end{proof}
+
+%---------------------------------------------------------------------------------------------------------------------------
+\subsection{Quelques transformées de Fourier}
+%---------------------------------------------------------------------------------------------------------------------------
+
+\begin{lemma}[Transformée de Fourier de la Gausienne \cite{ooKDRBooDFsyfV}]       \label{LEMooPAAJooCsoyAJ}
+    La transformée de Fourier de
+    \begin{equation}
+        \begin{aligned}
+            g_{\epsilon}\colon \eR^d&\to \eR \\
+            x&\mapsto  e^{-\epsilon\| x \|^2}
+        \end{aligned}
+    \end{equation}
+    est donnée par
+    \begin{equation}
+        \hat g_{\epsilon}(\xi)=\left( \frac{ \pi }{ \epsilon } \right)^{d/2} e^{-\| \xi \|^2/4\epsilon}
+    \end{equation}
+\end{lemma}
+
+\begin{proof}
+    Nous commençons par la fonction $ g(x) = e^{-\| x \|^2/2}$ et nous prouvons que sa transformée de Fourier est $\hat g(\xi)=(2\pi)^{d/2}g(\xi)$.
+    \begin{subproof}
+        \item[Réduction à la dimension \( 1\)]
+        La fonction \( g\) est dans l'espace de Schwartz. Par le théorème de Fubini,
+        \begin{equation}
+                \hat g(\xi)=\int_{\eR^d}\prod_{k=1}^d e^{-x_k^2} e^{-i\xi_kx_k}dx
+                =\prod_{k=1}^d\int_{\eR} e^{-t^2/2} e^{-\xi_kx}dt
+                =\prod_{k=1}^d\hat f(\xi_k) \label{EQooXRLIooRCfIOd}
+        \end{equation}
+        où \( f\) est la fonction d'une variable
+        \begin{equation}        \label{EQooFKSPooRBdgnk}
+            f(x)= e^{-x^2/2}.
+        \end{equation}
+        Notons que \( f\in\swD(\eR)\).
+
+    \item[Une équation différentielle]
+
+        Voyons l'équation différentielle satisfaite par la transformée de Fourier \( \hat f\) de la fonction \eqref{EQooFKSPooRBdgnk}. Grâce au lemme~\ref{LemQPVQjCx} nous trouvons l'équation différentielle\footnote{Une façon alternative, plus directe de déduire cette équation différentielle sera donnée dans l'exemple~\ref{EXooLMXKooFcAZGR}.}
+        \begin{equation}
+            \xi \hat f(\xi)+(\hat f)'(\xi)=0.
+        \end{equation}
+        C'est le moment d'utiliser le théorème de Cauchy-Lipschitz \eqref{ThokUUlgU}, appliqué à la fonction \( f(t,y)=-ty\) qui est Lipschitz et continue au au problème
+        \begin{subequations}        \label{SUBEQSooWZZKooNEKnME}
+            \begin{numcases}{}
+                y'+ty=0\\
+                y(0)=y_0
+            \end{numcases}
+        \end{subequations}
+        possède une unique solution maximale, en l'occurrence \( y(x)= y_0  e^{-x^2/2}  \). En ce qui concerne la condition initiale nous avons
+        \begin{equation}
+            \hat f(0)=\int_{\eR} e^{-x^2/2}dx=\sqrt{ 2\pi }.
+        \end{equation}
+        par l'exemple~\ref{EXooLUFAooGcxFUW}. Donc
+        \begin{equation}
+            \hat f(\xi)=\sqrt{ 2\pi } e^{-\xi^2/2}.
+        \end{equation}
+        En reformant le produit \eqref{EQooXRLIooRCfIOd} nous concluons.
+   \end{subproof}
+
+    Nous passons maintenant à la fonction \( g_{\epsilon}\). Nous pouvons écrire \( g_{\epsilon}\) sous la forme
+    \begin{equation}
+        g_{\epsilon}(x)=g(\sqrt{ 2\epsilon }x).
+    \end{equation}
+        Utilisant successivement la transformée de Fourier de \( g\) que nous venons de calculer et~\ref{LEMooKGDKooVXSMCn} (facteur d'échelle) nous trouvons
+        \begin{subequations}
+            \begin{align}
+                \hat g(\xi)&=(2\pi)^{d/2}g(\xi)\\
+                \hat g_{\epsilon}(\xi)&=(2\epsilon)^{-d/2}\hat g\big( \xi/\sqrt{ 2\epsilon } \big)\\
+                &=\left( \frac{ \pi }{ \epsilon } \right)^{d/2} e^{-| \xi |^2/4\epsilon} \label{SUBEQooFWIKooGMpFbo}..
+            \end{align}
+        \end{subequations}
+        Nous voyons que \( \hat g_{\epsilon}\in\swS(\eR^d)\)  (c'était gagné d'avance par la proposition~\ref{PropKPsjyzT}).
+\end{proof}
+
 \begin{lemma}       \label{LEMooTDWSooSBJXdv}
     Si \( g_{\epsilon}(x)= e^{-\epsilon\| x \|^2}\) alors la suite
     \begin{equation}        \label{EQooWQWZooZIYGpq}
@@ -744,27 +780,72 @@ Le corolaire suivant regroupe les résultats à propos des suites régularisante
     De telles suites existent, par exemple celle donnée par le lemme~\ref{LEMooTDWSooSBJXdv}.
 \end{proof}
 
+\begin{example}[\cite{KXjFWKA}] \label{EXooLMXKooFcAZGR}
+    Soit la fonction \( g_{\epsilon}(x)= e^{-\epsilon x^2}\). Sa transformée de Fourier sera déduite dans le lemma~\ref{LEMooPAAJooCsoyAJ} en utilisant le lemme de transfert~\ref{LemQPVQjCx}. Nous nous proposons ici de déduire de façon directe l'équation différentielle vérifiée par la transformée de Fourier de \( g_{\epsilon}\).
+
+    Nous posons
+    \begin{equation}
+        I(k)=\int_{\eR} e^{-ikx} e^{-\epsilon x^2}dx.
+    \end{equation}
+    et nous considérons la fonction
+    \begin{equation}
+        f(k,x)= e^{-ikx} e^{-\epsilon x^2}.
+    \end{equation}
+    Elle est de classe \( C^1\) par rapport à \( k\), et intégrable en \( x\) pour chaque \( k\). De plus sa dérivée
+    \begin{equation}
+        (\partial_k f)(k,x)=-ix e^{-ikx} e^{-\epsilon x^2}
+    \end{equation}
+    vérifie \( | \partial_kf |\leq x e^{-\epsilon x^2}\). La dérivée est donc majorée (uniformément en \( k\)) par une fonction intégrable. Le théorème~\ref{ThoMWpRKYp} permet de permuter la dérivée et l'intégrale :
+    \begin{subequations}
+        \begin{align}
+            I'(k)&=\int_{\eR}-ix e^{-ikx} e^{-\epsilon x^2}dx\\
+            &=i\int_{\eR} e^{-ikx}\frac{1}{ 2\epsilon } \frac{ d  }{ dx }\left(  e^{-\epsilon x^2} \right)dx\\
+            &=\frac{ -i }{ 2\epsilon }\int_{\eR}\frac{ d }{ dx }\left(  e^{-ikx} \right) e^{-\epsilon x^2}dx     &\text{par partie}\\
+            &=\frac{ -k }{ 2\epsilon }\int_{\eR} e^{-ikx} e^{-\epsilon x^2}dx\\
+            &=\frac{ -k }{ 2\epsilon }I(k).
+        \end{align}
+    \end{subequations}
+    D'où l'équation différentielle \( I'(k)=-\frac{ k }{ 2\epsilon }I(k)\).
+\end{example}
+
 %---------------------------------------------------------------------------------------------------------------------------
 \subsection{Formule d'inversion}
 %---------------------------------------------------------------------------------------------------------------------------
 
-\begin{proposition}[Formule d'inversion de Fourier\cite{KXjFWKA}]       \label{PROPooLWTJooReGlaN}
-    Si \( f\in\swS(\eR)\), alors nous avons  la formule d'inversion
-    \begin{equation}        \label{EQooHIDAooHARdNZ}
-        f(x)=\frac{1}{ 2\pi }\int_{\eR} e^{ikx}\hat f(k)dk.
-    \end{equation}
-    Cette formule peut d'écrire de plusieurs autres façons :
-    \begin{subequations}
-        \begin{align}
-        \TF\big( \TF(f) \big)(x)=2\pi f(-x),\\
-        \TF^{-1}(f)(x)=\frac{1}{ 2\pi }\hat f(-x),\\
-        f(x)=\frac{1}{ 2\pi }\TF(\hat f)(-x).     \label{EQooWBZTooPeBNeh}
-        \end{align}
-    \end{subequations}
+\begin{proposition}[Formule d'inversion\cite{MesIntProbb,KXjFWKA}]  \label{PROPooLWTJooReGlaN}
+    À propos d'inversion de la transformée de Fourier.
+    \begin{enumerate}
+        \item       \label{ITEMooLVOTooUDJSWt}
+            Si \( f\in\swS(\eR)\), alors nous avons la formule d'inversion
+            \begin{equation}        \label{EQooHIDAooHARdNZ}
+                f(x)=\frac{1}{ 2\pi }\int_{\eR} e^{ikx}\hat f(k)dk.
+            \end{equation}
+        \item       \label{ITEMooWINLooJWcDIX}
+            Nous avons, pour \( f\in \swS(\eR)\),
+            \begin{equation}
+                f(x)=\frac{1}{ 2\pi }\TF(\hat f)(-x).
+            \end{equation}
+        \item       \label{ITEMooCZYMooRvKTfS}
+            L'application
+            \begin{equation}
+                \TF\colon \swS(\eR)\to \swS(\eR)
+            \end{equation}
+            est une bijection continue.
+        \item
+            Cette formule peut d'écrire de plusieurs autres façons : pour tout \( f\in \swS(\eR^d)\) nous avons
+            \begin{subequations}
+                \begin{align}
+                    f(x)=\frac{1}{ 2\pi }\TF(\hat f)(-x).     \label{EQooWBZTooPeBNeh}\\
+                    \TF^{-1}(f)(\xi)&=-\frac{1}{ 2\pi }\TF(f)(-\xi).
+                \end{align}
+            \end{subequations}
+    \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-    Pour \( \epsilon>0\) nous posons
+    Le fait que la transformée de Fourier sur \( \swS(\eR^d)\) prenne ses valeurs dans \( \swS(\eR^d)\) est déjà prouvé dans \ref{PropKPsjyzT}. Nous commençons maintenant la preuve de \ref{ITEMooLVOTooUDJSWt}.
+
+    Soit \( f\in \swS(\eR^d)\). Pour \( \epsilon>0\) nous posons
     \begin{equation}
         f_{\epsilon}(k)= e^{-\epsilon k^2} e^{ikx}\hat f(k).
     \end{equation}
@@ -772,62 +853,128 @@ Le corolaire suivant regroupe les résultats à propos des suites régularisante
     \begin{equation}
         \lim_{\epsilon\to 0}\int_{\eR} e^{-\epsilon k^2} e^{ikx}\hat f(k)dk
     \end{equation}
-    de deux façons.
+    de deux façons; d'abord avec la convergence dominée, et ensuite avec Fubini.
 
-    D'abord en utilisant directement le théorème de la convergence dominée~\ref{ThoConvDomLebVdhsTf}. La fonction \( \hat f\) est dans \( \swS(\eR)\) (théorème~\ref{PropKPsjyzT}) et par conséquent \( f_{\epsilon}\in L^1(\eR)\) parce que le facteur \(  e^{-\epsilon k^2}\) ne va certainement pas empêcher de converger. De plus \( | f_{\epsilon} |\leq | \hat f |\) et \( \hat f\in L^1\). Le théorème est de la convergence dominée est applicable et
-    \begin{equation}        \label{EQooYIYGooXYubbW}
-        \lim_{\epsilon\to 0}\int_{\eR} e^{-\epsilon k^2} e^{ikx}\hat f(k)dk=\int_{\eR} e^{ikx}\hat f(k)dk.
-    \end{equation}
+    \begin{subproof}
+        \item[Premier calcul : convergence dominée]
+            D'abord en utilisant directement le théorème de la convergence dominée~\ref{ThoConvDomLebVdhsTf}. La fonction \( \hat f\) est dans \( \swS(\eR)\) (théorème~\ref{PropKPsjyzT}) et par conséquent \( f_{\epsilon}\in L^1(\eR)\) parce que le facteur \(  e^{-\epsilon k^2}\) ne va certainement pas empêcher de converger. De plus \( | f_{\epsilon} |\leq | \hat f |\) et \( \hat f\in L^1\). Le théorème est de la convergence dominée est applicable et
+            \begin{equation}        \label{EQooYIYGooXYubbW}
+                \lim_{\epsilon\to 0}\int_{\eR} e^{-\epsilon k^2} e^{ikx}\hat f(k)dk=\int_{\eR} e^{ikx}\hat f(k)dk.
+            \end{equation}
 
-    Pour le deuxième calcul nous allons faire appel à Fubini\footnote{Parce qu'il est toujours plus simple de refiler le boulot aux autres que de le faire soi-même\ldots pauvre Fubini !} pour la fonction
-    \begin{equation}
-        \begin{aligned}
-            u\colon \eR\times \eR&\to \eR \\
-            (k,y)&\mapsto  e^{ik(x-y)} e^{-\epsilon k^2}f(y).
-        \end{aligned}
-    \end{equation}
-    D'abord nous nous assurons que \( u\in L^1(\eR\times \eR)\) par le corolaire~\ref{CorTKZKwP}, et ensuite nous utilisons le théorème de Fubini~\ref{ThoFubinioYLtPI} pour manipuler les intégrales (et en particulier les inverser). Dans un premier temps nous avons :
-    \begin{equation}
-        \int_{\eR}\int_{\eR}|  e^{ik(x-y)} e^{-\epsilon k^2} f(y) |dy\,dk\leq \int_{\eR} e^{-\epsilon k^2} \big[  \int_{\eR}| f(y) |   dy \big] dk<\infty
-    \end{equation}
-    parce que $f$ étant dans \( \swS(\eR)\), l'intégrale intérieure se réduit à un nombre. Nous savons maintenant que \( u\in L^1(\eR\times \eR)\). Nous pouvons alors calculer un peu \ldots
-    \begin{subequations}
-        \begin{align}
-            \int_{\eR} e^{ikx} e^{-\epsilon k^2}\hat f(k)dk&=\int_{\eR}\int_{\eR} e^{ikx} e^{-\epsilon k^2} e^{-iky}f(y)dy\,dk\\
-            &=\int_{\eR}\big[ \int_{\eR} e^{ik(x-y)} e^{-\epsilon k^2}f(y)dk \big]dy\\
-            &=\int_{\eR}f(y)\big[   \int_{\eR} e^{ik(x-y)} e^{-\epsilon k^2}dk  \big]dy\\
-            &=\int_{\eR} f(y)\hat g_{\epsilon}(y-x)dy\\
-            &=\sqrt{ \frac{ \pi }{ \epsilon } }\int_{\eR}f(y) e^{-(y-x)^2/4\epsilon}dy\\
-            &=2\sqrt{ \epsilon }\sqrt{ \frac{ \pi }{ \epsilon } }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt\\
-            &=2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt\\
-        \end{align}
-    \end{subequations}
-    Justifications  :
-    \begin{itemize}
-        \item
-           La fonction \( g_{\epsilon}\) est la gaussienne dont la transformée de Fourier est a été l'objet du lemme \ref{LEMooPAAJooCsoyAJ}.
-       \item
-           Nous avons effectué le changement de variables \( t=(y-x)/(2\sqrt{ \epsilon })\) qui donne \( dt=dy/2\sqrt{ \epsilon }\).
-    \end{itemize}
-    La fonction \( f\) étant Schwartz (en particulier bornée), dans la dernière intégrale, nous pouvons effectuer la majoration
-    \begin{equation}
-        f(x+2\sqrt{ \epsilon }t) e^{-t^2}\leq \| f \|_{\infty} e^{-t^2},
-    \end{equation}
-    qui est une fonction intégrable. Nous pouvons donc permuter la limite et l'intégrale. Dans l'égalité
-    \begin{equation}
-        \lim_{\epsilon\to 0}\int_{\eR} e^{ikx} e^{-\epsilon k^2}\hat f(k)dk =\lim_{\epsilon\to 0} 2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt
-    \end{equation}
-    À gauche nous avons déjà la limite depuis \eqref{EQooYIYGooXYubbW}, et à droite nous obtenons
-    \begin{equation}
-        \lim_{\epsilon\to 0} 2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt=\int_{\eR}f(x) e^{-t^2}dt=2\sqrt{ \pi }f(x)\sqrt{ \pi }=2\pi f(x)
-    \end{equation}
-    où nous avons utilisé l'intégrale gaussienne faite dans l'exemple~\ref{EXooLUFAooGcxFUW}.
+        \item[Deuxième calcul : Fubini]
 
-    En remettant tout ensemble,
-    \begin{equation}
-        2\pi f(x)=\lim_{\epsilon\to 0}\int_{\eR} e^{-\epsilon k^2} e^{ikx}\hat f(k)dk=\int_{\eR} e^{ikx}\hat f(k)dk,
+            Pour le deuxième calcul nous allons faire appel à Fubini\footnote{Parce qu'il est toujours plus simple de refiler le boulot aux autres que de le faire soi-même\ldots pauvre Fubini !} pour la fonction
+            \begin{equation}
+                \begin{aligned}
+                    u\colon \eR\times \eR&\to \eR \\
+                    (k,y)&\mapsto  e^{ik(x-y)} e^{-\epsilon k^2}f(y).
+                \end{aligned}
+            \end{equation}
+            D'abord nous nous assurons que \( u\in L^1(\eR\times \eR)\) par le corolaire~\ref{CorTKZKwP}, et ensuite nous utilisons le théorème de Fubini~\ref{ThoFubinioYLtPI} pour manipuler les intégrales (et en particulier les permuter). 
+            
+            \begin{subproof}
+                \item[\( u\in L^1(\eR\times \eR)\)]
+                    Dans un premier temps nous avons :
+                    \begin{equation}
+                        \int_{\eR}\int_{\eR}|  e^{ik(x-y)} e^{-\epsilon k^2} f(y) |dy\,dk\leq \int_{\eR} e^{-\epsilon k^2} \big[  \int_{\eR}| f(y) |   dy \big] dk<\infty
+                    \end{equation}
+                    parce que $f$ étant dans \( \swS(\eR)\), l'intégrale intérieure se réduit à un nombre. Nous savons maintenant que \( u\in L^1(\eR\times \eR)\) grâce au corolaire \ref{CorTKZKwP}.
+
+                \item[Calcul]
+                    
+                    Nous pouvons alors calculer un peu \ldots
+                    \begin{subequations}
+                        \begin{align}
+                            \int_{\eR} e^{ikx} e^{-\epsilon k^2}\hat f(k)dk&=\int_{\eR}\int_{\eR} e^{ikx} e^{-\epsilon k^2} e^{-iky}f(y)dy\,dk\\
+                            &=\int_{\eR}\big[ \int_{\eR} e^{ik(x-y)} e^{-\epsilon k^2}f(y)dk \big]dy    \label{SUBEQooYJATooBdisqE}\\
+                            &=\int_{\eR}f(y)\big[   \int_{\eR} e^{ik(x-y)} e^{-\epsilon k^2}dk  \big]dy\\
+                            &=\int_{\eR} f(y)\hat g_{\epsilon}(y-x)dy   \label{SUBEQooXLLMooQazBnM}\\
+                            &=\sqrt{ \frac{ \pi }{ \epsilon } }\int_{\eR}f(y) e^{-(y-x)^2/4\epsilon}dy\label{SUBEQooOPQNooPofmvh}\\
+                            &=2\sqrt{ \epsilon }\sqrt{ \frac{ \pi }{ \epsilon } }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt  \label{SUBEQooONHGooNoiBru}\\
+                            &=2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt\\
+                        \end{align}
+                    \end{subequations}
+                    Justifications  :
+                    \begin{itemize}
+                        \item
+                            Pour \eqref{SUBEQooYJATooBdisqE}, c'est Fubini \ref{ThoFubinioYLtPI}.
+                        \item
+                            Pour \eqref{SUBEQooXLLMooQazBnM}, nous avons reconnu dans le crochet la transformée de Fourier de la fonction \( g_{\epsilon}\colon x\mapsto  e^{-\epsilon x^2}\).
+                        \item
+                            Pour \eqref{SUBEQooOPQNooPofmvh}, nous utilisons la transformée de Fourier de \( g_{\epsilon}\) donnée dans le lemme \ref{LEMooPAAJooCsoyAJ}.
+                       \item
+                           Pour \eqref{SUBEQooONHGooNoiBru}, nous avons effectué le changement de variables \( t=(y-x)/(2\sqrt{ \epsilon })\) qui donne \( dt=dy/2\sqrt{ \epsilon }\).
+                    \end{itemize}
+
+            \end{subproof}
+
+        \item[Second passage à la limite]
+
+            Nous avons obtenu l'égalité
+            \begin{equation}        \label{EQooUCSTooRvOuhi}
+                \int_{\eR} e^{ikx} e^{-\epsilon k^2}\hat f(k)dk = 2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt,
+            \end{equation}
+            et nous voudrions passer à la limite \( \epsilon\to 0\). Le membre de gauche est déjà fait en \eqref{EQooYIYGooXYubbW}.
+
+            Pour le membre de droite, la fonction \( f\) étant Schwartz (en particulier bornée), nous pouvons effectuer la majoration
+            \begin{equation}
+                f(x+2\sqrt{ \epsilon }t) e^{-t^2}\leq \| f \|_{\infty} e^{-t^2},
+            \end{equation}
+            qui est une fonction intégrable de \( t\). Nous avons donc le droit de permuter la limite \( \epsilon\to 0\) et l'intégrale dans le calcul suivant :
+            \begin{equation}
+                \lim_{\epsilon\to 0}\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}=\int_{\eR}f(x) e^{-t^2}dt.
+            \end{equation}
+
+        \item[Fin]
+
+            Nous avons maintenant les limites des deux membres de \eqref{EQooUCSTooRvOuhi}. Récrivons :
+            \begin{equation}
+                \lim_{\epsilon\to 0}\int_{\eR} e^{ikx} e^{-\epsilon k^2}\hat f(k)dk =\lim_{\epsilon\to 0} 2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt,
+            \end{equation}
+            À gauche nous avons déjà la limite depuis \eqref{EQooYIYGooXYubbW}, et à droite nous obtenons
+            \begin{equation}
+                \lim_{\epsilon\to 0} 2\sqrt{ \pi }\int_{\eR}f(x+2\sqrt{ \epsilon }t) e^{-t^2}dt=2\sqrt{ \pi }\int_{\eR}f(x) e^{-t^2}dt=2\sqrt{ \pi }f(x)\sqrt{ \pi }=2\pi f(x)
+            \end{equation}
+            où nous avons utilisé l'intégrale gaussienne faite dans l'exemple~\ref{EXooLUFAooGcxFUW}.
+
+            En remettant tout ensemble,
+            \begin{equation}
+                2\pi f(x)=\lim_{\epsilon\to 0}\int_{\eR} e^{-\epsilon k^2} e^{ikx}\hat f(k)dk=\int_{\eR} e^{ikx}\hat f(k)dk,
+            \end{equation}
+            ce qu'il fallait prouver.
+    \end{subproof}
+
+    Le plus gros est fait; nous avons prouvé
+    \begin{equation}        \label{EQooYVUZooZXQoEH}
+        f(x)=\frac{1}{ 2\pi }\int_{\eR} e^{ikx}\hat f(k)dk.
     \end{equation}
-    ce qu'il fallait prouver.
+    Pour \ref{ITEMooWINLooJWcDIX}, c'est simplement une reformulation de cela.
+    
+    Nous prouvons maintenant \ref{ITEMooCZYMooRvKTfS}.
+
+    \begin{subproof}
+        \item[La transformée de Fourier est injective]
+            Vu qu'elle est linéaire, il suffit de démontrer que si \( \TF(f)=0\), alors \( f=0\). Si \( \hat f=0\), alors la formule \eqref{EQooYVUZooZXQoEH} donne immédiatement \( f=0\).
+        \item[La transformée de Fourier est surjective]
+            Soit \( f\in \swS(\eR)\). Nous devons trouver \( g\in\swS(\eR)\) tel que \( \hat g=f\). La formule \( \TF(\hat f)(-x)=2\pi f(x)\) nous incite à essayer
+            \begin{equation}
+                g(\xi)=-\frac{1}{ 2\pi }\hat f(-\xi).
+            \end{equation}
+            Calculons \( \TF(g)\) :
+            \begin{subequations}
+                \begin{align}
+                    \TF(g)(x)&=-\int_{\eR} e^{-i\xi x}g(\xi)d\xi\\
+                    &=-\int_{\eR} e^{-i\xi x}\frac{1}{ 2\pi }\hat f(-\xi)d\xi\\
+                    &=\frac{1}{ 2\pi }\int_{\eR} e^{itx}\hat f(t)dt\\
+                    &=\frac{1}{ 2\pi }\TF(\hat f)(-x)\\
+                    &=f(x).
+                \end{align}
+            \end{subequations}
+            Pour la dernière ligne, nous avons utilisé \( \TF(\hat f)(-x)=2\pi f(x)\).
+    \end{subproof}
+    
+
 \end{proof}
 
 \begin{corollary}       \label{CORooAZLZooSviTej}

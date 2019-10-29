@@ -18,7 +18,7 @@ Nous notons \( \mS\) l'ensemble des intervalles\footnote{Définition~\ref{DefEYA
 
     Nous devons vérifier la définition~\ref{DefTCUoogGDud}. Les ensembles \( \eR\) et \( \emptyset\) sont des intervalles et font donc partie de \( \tribA_{\mS}\).
 
-    Si \( A\in\tribA_{\mS}\) se décompose en union d'intervalles de la forme \( (a_k,b_k)\) avec \( k=1,\ldots, n\) (ici nous mettons des parenthèses au lieu de crochets parce qu'a priori nous ne savons pas). Alors
+    Si \( A\in\tribA_{\mS}\) se décompose en union d'intervalles de la forme \( (a_k,b_k)\) avec \( k=1,\ldots, n\) (ici nous mettons des parenthèses au lieu de crochets parce qu'à priori nous ne savons pas). Alors
     \begin{equation}
         A^c=\bigcup_{k=0}^{k}(b_k,a_{k+1})
     \end{equation}
@@ -282,7 +282,7 @@ Le lemme suivant nous indique que nous pouvons calculer la longueur d'un éléme
     \begin{equation}
         \mO=\bigcup_{n=1}^{\infty}B(q_n,\frac{ \epsilon }{ 2^{n+1} }).
     \end{equation}
-    Cela est un ouvert comme union d'ouverts, ça contient tous les rationnels, et sa mesure se majore. En effet le théorème~\ref{ThoDESooEyDOe} donne \( \lambda\big( B(q_n,\frac{\epsilon }{ 2^n }) \big)=\frac{ \epsilon }{ 2^n }\). Vu que ces boules ne sont a priori pas disjointes, le lemme~\ref{LemPMprYuC} donne
+    Cela est un ouvert comme union d'ouverts, ça contient tous les rationnels, et sa mesure se majore. En effet le théorème~\ref{ThoDESooEyDOe} donne \( \lambda\big( B(q_n,\frac{\epsilon }{ 2^n }) \big)=\frac{ \epsilon }{ 2^n }\). Vu que ces boules ne sont à priori pas disjointes, le lemme~\ref{LemPMprYuC} donne
     \begin{equation}
         \lambda(\mO) \leq \sum_{n=1}^{\infty}\frac{ \epsilon }{ 2^n }=\epsilon
     \end{equation}
@@ -298,7 +298,7 @@ Le lemme suivant nous indique que nous pouvons calculer la longueur d'un éléme
     \begin{equation}
         A=\bigcup_{n=1}^{\infty}B(n,\frac{1}{ 2^n }).
     \end{equation}
-    La partie \( A\) n'est pas bornée parce que que \( \eN\subset A\). Mais en terme de mesure,
+    La partie \( A\) n'est pas bornée parce que que \( \eN\subset A\). Mais en termes de mesure,
     \begin{equation}
         \lambda(A)\leq \sum_{n=1}^{\infty}\frac{1}{ 2^n }<\infty
     \end{equation}
@@ -775,7 +775,7 @@ Le lemme suivant dit précisément ce que nous entendons en disant que les élé
             c&\mapsto \varphi_3(   c\text{ en remplaçant les } 1\text{ par des } 2  )
         \end{aligned}
     \end{equation}
-    est une bijection. Le fait que \( \psi\) soit injective est une conséquence du fait que ce soit la composition de deux applications injectives (le remplacement et \( \varphi_3\)). Il faut par contre montrer que l'image est égale à \( K\), en notant qu'il n'est pas évident a priori que l'image soit contenue dans \( K\).
+    est une bijection. Le fait que \( \psi\) soit injective est une conséquence du fait que ce soit la composition de deux applications injectives (le remplacement et \( \varphi_3\)). Il faut par contre montrer que l'image est égale à \( K\), en notant qu'il n'est pas évident à priori que l'image soit contenue dans \( K\).
 
     L'opération qui consiste à remplacer les \( 1\) par des \( 2\) est une bijection \( \eD_2\to \eE\). Le corolaire~\ref{CorSEDooJmeXt} nous dit aussi que \( \varphi_3\colon \eE\to K\) est une bijection. En tant que composée de bijections, \( \psi\) est une bijection.
 
@@ -838,7 +838,7 @@ Vous voulez un truc dingue à propos de la partie \( J\) de l'exemple \ref{EXooV
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \begin{normaltext}
-    Nous n'en avons pas encore terminé avec la théorie de la mesure, mais nous devons quand même définir les intégrales et voir quelque propriétés avant de continuer avec la mesure parce que la définition de la mesure sur un espace mesurable produit\footnote{Théorème~\ref{ThoWWAjXzi}.} passe par une intégrale.
+    Nous n'en avons pas encore terminé avec la théorie de la mesure, mais nous devons quand même définir les intégrales et voir quelques propriétés avant de continuer avec la mesure parce que la définition de la mesure sur un espace mesurable produit\footnote{Théorème~\ref{ThoWWAjXzi}.} passe par une intégrale.
 \end{normaltext}
 
 \begin{normaltext}      \label{NORMooFZEDooIxSgLe}
@@ -1376,6 +1376,21 @@ Nous définissons aussi
 \end{equation}
 si \( f\) est une fonction mesurable sur \( \Omega\).
 
+\begin{lemma}       \label{LEMooMWKTooIKomSw}
+    Pour \( f\colon \Omega\to \eR\) nous avons \( \int_{\Omega}| f |<\infty\) si et seulement si \( \int_{\Omega}f\) existe et est finie.
+\end{lemma}
+
+\begin{proof}
+    Deux sens.
+    \begin{subproof}
+        \item[\( \Rightarrow\)]
+            La proposition \ref{DefTCXooAstMYl} nous indique que \( \int_{\Omega}f^+\) et \( \int_{\Omega}f^-\) sont finies. Dans ce cas, la partie «définition» de \ref{DefTCXooAstMYl} donne \( \int_{\Omega}f=\int_{\Omega}f^+-\int_{\Omega}f^-<\infty\).
+        \item[\( \Leftarrow\)]
+            Nous n'avons défini \( \int_{\Omega}f\) que dans le cas où les intégrales de \( f^+\) et \( f^-\) sont finies.
+    \end{subproof}
+\end{proof}
+Ce lemme justifie pourquoi nous appelons l'espace \( L^1\) l'espace des «fonctions intégrables».
+
 \begin{remark}
     Dans \( \eR^d\), quasiment toutes les fonctions et ensembles sont mesurables. En effet la construction d'ensembles non mesurables demande obligatoirement l'utilisation de l'axiome du choix; de tels ensembles doivent être construits «exprès pour». Il y a très peu de chances pour que vous tombiez sur un ensemble non mesurable de \( \eR^d\) sans que vous ne vous en rendiez compte.
 
@@ -1404,7 +1419,6 @@ si \( f\) est une fonction mesurable sur \( \Omega\).
     La fonction \( g\) est manifestement à valeurs réelles positives. La proposition~\ref{PROPooGTMVooPHcrRl} nous dit alors que \( | f |\) est intégrable. Ensuite c'est au tour de la proposition~\ref{DefTCXooAstMYl} de conclure à l'intégrabilité de \( f\).
 \end{proof}
 
-
 \begin{proposition}     \label{PROPooFIYEooCpdmwZ}
     Soient deux fonctions intégrables sur \( (S,\tribF,\mu)\) et à valeurs dans \( \eC\). Alors \( f+g\) est intégrable et
     \begin{equation}
@@ -1431,7 +1445,7 @@ si \( f\) est une fonction mesurable sur \( \Omega\).
 \end{proof}
 
 \begin{proposition}     \label{PropOPSCooVpzaBt}
-    Si \( A,B\subset \Omega\) sont des parties disjointes et si \( f\colon \eR\to \eR\) est intégrable sur \( A\cup B\) alors les intégrales \( \int_Af\) et \( \int_Bf\) existent et
+    Si \( A,B\subset \Omega\) sont des parties disjointes de \( (\Omega,\tribA,\mu)\) et si \( f\colon \Omega\to \eR\) est intégrable sur \( A\cup B\) alors les intégrales \( \int_Af\) et \( \int_Bf\) existent et
     \begin{equation}
         \int_{A\cup B}f=\int_Af+\int_Bf.
     \end{equation}
@@ -1588,12 +1602,12 @@ La proposition suivante est, pour les intégrales à valeurs vectorielles, analo
 \subsection{Quelques propriétés}
 %---------------------------------------------------------------------------------------------------------------------------
 
-\begin{proposition}
+\begin{proposition}     \label{PROPooFLZVooQoDsAn}
     Si \( f,g\) sont des fonctions étagées et si \( A,B\subset S\) sont disjoints, alors
     \begin{enumerate}
         \item
             \( \int_Afd\mu=\int_Sf\mtu_Ad\mu\)
-        \item
+        \item       \label{ITEMooHZQKooSUKlFk}
             \( \int_{A\cup B}fd\mu=\int_Afd\mu+\int_Bfd\mu\).
     \end{enumerate}
 \end{proposition}
@@ -1738,11 +1752,20 @@ Il existe un résultat considérablement plus intéressant que cette proposition
 %---------------------------------------------------------------------------------------------------------------------------
 
 \begin{theorem}[Convergence dominée de Lebesgue]        \label{ThoConvDomLebVdhsTf}
-    Soit \( (f_n)_{n\in\eN}\) une suite de fonctions intégrables sur \( (\Omega,\tribA,\mu)\) à valeurs dans \( \eC\) ou \( \eR\). Nous supposons que  \( f_n\to f\) simplement sur \( \Omega\) presque partout et qu'il existe une fonction intégrable \( g\) telle que
-    \begin{equation}
-        | f_n(x) | \leq g(x)
-    \end{equation}
-    pour presque\footnote{S'il n'y avait pas le «presque» ici, ce théorème serait à peu près inutilisable en probabilité ou en théorie des espaces \( L^p\), comme dans la démonstration du théorème de Fischer-Riesz~\ref{ThoGVmqOro} par exemple.} tout \( x\in\Omega\) et pour tout \( n\in \eN\). Alors
+    Soit une suite de fonctions \( (f_n)_{n\in \eN}\) sur \( (\Omega,\tribA,\mu)\) à valeurs dans \( \eC\) ou \( \eR\). Nous supposons que
+    \begin{enumerate}
+        \item
+            Pour chaque \( n\) nous avons \( f_n\in L^1(\Omega,\tribA,\mu)\),
+        \item
+            \( f_n\to f\) simplement presque partout sur \( \Omega\),
+        \item 
+            Il existe une fonction \( g\in L^1(\Omega)\) telle que
+            \begin{equation}
+                | f_n(x) | \leq g(x)
+            \end{equation}
+            pour presque\footnote{S'il n'y avait pas le «presque» ici, ce théorème serait à peu près inutilisable en probabilité ou en théorie des espaces \( L^p\), comme dans la démonstration du théorème de Fischer-Riesz~\ref{ThoGVmqOro} par exemple.} tout \( x\in\Omega\) et pour tout \( n\in \eN\). 
+    \end{enumerate}
+    Alors
     \begin{enumerate}
         \item
             \( f\) est intégrable,
@@ -1808,6 +1831,50 @@ Il existe un résultat considérablement plus intéressant que cette proposition
 
 \begin{proof}
     L'hypothèse est la convergence de l'intégrale \( \int_{\eN}| a_i |dm(i)\) où \( dm\) est la mesure de comptage. Étant donné que \( | a_i |\leq | a_i |\), la fonction \( a_i\) (fonction de \( i\)) peut jouer le rôle de \( g\) dans le théorème de la convergence dominée de Lebesgue (théorème~\ref{ThoConvDomLebVdhsTf}).
+\end{proof}
+
+%--------------------------------------------------------------------------------------------------------------------------- 
+\subsection{Additivité de l'intégrale de Lebesgque}
+%---------------------------------------------------------------------------------------------------------------------------
+
+\begin{proposition}[\( \sigma\)-additivité\cite{BIBooAWGNooUzLMUB}]     \label{PROPooDWYNooWKJmEV}
+    Soit un espace mesuré \( (\Omega,\tribA,\mu)\). Nous considérons des parties disjointes \( \{ A_i \}_{i\in \eN}\) de \( \Omega\) telles que \( \bigcup_{k=0}^{\infty}A_k=\Omega\). Si \( f\in L^1(\Omega)\), alors
+    \begin{equation}
+        \int_{\Omega}fd\mu=\sum_{k=0}^{\infty}\int_{A_k}fd\mu.
+    \end{equation}
+\end{proposition}
+
+\begin{proof}
+    Nous posons \( \Omega_n=\bigcup_{k=0}^nA_k\) ainsi que \( f_n=f\mtu_{\Omega_n}\). Pour chaque \( N\in \eN\) nous avons
+    \begin{subequations}        \label{EQSooBREOooWzviSK}
+        \begin{align}
+            \sum_{k=0}^N\int_{A_k}fd\mu&=\int_{\bigcup_{k=0}^NA_k}f     \label{EQooCVVVooTIINmz}\\
+            &=\int_{\Omega_N}f\\
+            &=\int_{\Omega}f_N.     \label{SUBEQooJZLQooKlOoes}
+        \end{align}
+    \end{subequations}
+    Justifications :
+    \begin{itemize}
+        \item Pour \eqref{EQooCVVVooTIINmz}, c'est la proposition \ref{PropOPSCooVpzaBt} qui traite du cas de sommes finies.
+        \item Pour \eqref{SUBEQooJZLQooKlOoes}  c'est la proposition \ref{PROPooFLZVooQoDsAn}\ref{ITEMooHZQKooSUKlFk}.
+    \end{itemize}
+    L'idée est maintenant de passer à la limite des deux côtés de \eqref{EQSooBREOooWzviSK}. Voici le raisonnement :
+    \begin{itemize}
+        \item Nous montrons qu'à droite, la limite existe et vaut \( \int_{\Omega}fd\mu\).
+        \item Le fait que la limite du membre de droite existe implique l'existence de la limite du membre de gauche.
+        \item La limite du membre de gauche vaut \( \sum_{k=0}^{\infty}\int_{A_k}fd\mu\).
+    \end{itemize}
+    La limite du membre de droite s'établi avec le théorème de la convergence dominée de Lebesgue \ref{ThoUnifCvIntRiem}.
+    \begin{itemize}
+        \item Nous avons convergence simple \( f_n\to f\) parce que \( \bigcup_{n=0}^{\infty}A_i=\Omega\).
+        \item La fonction \( g=| f |\) est intégrable sur \( \Omega\) parce que \( f\in L^1(\Omega)\) par hypothèse.
+        \item Pour tout \( n\in \eN\) et pour tout \( x\in \Omega\) nous avons \( | f_n(x) |\leq g(x)\) parce que \( | f_n(x) |\) est soit égal à \( g(x)\) soit égal à zéro suivant que \( x\in \Omega_n\) ou non.
+    \end{itemize}
+    Donc le théorème de la convergence dominée est applicable. La limite du membre de droite de \eqref{EQSooBREOooWzviSK} existe et vaut :
+    \begin{equation}
+        \lim_{N\to \infty} \int_{\Omega}f_N=\int_{\Omega}f.
+    \end{equation}
+    Nous pouvons alors prendre aussi la limite du membre de gauche dans \eqref{EQSooBREOooWzviSK} et obtenir le résultat attendu.
 \end{proof}
 
 %---------------------------------------------------------------------------------------------------------------------------
@@ -1878,7 +1945,7 @@ où \( dx\) est la mesure de Lebesgue.
         \int_Sfd(w\cdot \mu)=\lim_{n\to \infty} \int_Sf_nd(w\cdot\mu)=\lim_{n\to \infty} \int_S(wf_n)d\mu=\int_Swfd\mu.
     \end{equation}
 
-    Nous passons maintenant au cas général où \( f\) est une fonction à valeurs dans \( \bar\eR\) ou \( \eC\) (avec \( w\) finie dans ce dernier cas). Nous avons la chaîne d'équivalences
+    Nous passons maintenant au cas général où \( f\) est une fonction à valeurs dans \( \bar\eR\) ou \( \eC\) (avec \( w\) finie dans ce dernier cas). Nous avons la chaine d'équivalences
     %\begin{itemize}{$\Leftrightarrow$}
     \begin{itemize}
             \renewcommand{\labelitemi}{$\Leftrightarrow$}
